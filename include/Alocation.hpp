@@ -17,4 +17,4 @@ public:
 	void getAlocation();
 };
 
-#endif /* ALOCATION_H */
+#endif /* ALOCATION_HPP */
