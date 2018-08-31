@@ -5,7 +5,7 @@
 
 class Client : public Person{
 public:
-	int PurchaseKey;
+	int CustomerId;
 	std::string CustomerLogin;
 	std::string CustomerPassword;
 public:

@@ -8,9 +8,17 @@ Alocation::Alocation(std::vector <int>  alocationData, std::vector <int>  alocat
 	this->DevolutionHour = devolutionHour;
 }
 
-Alocation::Alocation(int which){
+// se a alocação for por dia, a data e hora de devolução são inseridas posteriormente
+Alocation::Alocation(int which,bool byperiod)
+{
 	int day, month, year, hour, minutes;
 	this->whichvehicle = which;
+
+	std::cout<<"Insira a identificação do cliente: " ;
+	std::cin>>this->CustomerId;
+	std::cout<<"Insira a identificação da agencia: ";
+	std::cin>>this->Agency;
+	
 	std::cout<<"Insira a o dia da data de alocação: ";
 	std::cin>>day;
 	this->AlocationData.push_back(day);
@@ -26,21 +34,25 @@ Alocation::Alocation(int which){
 	std::cout<<"Insira os minutos de alocação: ";
 	std::cin>>minutes;
 	this->AlocationHour.push_back(minutes);
-	std::cout<<"Insira a o dia da data de devolução: ";
-	std::cin>>day;
-	this->DevolutionData.push_back(day);
-	std::cout<<"Insira a o mês da data de devolução: ";
-	std::cin>>month;
-	this->DevolutionData.push_back(month);
-	std::cout<<"Insira a o ano da data de devolução: ";
-	std::cin>>year;
-	this->DevolutionData.push_back(year);
-	std::cout<<"Insira a hora de devolução: ";
-	std::cin>>hour;
-	this->DevolutionHour.push_back(hour);
-	std::cout<<"Insira os minutos de devolução: ";
-	std::cin>>minutes;
-	this->DevolutionHour.push_back(minutes);
+
+	if(byperiod){
+		std::cout<<"Insira a o dia da data de devolução: ";
+		std::cin>>day;
+		this->DevolutionData.push_back(day);
+		std::cout<<"Insira a o mês da data de devolução: ";
+		std::cin>>month;
+		this->DevolutionData.push_back(month);
+		std::cout<<"Insira a o ano da data de devolução: ";
+		std::cin>>year;
+		this->DevolutionData.push_back(year);
+		std::cout<<"Insira a hora de devolução: ";
+		std::cin>>hour;
+		this->DevolutionHour.push_back(hour);
+		std::cout<<"Insira os minutos de devolução: ";
+		std::cin>>minutes;
+		this->DevolutionHour.push_back(minutes);
+	}
+
 
 }
 

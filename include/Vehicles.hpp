@@ -6,6 +6,7 @@
 class Vehicle{
 public:
 	int Key;
+	int AlocationPrice;
 	bool Alocated;
 	std::string Board;
 	std::string Color;

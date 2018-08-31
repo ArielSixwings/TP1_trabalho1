@@ -2,7 +2,7 @@
 #include <vector>
 #include "Vehicles.hpp"
 #include "Alocation.hpp"
-
+#include "Agency.hpp"
 int main(){
 	int i, which, howmany;
 	std::vector <Vehicle> Cars;
@@ -33,7 +33,7 @@ int main(){
 	std::vector <Alocation> Queue;
 
 	for(i = 0; i < howmany; i++){
-		Alocation aux(Chosen[i]);
+		Alocation aux(Chosen[i],true);
 		Queue.push_back(aux);
 	}
 	
