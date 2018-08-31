@@ -5,11 +5,10 @@
 
 class Client : public Person{
 public:
-	int CustomerId;
 	std::string CustomerLogin;
 	std::string CustomerPassword;
 public:
-	Client(int PurchaseKey, std::string CustomerLogin, std::string CustomerPassword);
+	Client(int CPF,std::string Name, std::string CustomerLogin, std::string CustomerPassword);
 	void ShowInformation();
 };
 
