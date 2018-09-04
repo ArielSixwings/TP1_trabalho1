@@ -46,8 +46,21 @@ int main(){
 
 
 		for(i = 0; i < howmany; i++){
-			Alocation aux(Chosen[i],true);
-			Queue.push_back(aux);
+			std::cout<<"\nEscolha o tipo de alocação para o carro "<< i <<std::endl;
+			std::cout<<"Período         0"<<std::endl;
+			std::cout<<"Diária          1"<<std::endl;
+			std::cout<<"Opção: ";
+			std::cin>>option;
+			if(option == 0){
+				Alocation aux(Chosen[i],true);
+				Queue.push_back(aux);
+				Cars[Chosen[i]].Alocate = true;
+			}
+			else{
+				Alocation aux(Chosen[i],false);
+				Queue.push_back(aux);
+				Cars[Chosen[i]].Alocate = true;	
+			}
 		}
 		
 		for(auto c : Queue){
