@@ -54,12 +54,12 @@ int main(){
 			if(option == 0){
 				Alocation aux(Chosen[i],true);
 				Queue.push_back(aux);
-				Cars[Chosen[i]].Alocate = true;
+				Cars[Chosen[i]].Alocated = true;
 			}
 			else{
 				Alocation aux(Chosen[i],false);
 				Queue.push_back(aux);
-				Cars[Chosen[i]].Alocate = true;	
+				Cars[Chosen[i]].Alocated = true;	
 			}
 		}
 		
