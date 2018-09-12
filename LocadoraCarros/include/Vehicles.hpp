@@ -15,11 +15,11 @@ public:
 	int Year;
 	int Howmanydoors;
 	int Distance;
-	int RENAVAM;
+	std::string RENAVAM;
 public:
 	Vehicle(int i);
 	Vehicle(int key, std::string board, std::string color, std::string typefuel, 
-	std::string chassi, int year, int howmanydoors, int distance, int RENAVAM);
+	std::string chassi, int year, int howmanydoors, int distance, std::string RENAVAM);
 	Alocation Alocate(std::vector <int> AlocationData, std::vector <int> AlocationHour, std::vector <int> DevolutionData, std::vector <int> DevolutionHour);
 	void getVehicle();
 };

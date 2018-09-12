@@ -2,15 +2,22 @@
 #include <string>
 #include "Client.hpp"
 
-Client::Client(int CPF,std::string Name, std::string CustomerLogin, std::string CustomerPassword){
-	this->CPF = CPF;
-	this->Name = Name;
+void Client::SetClient(std::string CustomerLogin, std::string CustomerPassword){
 	this->CustomerLogin = CustomerLogin;
 	this->CustomerPassword = CustomerPassword;
 }
 
+Client::Client(std::string CPF,std::string Name, int Age, std::string CustomerLogin, std::string CustomerPassword) : Person(CPF, Age, Name){
+	SetClient(CustomerLogin, CustomerPassword);
+}
+
 void Client::ShowInformation(){
-	std::cout<<"Identificador do cliente: " << this->CPF << std::endl;
+	std::cout<<"Cliente" << std::endl;
+	Person::ShowInformation();
 	std::cout<<"Login do Cliente: " << this->CustomerLogin << std::endl;
 	std::cout<<"Senha do Cliente: " << this->CustomerPassword << std::endl;
+}
+
+int Client::ReturnType(){
+	return 1;
 }

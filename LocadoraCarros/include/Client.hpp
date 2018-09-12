@@ -8,8 +8,11 @@ public:
 	std::string CustomerLogin;
 	std::string CustomerPassword;
 public:
-	Client(int CPF,std::string Name, std::string CustomerLogin, std::string CustomerPassword);
-	void ShowInformation();
+	using Person::Person;
+	Client(std::string CPF,std::string Name, int Age, std::string CustomerLogin, std::string CustomerPassword);
+	void SetClient(std::string CustomerLogin, std::string CustomerPassword);
+	void ShowInformation() override;
+	int ReturnType() override;
 };
 
 #endif /* CLIENT_HPP */

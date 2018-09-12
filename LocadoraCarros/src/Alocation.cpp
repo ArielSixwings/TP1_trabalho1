@@ -65,6 +65,8 @@ Alocation::~Alocation(){
 }
 
 void Alocation::getAlocation(){
+	std::cout << std::endl;
+	std::cout<<"Chave do Veículo: " << whichvehicle << std::endl;
 	std::cout<<"Data de Alocação: " << AlocationData[0] << "/" << AlocationData[1] << "/" << AlocationData[2] << std::endl;
 	std::cout<<"Hora de Alocação: " << AlocationHour[0] << ":" << AlocationHour[1] << std::endl;
 

@@ -4,13 +4,14 @@
 
 class Person{
 public:
-	int CPF;
 	int Age;
+	std::string CPF;
 	std::string Name;
 public:
 	Person();
-	Person(int CPF, int Age, std::string Name);
-	void ShowInformation();
+	Person(std::string CPF, int Age, std::string Name);
+	virtual void ShowInformation();
+	virtual int ReturnType();
 };
 
 #endif /* PERSON_HPP */
