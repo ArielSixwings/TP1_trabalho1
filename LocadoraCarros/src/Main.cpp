@@ -7,11 +7,13 @@
 #include "Vehicles.hpp"
 #include "Alocation.hpp"
 #include "Agency.hpp"
+#include "Exceptions.hpp"
+
 int main(){
 
 	// Menu's Variables
-	std::string check;
 	int option;
+	std::string check;
 
 	// Program
 	std::vector <Vehicle> Cars;
@@ -46,7 +48,10 @@ int main(){
 	std::cout <<"Funcionário - 1" << std::endl;
 	std::cout << std::endl;
 	std::cout << "Opção: ";
-	std::cin>>option;
+	
+	option = VerifyInputs();
+
+
 	std::cout << std::endl;
 	switch(option){
 
