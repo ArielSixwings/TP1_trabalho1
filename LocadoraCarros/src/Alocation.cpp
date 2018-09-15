@@ -9,16 +9,14 @@ Alocation::Alocation(std::vector <int>  alocationData, std::vector <int>  alocat
 }
 
 // se a alocação for por dia, a data e hora de devolução são inseridas posteriormente
-Alocation::Alocation(int which,bool byperiod)
+Alocation::Alocation(int which,std::string Agency,bool byperiod)
 {
 	int day, month, year, hour, minutes;
 	whichvehicle = which;
+	this->Agency = Agency;
 
-	std::cout<<"Insira a identificação do cliente: " ;
+	std::cout<<"Insira a identificação do cliente(CPF): " ;
 	std::cin>>CustomerId;
-	std::cout<<"Insira a identificação da agencia: ";
-	std::cin>>Agency;
-	
 	std::cout<<"Insira a o dia da data de alocação: ";
 	std::cin>>day;
 	AlocationData.push_back(day);
@@ -78,4 +76,24 @@ void Alocation::getAlocation(){
 		std::cout<<"Hora de Devolução: " << DevolutionHour[0] << ":" << DevolutionHour[1] << std::endl;
 	}
 
+}
+
+int Alocation::howmanydays()
+{
+    struct std::tm timeAlocation = {0,0,0,AlocationData[0],
+		(AlocationData[1]-1),(AlocationData[2] - 1900)}; /* 000 is 1900 */
+    struct std::tm timeDevolution = {0,0,0,DevolutionData[0],
+		(DevolutionData[1]-1),(DevolutionData[2] - 1900)};
+    
+	std::time_t x = std::mktime(&timeAlocation);
+    std::time_t y = std::mktime(&timeDevolution);
+    double difference;
+	if ( x != (std::time_t)(-1) && y != (std::time_t)(-1) )
+    {
+        difference = std::difftime(y, x) / (60 * 60 * 24);
+        std::cout << std::ctime(&x);
+        std::cout << std::ctime(&y);
+        std::cout << "difference = " << difference << " days" << std::endl;
+    }
+	return difference;
 }

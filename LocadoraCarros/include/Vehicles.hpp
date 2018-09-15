@@ -16,10 +16,12 @@ public:
 	int Howmanydoors;
 	int Distance;
 	std::string RENAVAM;
+	double Priceperday;
+	double Priceperperiod;
 public:
 	Vehicle(int i);
 	Vehicle(int key, std::string board, std::string color, std::string typefuel, 
-	std::string chassi, int year, int howmanydoors, int distance, std::string RENAVAM);
+	std::string chassi, int year, int howmanydoors, int distance, std::string RENAVAM, double Priceperday, double Priceperperiod);
 	Alocation Alocate(std::vector <int> AlocationData, std::vector <int> AlocationHour, std::vector <int> DevolutionData, std::vector <int> DevolutionHour);
 	void getVehicle();
 };

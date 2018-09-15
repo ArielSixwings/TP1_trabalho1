@@ -4,9 +4,13 @@
 #include <iostream>
 #include <string>
 class Agency{
+public:
     std::string agencyId;
     std::string locality;
-    Agency(std::string agencyId, std::string locality);
+    double Revenue;
+public:   
+    Agency(std::string agencyId, std::string locality,double Revenue);
+    void SumRevenue(double salesrevenue);
 };
 
 #endif //AGENCY_HPP

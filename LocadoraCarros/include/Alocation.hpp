@@ -2,6 +2,7 @@
 #define ALOCATION_HPP
 #include <vector>
 #include <string>
+#include <ctime>
 
 class Alocation{
 public:
@@ -14,11 +15,12 @@ public:
 	std::string Agency;
 	std::string CustomerId;
 public:
-	Alocation(int which,bool byperiod);
+	Alocation(int which,std::string Agency,bool byperiod);
 	Alocation(std::vector <int> alocationData, std::vector <int>  alocationHour,
 	 std::vector <int>  devolutionData, std::vector <int>  devolutionHour);
 	~Alocation();
 	void getAlocation();
+	int howmanydays();
 };
 
 #endif /* ALOCATION_HPP */

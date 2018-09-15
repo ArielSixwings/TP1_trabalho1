@@ -2,8 +2,10 @@
 #include <string>
 #include "Vehicles.hpp"
 
-Vehicle::Vehicle(int key, std::string board, std::string color, std::string typefuel, 
-	std::string chassi, int year, int howmanydoors, int distance, std::string RENAVAM){
+Vehicle::Vehicle(int key, std::string board, std::string color,std::string typefuel, 
+	std::string chassi, int year, int howmanydoors, int distance, 
+	std::string RENAVAM, double Priceperday, double Priceperperiod)
+{
 	this->Alocated = false;
 	this->Key = key;
 	this->Board = board;
@@ -14,6 +16,8 @@ Vehicle::Vehicle(int key, std::string board, std::string color, std::string type
 	this->Howmanydoors = howmanydoors;
 	this->Distance = distance;
 	this->RENAVAM = RENAVAM;
+	this->Priceperday = Priceperday;
+	this->Priceperperiod = Priceperperiod;
 }
 
 Vehicle::Vehicle(int i){
@@ -56,5 +60,7 @@ void Vehicle::getVehicle(){
 	std::cout<<"Número de Portas: " << Howmanydoors << std::endl;
 	std::cout<<"Quilometragem: " << Distance << std::endl;
 	std::cout<<"RENAVAM: " << RENAVAM << std::endl;
+	std::cout<<"Preço de alocação por dia: "<< Priceperday << std::endl;
+	std::cout<<"Preço de alocação por período: "<< Priceperperiod << std::endl;
 	std::cout << std::endl;
 }
