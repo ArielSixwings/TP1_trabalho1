@@ -10,3 +10,10 @@ void Agency::SumRevenue(double salesrevenue)
 {
     Revenue += salesrevenue;
 }
+
+void Agency::getAgency()
+{
+    std::cout<<"Identificação da agencia: "<<agencyId <<std::endl;
+    std::cout<<"Localidade: "<<locality<<std::endl;
+    std::cout<<"Receita: "<<Revenue<<std::endl; 
+}

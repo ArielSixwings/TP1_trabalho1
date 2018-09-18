@@ -95,8 +95,11 @@ int main(){
 			std::cout<<"Diária   -  1" <<std::endl;
 			std::cout<<"Opção: ";
 			std::cin>>option;
+			int auxid = 0;
 			for(auto a : Agencys){
-				std::cout<< "Agencia: " << i <<"identificação: "<<Agencys[i].agencyId<<std::endl; 
+				 
+				std::cout<< "Agencia: " << auxid <<" identificação: "<<a.agencyId<<std::endl;
+				auxid++; 
 			}
 			std::cout<<"Insira a identificação da agencia: ";
 			std::cin>>auxId;
@@ -118,6 +121,9 @@ int main(){
 		
 		for(auto c : Queue){
 			c.getAlocation();
+		}
+		for(auto a : Agencys){
+			a.getAgency();
 		}
 
 		return 0;

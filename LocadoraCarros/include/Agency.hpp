@@ -11,6 +11,7 @@ public:
 public:   
     Agency(std::string agencyId, std::string locality,double Revenue);
     void SumRevenue(double salesrevenue);
+    void getAgency();
 };
 
 #endif //AGENCY_HPP
