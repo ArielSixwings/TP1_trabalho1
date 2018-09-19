@@ -7,7 +7,8 @@ void Client::SetClient(std::string CustomerLogin, std::string CustomerPassword){
 	this->CustomerPassword = CustomerPassword;
 }
 
-Client::Client(std::string CPF,std::string Name, int Age, std::string CustomerLogin, std::string CustomerPassword) : Person(CPF, Age, Name){
+Client::Client(std::string CPF,std::string Name, int Age, std::string CustomerLogin, std::string CustomerPassword)
+	: Person(CPF, Age, Name){
 	SetClient(CustomerLogin, CustomerPassword);
 }
 

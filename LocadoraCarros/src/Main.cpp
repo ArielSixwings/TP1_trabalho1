@@ -30,17 +30,19 @@ int main(){
 	Agency A1("074","Aeroporto de Brasília, Juscelino Kubitschek, BSB, Brasil",0.0);
 	Agency A2("893","Q CSD 06 LOTE 34 LOJA 01, St. D Sul - TAGUATINGA SUL, Brasília - DF, 72020-065",0.0);
 	Agency A3("182","St. A Sul QSA 20 - Taguatinga, Brasília - DF, 72015-200",0.0);
+	
+	A1.startSalesMonth();
 	Agencys.push_back(A1);
 	Agencys.push_back(A2);
 	Agencys.push_back(A3);
 
 	// Creating basic vehicles
 	Vehicle V1(0, "VEG4064", "RED", "ALCOHOL", "3KI8S30KMN14IOM40",
-		 2015, 4, 923844, "00184729834",103.5,93.15);
+		 2015, 4, 923844.0, "00184729834",103.5,93.15);
 	Vehicle V2(1, "GTX1070", "BLUE", "GASOLINE", "2MX0P1KL3USKDNZPI",
-		 1999, 4, 10000, "00948571274",93.7,84.33);
+		 1999, 4, 10000.0, "00948571274",93.7,84.33);
 	Vehicle V3(2, "RTX2080", "PINK WITH GREEN STRIPES", "ELETRIC", "0I59D03HBAMM3JU8K",
-		 2018, 7, 0, "00937458192",82.9,74.61);
+		 2018, 7, 0.0, "00937458192",82.9,74.61);
 	Cars.push_back(V1);
 	Cars.push_back(V2);
 	Cars.push_back(V3);
@@ -109,7 +111,8 @@ int main(){
 				int days = Queue[i].howmanydays();
 				double salesrevenue = days * Cars[Alocated[i].Key].Priceperperiod;
 				double index = AgencysIdmap.at(Queue[i].Agency);
-				Agencys[index].SumRevenue(salesrevenue);
+				Agencys[index].sumRevenue(salesrevenue);
+				Agency::sumGeneralRevenue(salesrevenue);
 				Cars[Alocated[i].Key].Alocated = true;
 			}
 			else{
@@ -125,7 +128,7 @@ int main(){
 		for(auto a : Agencys){
 			a.getAgency();
 		}
-
+		Agency::getGeneralData();
 		return 0;
 	case 1:
 

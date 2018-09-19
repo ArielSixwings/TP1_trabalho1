@@ -8,7 +8,9 @@ void Employee::SetEmployee(int salary,std::string employeelogin,std::string empl
     this->employeepassword = employeepassword;
 }
 
-Employee::Employee(std::string CPF,std::string Name, int Age, int salary,std::string employeelogin,std::string employeepassword) : Person(CPF, Age, Name){
+Employee::Employee(std::string CPF,std::string Name, int Age, 
+	int salary,std::string employeelogin,std::string employeepassword) 
+	: Person(CPF, Age, Name){
 	SetEmployee(salary, employeelogin, employeepassword);
 }
 

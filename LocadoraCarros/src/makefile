@@ -19,7 +19,7 @@ $(ODIR)/%.o: %.cpp $(DEPS)
 	$(CC) -c -o $@ $< $(CFLAGS)
 
 Atividade1: $(OBJ)
-	$(CC) -o $@ $^ $(CFLAGS) $(LIBS) -Wall
+	$(CC) -o $@ $^ $(CFLAGS) $(LIBS) -Wall -g
 	
 .PHONY: clean
 

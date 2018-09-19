@@ -3,7 +3,7 @@
 #include "Vehicles.hpp"
 
 Vehicle::Vehicle(int key, std::string board, std::string color,std::string typefuel, 
-	std::string chassi, int year, int howmanydoors, int distance, 
+	std::string chassi, int year, int howmanydoors, double distance, 
 	std::string RENAVAM, double Priceperday, double Priceperperiod)
 {
 	this->Alocated = false;
