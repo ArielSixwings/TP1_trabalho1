@@ -4,6 +4,15 @@
 #include <exception>
 #include <string>
 
-int VerifyInputs();
+class ExceptionsInputs{
+public:
+	int x;
+	int y;
+public:
+	ExceptionsInputs(int a, int b);
+	static int VerifyInputs(int a, int b);
+};
+
+int VerifyTypeInputs();
 
 #endif /* EXCEPTIONS_HPP */

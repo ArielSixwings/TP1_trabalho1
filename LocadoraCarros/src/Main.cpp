@@ -21,11 +21,13 @@ int main(){
 	std::string check, auxId;;
 
 	// Program
+	std::vector <int> Available;
 	std::vector <Vehicle> Cars;
 	int i, which, howmany;
 	std::vector <Alocation> Queue;
 	std::vector <Vehicle> Alocated;
 	std::vector <Agency> Agencys;
+
 	//Creating basic Agencys
 	Agency A1("074","Aeroporto de Brasília, Juscelino Kubitschek, BSB, Brasil",0.0);
 	Agency A2("893","Q CSD 06 LOTE 34 LOJA 01, St. D Sul - TAGUATINGA SUL, Brasília - DF, 72020-065",0.0);
@@ -43,6 +45,7 @@ int main(){
 		 1999, 4, 10000.0, "00948571274",93.7,84.33);
 	Vehicle V3(2, "RTX2080", "PINK WITH GREEN STRIPES", "ELETRIC", "0I59D03HBAMM3JU8K",
 		 2018, 7, 0.0, "00937458192",82.9,74.61);
+
 	Cars.push_back(V1);
 	Cars.push_back(V2);
 	Cars.push_back(V3);
@@ -53,6 +56,7 @@ int main(){
 	Employee* P02 = new Employee("00000000000", "Ariel", 19, 5000, "Pivosinho", "tururu");
 	Client* CL1 = new Client("34956918320", "Pedro", 22, "BJ", "ia");
 	Client* CL2 = new Client("28359481723", "Victor", 19, "Cubo", "cachorro");
+
 	People.push_back(P01);
 	People.push_back(P02);
 	People.push_back(CL1);
@@ -66,11 +70,9 @@ int main(){
 	std::cout <<"Funcionário - 1" << std::endl;
 	std::cout << std::endl;
 	std::cout << "Opção: ";
-	
-	option = VerifyInputs();
-
-
+	option = VerifyTypeInputs();
 	std::cout << std::endl;
+
 	switch(option){
 
 	case 0:
@@ -86,7 +88,7 @@ int main(){
 
 		for(i = 0; i < howmany; i++){
 			std::cout<<"Insira a chave do veículo: ";
-			std::cin>>which;
+			which = ExceptionsInputs::VerifyInputs(0, howmany);
 			Alocated.push_back(Cars[which]);
 		}
 
@@ -96,7 +98,7 @@ int main(){
 			std::cout<<"Período  -  0" <<std::endl;
 			std::cout<<"Diária   -  1" <<std::endl;
 			std::cout<<"Opção: ";
-			std::cin>>option;
+			option = VerifyTypeInputs();
 			int auxid = 0;
 			for(auto a : Agencys){
 				 
@@ -140,7 +142,7 @@ int main(){
 			std::cout<<"Criar veículos            -  0" <<std::endl;
 			std::cout<<"Ver lista de usuários     -  1" <<std::endl;
 			std::cout<<"Opção: ";
-			std::cin>>option;
+			option = VerifyTypeInputs();
 			std::cout<< std::endl;
 			if(option == 0){
 				std::cout<<"Quantos veículos serão criados: " << std::endl;

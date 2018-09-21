@@ -1,6 +1,30 @@
 #include "Exceptions.hpp"
 
-int VerifyInputs(){
+ExceptionsInputs::ExceptionsInputs(int a, int b){
+	this->x = a;
+	this->y = b;
+}
+
+int ExceptionsInputs::VerifyInputs(int a, int b){
+	int given, aux;
+	do{
+		try{
+			std::cin>>given;
+			if(given < a || given > b){
+				throw ExceptionsInputs(a, b);
+			}else{
+				aux = 0;
+			}
+		}
+		catch(ExceptionsInputs& ex){
+			std::cout<<"Insira um valor dentro do intervalo: ";
+			aux = -1;
+		}
+	}while(aux < 0);
+	return given;
+}
+
+int VerifyTypeInputs(){
 	std::string option_aux;
 	int option;
 	do{
