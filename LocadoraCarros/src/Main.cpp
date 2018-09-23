@@ -21,7 +21,6 @@ int main(){
 	std::string check, auxId;;
 
 	// Program
-	std::vector <int> Available;
 	std::vector <Vehicle> Cars;
 	int i, which, howmany;
 	std::vector <Alocation> Queue;

@@ -24,6 +24,62 @@ int ExceptionsInputs::VerifyInputs(int a, int b){
 	return given;
 }
 
+std::string ExceptionsInputs::VerifyExactInputs(unsigned int a, int which){
+	int aux;
+	std::string word;
+	switch (which){
+		case PLACA:
+			do{
+				try{
+					std::cin>>word;
+					if(word.length() < a || word.length() > a){
+						throw ExceptionsInputs(a, 0);
+					}else{
+						aux = 0;
+					}
+				}
+				catch(ExceptionsInputs& ex){
+					std::cout<<"Insira algo com " << a << " caracteres: ";
+					aux = -1;
+				}
+			}while(aux < 0);
+			return word;
+		case CHASSI:
+			do{
+				try{
+					std::cin>>word;
+					if(word.length() < a || word.length() > a){
+						throw ExceptionsInputs(a, 0);
+					}else{
+						aux = 0;
+					}
+				}
+				catch(ExceptionsInputs& ex){
+					std::cout<<"Insira algo com " << a << " caracteres: ";
+					aux = -1;
+				}
+			}while(aux < 0);
+			return word;
+		case RENAVAM:
+			do{
+				try{
+					std::cin>>word;
+					if(word.length() < a || word.length() > a){
+						throw ExceptionsInputs(a, 0);
+					}else{
+						aux = 0;
+					}
+				}
+				catch(ExceptionsInputs& ex){
+					std::cout<<"Insira algo com " << a << " caracteres: ";
+					aux = -1;
+				}
+			}while(aux < 0);
+			return word;
+	}
+	return "0";
+}
+
 int VerifyTypeInputs(){
 	std::string option_aux;
 	int option;
@@ -34,7 +90,7 @@ int VerifyTypeInputs(){
 		}
 		catch(std::invalid_argument &exc){
 			std::cout<<std::endl;
-			std::cout<<"Insira alguma das opções: ";
+			std::cout<<"Insira algo do tipo inteiro: ";
 			option = -1;
 		}
 	}while(option < 0);

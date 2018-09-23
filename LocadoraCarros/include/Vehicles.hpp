@@ -15,7 +15,7 @@ public:
 	int Year;
 	int Howmanydoors;
 	double Distance;
-	std::string RENAVAM;
+	std::string Renavam;
 	double Priceperday;
 	double Priceperperiod;
 public:

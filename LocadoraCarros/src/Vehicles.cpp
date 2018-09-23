@@ -1,10 +1,11 @@
 #include <iostream>
 #include <string>
 #include "Vehicles.hpp"
+#include "Exceptions.hpp"
 
 Vehicle::Vehicle(int key, std::string board, std::string color,std::string typefuel, 
 	std::string chassi, int year, int howmanydoors, double distance, 
-	std::string RENAVAM, double Priceperday, double Priceperperiod)
+	std::string Renavam, double Priceperday, double Priceperperiod)
 {
 	this->Alocated = false;
 	this->Key = key;
@@ -15,7 +16,7 @@ Vehicle::Vehicle(int key, std::string board, std::string color,std::string typef
 	this->Year = year;
 	this->Howmanydoors = howmanydoors;
 	this->Distance = distance;
-	this->RENAVAM = RENAVAM;
+	this->Renavam = RENAVAM;
 	this->Priceperday = Priceperday;
 	this->Priceperperiod = Priceperperiod;
 }
@@ -25,21 +26,21 @@ Vehicle::Vehicle(int i){
 	this->Key = i;
 	std::cout<<"Veículo " << i << std::endl;
 	std::cout<<"Placa: ";
-	std::cin>>this->Board;
+	this->Board = ExceptionsInputs::VerifyExactInputs(6, PLACA);
 	std::cout<<"Cor: ";
 	std::cin>>this->Color;
 	std::cout<<"Tipo de Combustível: ";
 	std::cin>>this->TypeFuel;
 	std::cout<<"Chassi: ";
-	std::cin>>this->Chassi;
+	this->Chassi = ExceptionsInputs::VerifyExactInputs(17, CHASSI);
 	std::cout<<"Ano de Fabricação: ";
-	std::cin>>this->Year;
+	this->Year = VerifyTypeInputs();
 	std::cout<<"Número de Portas: ";
-	std::cin>>this->Howmanydoors;
+	this->Howmanydoors = VerifyTypeInputs();
 	std::cout<<"Quilometragem: ";
-	std::cin>>this->Distance;
+	this->Distance = VerifyTypeInputs();
 	std::cout<<"RENAVAM: ";
-	std::cin>>this->RENAVAM;
+	this->Renavam = ExceptionsInputs::VerifyExactInputs(11, RENAVAM);
 	std::cout << std::endl;
 }
 
@@ -59,7 +60,7 @@ void Vehicle::getVehicle(){
 	std::cout<<"Ano de Fabricação: " << Year << std::endl;
 	std::cout<<"Número de Portas: " << Howmanydoors << std::endl;
 	std::cout<<"Quilometragem: " << Distance << std::endl;
-	std::cout<<"RENAVAM: " << RENAVAM << std::endl;
+	std::cout<<"RENAVAM: " << Renavam << std::endl;
 	std::cout<<"Preço de alocação por dia: "<< Priceperday << std::endl;
 	std::cout<<"Preço de alocação por período: "<< Priceperperiod << std::endl;
 	std::cout << std::endl;
