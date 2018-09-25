@@ -60,7 +60,7 @@ void Vehicle::getVehicle(){
 	std::cout<<"Ano de Fabricação: " << Year << std::endl;
 	std::cout<<"Número de Portas: " << Howmanydoors << std::endl;
 	std::cout<<"Quilometragem: " << Distance << std::endl;
-	std::cout<<"RENAVAM: " << Renavam << std::endl;
+	std::cout<<"RENAVAM: " << this->Renavam << std::endl;
 	std::cout<<"Preço de alocação por dia: "<< Priceperday << std::endl;
 	std::cout<<"Preço de alocação por período: "<< Priceperperiod << std::endl;
 	std::cout << std::endl;

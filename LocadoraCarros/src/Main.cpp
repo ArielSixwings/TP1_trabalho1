@@ -87,7 +87,7 @@ int main(){
 
 		for(i = 0; i < howmany; i++){
 			std::cout<<"Insira a chave do veículo: ";
-			which = ExceptionsInputs::VerifyInputs(0, howmany);
+			which = ExceptionsInputs::VerifyInputs(0, Cars.size());
 			Alocated.push_back(Cars[which]);
 		}
 
