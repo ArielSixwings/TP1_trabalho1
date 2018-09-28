@@ -2,6 +2,7 @@
 #include <vector>
 #include <string>
 #include <map>
+#include <cstdlib>
 #include "Person.hpp"
 #include "Employee.hpp"
 #include "Client.hpp"
@@ -61,132 +62,181 @@ int main(){
 	People.push_back(CL1);
 	People.push_back(CL2);
 	
-
 	// Menu
-	std::cout <<"Escolha o tipo de usuário:" << std::endl;
+	MENU:
+	std::cout <<"Menu" << std::endl;
 	std::cout << std::endl;
-	std::cout <<"Cliente     - 0" << std::endl;
-	std::cout <<"Funcionário - 1" << std::endl;
+	std::cout <<"Executar Programa     - 0" << std::endl;
+	std::cout <<"Finalizar Programa    - 1" << std::endl;
 	std::cout << std::endl;
 	std::cout << "Opção: ";
 	option = VerifyTypeInputs();
 	std::cout << std::endl;
 
 	switch(option){
-
-	case 0:
-
-		std::cout<< "Veículos Disponíveis: " << std::endl << std::endl;
-		for(auto c : Cars){
-			c.getVehicle();
-		}
-
-		std::cout<<"Quantos veículos desejam-se alugar?" << std::endl;
-		std::cin>>howmany;
-
-
-		for(i = 0; i < howmany; i++){
-			std::cout<<"Insira a chave do veículo: ";
-			which = ExceptionsInputs::VerifyInputs(0, Cars.size());
-			Alocated.push_back(Cars[which]);
-		}
-
-
-		for(i = 0; i < howmany; i++){
-			std::cout<<"\nEscolha o tipo de alocação para o carro "<< Alocated[i].Key <<std::endl;
-			std::cout<<"Período  -  0" <<std::endl;
-			std::cout<<"Diária   -  1" <<std::endl;
-			std::cout<<"Opção: ";
+		case 0:
+			// SubMenu
+			std::cout <<"Escolha o tipo de usuário:" << std::endl;
+			std::cout << std::endl;
+			std::cout <<"Cliente     - 0" << std::endl;
+			std::cout <<"Funcionário - 1" << std::endl;
+			std::cout << std::endl;
+			std::cout << "Opção: ";
 			option = VerifyTypeInputs();
-			int auxid = 0;
-			for(auto a : Agencys){
-				 
-				std::cout<< "Agencia: " << auxid <<" identificação: "<<a.agencyId<<std::endl;
-				auxid++; 
-			}
-			std::cout<<"Insira a identificação da agencia: ";
-			std::cin>>auxId;
-			if(option == 0){
-				Alocation aux(Alocated[i].Key,auxId,true);
-				Queue.push_back(aux);
-				int days = Queue[i].howmanydays();
-				double salesrevenue = days * Cars[Alocated[i].Key].Priceperperiod;
-				double index = AgencysIdmap.at(Queue[i].Agency);
-				Agencys[index].sumRevenue(salesrevenue);
-				Agency::sumGeneralRevenue(salesrevenue);
-				Cars[Alocated[i].Key].Alocated = true;
-			}
-			else{
-				Alocation aux(Alocated[i].Key,auxId,false);
-				Queue.push_back(aux);
-				Cars[Alocated[i].Key].Alocated = true;	
-			}
-		}
-		
-		for(auto c : Queue){
-			c.getAlocation();
-		}
-		for(auto a : Agencys){
-			a.getAgency();
-		}
-		Agency::getGeneralData();
-		return 0;
-	case 1:
+			std::cout << std::endl;
 
-		std::cout<<"Insira a Senha de Acesso: ";
-		std::cout << std::endl;
-		std::cin >>check;
-		if(check == "ECEM"){
-			std::cout<<"\nAções disponíveis"<< std::endl;
-			std::cout<<"Criar veículos            -  0" <<std::endl;
-			std::cout<<"Ver lista de usuários     -  1" <<std::endl;
-			std::cout<<"Opção: ";
-			option = VerifyTypeInputs();
-			std::cout<< std::endl;
-			if(option == 0){
-				std::cout<<"Quantos veículos serão criados: " << std::endl;
+			switch(option){
+
+			case 0:
+
+				std::cout<< "Veículos Disponíveis: " << std::endl << std::endl;
+				for(auto c : Cars){
+					c.getVehicle();
+				}
+
+				std::cout<<"Quantos veículos desejam-se alugar?" << std::endl;
 				std::cin>>howmany;
+
+
 				for(i = 0; i < howmany; i++){
-					Vehicle aux(i);
-					Cars.push_back(aux);
+					std::cout<<"Insira a chave do veículo: ";
+					which = ExceptionsInputs::VerifyInputs(0, Cars.size());
+					Alocated.push_back(Cars[which]);
 				}
-			}				
-			if(option == 1){
-				for(i = 0; i < (int)People.size(); i++){
-					if(People[i]->ReturnType() == 1){
-						Client* c1 = (Client*)People[i];
-						c1->ShowInformation();
+
+
+				for(i = 0; i < howmany; i++){
+					std::cout<<"\nEscolha o tipo de alocação para o carro "<< Alocated[i].Key <<std::endl;
+					std::cout<<"Período  -  0" <<std::endl;
+					std::cout<<"Diária   -  1" <<std::endl;
+					std::cout<<"Opção: ";
+					option = VerifyTypeInputs();
+					int auxid = 0;
+					for(auto a : Agencys){
+						 
+						std::cout<< "Agencia: " << auxid <<" identificação: "<<a.agencyId<<std::endl;
+						auxid++; 
 					}
-					if(People[i]->ReturnType() == 2){
-						Employee* c1 = (Employee*)People[i];
-						c1->ShowInformation();
+					std::cout<<"Insira a identificação da agencia: ";
+					std::cin>>auxId;
+					if(option == 0){
+						Alocation aux(Alocated[i].Key,auxId,true);
+						Queue.push_back(aux);
+						int days = Queue[i].howmanydays();
+						double salesrevenue = days * Cars[Alocated[i].Key].Priceperperiod;
+						double index = AgencysIdmap.at(Queue[i].Agency);
+						Agencys[index].sumRevenue(salesrevenue);
+						Agency::sumGeneralRevenue(salesrevenue);
+						Cars[Alocated[i].Key].Alocated = true;
+					}
+					else{
+						Alocation aux(Alocated[i].Key,auxId,false);
+						Queue.push_back(aux);
+						Cars[Alocated[i].Key].Alocated = true;	
 					}
 				}
+				
+				for(auto c : Queue){
+					c.getAlocation();
+				}
+				for(auto a : Agencys){
+					a.getAgency();
+				}
+				Agency::getGeneralData();
+				std::cout << std::endl;
+				std::cout<<"Pressione qualquer tecla para continuar...";
+				getchar();
+				getchar();
+				system("clear");
+				goto MENU;
+			case 1:
+
+				std::cout<<"Insira a Senha de Acesso: ";
+				std::cout << std::endl;
+				std::cin >>check;
+				if(check == "ECEM"){
+					std::cout<<"\nAções disponíveis"<< std::endl;
+					std::cout<<"Inserir veículos            -  0" <<std::endl;
+					std::cout<<"Inserir usuários            -  1" <<std::endl;
+					std::cout<<"Ver lista de usuários       -  2" <<std::endl;
+					std::cout<<"Opção: ";
+					option = VerifyTypeInputs();
+					std::cout<< std::endl;
+					if(option == 0){
+						std::cout<<"Quantos veículos serão inseridos: " << std::endl;
+						std::cin>>howmany;
+						for(i = 0; i < howmany; i++){
+							Vehicle aux(i);
+							Cars.push_back(aux);
+						}
+						std::cout << std::endl;
+						std::cout<<"Pressione qualquer tecla para continuar...";
+						getchar();
+						getchar();
+						system("clear");
+						goto MENU;
+					}
+					if(option == 1){
+						std::cout<<"Quantos usuários serão inseridos: " << std::endl;
+						std::cin>>howmany;
+						for(i = 0; i < howmany; i++){
+							std::cout << std::endl;
+							std::cout<<"Usuário " << i << std::endl;
+							std::cout<<"Cliente         -  0" <<std::endl;
+							std::cout<<"Funcionário     -  1" <<std::endl;
+							std::cout<<"Tipo de usuário: ";
+							option = VerifyTypeInputs();
+							if(option == 0){
+								std::cout << std::endl;
+								Client* aux = new Client();
+								People.push_back(aux);
+							}
+							if(option == 1){
+								std::cout << std::endl;
+								Employee* aux = new Employee();
+								People.push_back(aux);
+							}
+							if(option != 0 && option != 1){
+								goto MENU;
+							}
+						}
+						std::cout << std::endl;
+						std::cout<<"Pressione qualquer tecla para continuar..." << std::endl;
+						getchar();
+						getchar();
+						system("clear");
+						goto MENU;
+					}
+					if(option == 2){
+						for(i = 0; i < (int)People.size(); i++){
+							if(People[i]->ReturnType() == 1){
+								Client* c1 = (Client*)People[i];
+								c1->ShowInformation();
+								std::cout << std::endl;
+							}
+							if(People[i]->ReturnType() == 2){
+								Employee* c1 = (Employee*)People[i];
+								c1->ShowInformation();
+								std::cout << std::endl;
+							}
+						}
+						std::cout << std::endl;
+						std::cout<<"Pressione qualquer tecla para continuar..." << std::endl;
+						getchar();
+						getchar();
+						system("clear");
+						goto MENU;
+					}
+					else{
+						goto MENU;
+					}
+				}
+			default:
+				goto MENU;
 			}
-		}
-
-		return 0;
-	default:
-		return 0;
+		case 1:
+			return 0;
+		default:
+			return 0;
 	}
-
-	// ex.getVehicle();
-	// int* AlocationData = new int[3];
-	// AlocationData[0] = 12;
-	// AlocationData[1] = 06;
-	// AlocationData[2] = 1206;
-	// int* AlocationHour = new int[2];
-	// AlocationHour[0] = 15;
-	// AlocationHour[1] = 45;
-	// int* DevolutionData = new int[3];
-	// DevolutionData[0] = 12;
-	// DevolutionData[1] = 06;
-	// DevolutionData[2] = 1306;
-	// int* DevolutionHour = new int[2];
-	// DevolutionHour[0] = 15;
-	// DevolutionHour[1] = 46;
-	// Alocation ExState = ex.Alocate(AlocationData, AlocationHour, DevolutionData, DevolutionHour);
-	// ex.getVehicle();
-	// ExState.getAlocation();
-	return 0;
 }

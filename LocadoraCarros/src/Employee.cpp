@@ -25,3 +25,12 @@ void Employee::ShowInformation(){
 int Employee::ReturnType(){
 	return 2;
 }
+
+Employee::Employee(){
+	std::cout<<"Salário: ";
+	std::cin>>this->salary;
+	std::cout<<"Login de Funcionário: ";
+	std::cin>>this->employeelogin;
+	std::cout<<"Senha de Funcionário: ";
+	std::cin>>this->employeepassword;
+}

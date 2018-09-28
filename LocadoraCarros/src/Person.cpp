@@ -9,11 +9,11 @@ Person::Person(std::string CPF, int Age, std::string Name){
 }
 
 Person::Person(){
-	std::cout<<"Insira seu CPF: " << std::endl;
+	std::cout<<"CPF: ";
 	std::cin >> this->CPF;
-	std::cout<<"Insira sua Idade: " << std::endl;
+	std::cout<<"Idade: ";
 	std::cin>> this->Age;
-	std::cout<<"Insira seu Nome: " << std::endl;
+	std::cout<<"Nome: ";
 	std::cin>>this->Name;
 }
 

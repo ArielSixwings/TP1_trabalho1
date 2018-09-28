@@ -10,6 +10,7 @@ public:
 public:
 	using Person::Person;
 	Client(std::string CPF,std::string Name, int Age, std::string CustomerLogin, std::string CustomerPassword);
+	Client();
 	void SetClient(std::string CustomerLogin, std::string CustomerPassword);
 	void ShowInformation() override;
 	int ReturnType() override;

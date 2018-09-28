@@ -22,3 +22,10 @@ void Client::ShowInformation(){
 int Client::ReturnType(){
 	return 1;
 }
+
+Client::Client(){
+	std::cout<<"Login de Cliente: ";
+	std::cin>>this->CustomerLogin;
+	std::cout<<"Senha de Cliente: ";
+	std::cin>>this->CustomerPassword;
+}

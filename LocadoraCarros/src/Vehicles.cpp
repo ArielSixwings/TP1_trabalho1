@@ -26,7 +26,7 @@ Vehicle::Vehicle(int i){
 	this->Key = i;
 	std::cout<<"Veículo " << i << std::endl;
 	std::cout<<"Placa: ";
-	this->Board = ExceptionsInputs::VerifyExactInputs(6, PLACA);
+	this->Board = ExceptionsInputs::VerifyExactInputs(7, PLACA);
 	std::cout<<"Cor: ";
 	std::cin>>this->Color;
 	std::cout<<"Tipo de Combustível: ";
@@ -41,6 +41,10 @@ Vehicle::Vehicle(int i){
 	this->Distance = VerifyTypeInputs();
 	std::cout<<"RENAVAM: ";
 	this->Renavam = ExceptionsInputs::VerifyExactInputs(11, RENAVAM);
+	std::cout<<"Preço de alocação por dia: ";
+	std::cin>>this->Priceperday;
+	std::cout<<"Preço de alocação por período: ";
+	std::cin>>this->Priceperperiod;
 	std::cout << std::endl;
 }
 
