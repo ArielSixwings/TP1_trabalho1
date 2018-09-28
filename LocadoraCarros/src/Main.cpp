@@ -126,7 +126,6 @@ int main(){
 						double salesrevenue = days * Cars[Alocated[i].Key].Priceperperiod;
 						double index = AgencysIdmap.at(Queue[i].Agency);
 						Agencys[index].sumRevenue(salesrevenue);
-						Agency::sumGeneralRevenue(salesrevenue);
 						Cars[Alocated[i].Key].Alocated = true;
 					}
 					else{
