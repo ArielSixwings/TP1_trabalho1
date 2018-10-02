@@ -3,6 +3,7 @@
 #include <iostream>
 #include <exception>
 #include <string>
+#include <map>
 
 const int PLACA   = 1;
 const int CHASSI  = 2;
@@ -21,6 +22,8 @@ public:
 	static int VerifyInputs(int a, int b);
 	//!verifica se a uma entrada do tipo string tem exatamente o número de caraacteres desejados
 	static std::string VerifyExactInputs(unsigned int a, int which);
+
+	static std::string VerifyAgencyId(std::map<std::string, int> AgencysIdmap);
 };
 
 int VerifyTypeInputs();

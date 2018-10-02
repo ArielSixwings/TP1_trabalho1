@@ -80,6 +80,26 @@ std::string ExceptionsInputs::VerifyExactInputs(unsigned int a, int which){
 	return "0";
 }
 
+std::string ExceptionsInputs::VerifyAgencyId(std::map<std::string, int> AgencysIdmap){
+	int aux;
+	std::string agencyid;
+	do{
+		try{
+			std::cin>>agencyid;
+			if(AgencysIdmap.find(agencyid) == AgencysIdmap.end()){
+				throw ExceptionsInputs(0,0);
+			}else{
+				aux = 0;
+			}
+		}
+		catch(ExceptionsInputs& ex){
+			std::cout<<"Insira um valor valido para a agencia "<<std::endl;
+			aux = -1;
+		}
+	}while(aux < 0);
+	return agencyid;		
+}
+
 int VerifyTypeInputs(){
 	std::string option_aux;
 	int option;
@@ -96,3 +116,4 @@ int VerifyTypeInputs(){
 	}while(option < 0);
 	return option;
 }
+

@@ -23,6 +23,7 @@ int main(){
 
 	// Program
 	std::vector <Vehicle> Cars;
+	//std::vector <int> 
 	int i, which, howmany;
 	std::vector <Alocation> Queue;
 	std::vector <Vehicle> Alocated;
@@ -122,15 +123,18 @@ int main(){
 					std::cout<<"Opção: ";
 					option = VerifyTypeInputs();
 					int auxid = 0;
+					std::string auxagencyid;
 					for(auto a : Agencys){
 						 
 						std::cout<< "Agencia: " << auxid <<" identificação: "<<a.agencyId<<std::endl;
 						auxid++; 
 					}
 					std::cout<<"Insira a identificação da agencia: ";
-					std::cin>>auxId;
+					
+					auxagencyid = ExceptionsInputs::VerifyAgencyId(AgencysIdmap);
+
 					if(option == 0){
-						Alocation aux(Alocated[i].Key,auxId,true);
+						Alocation aux(Alocated[i].Key,auxagencyid,true);
 						Queue.push_back(aux);
 						int days = Queue[i].howmanydays();
 						double salesrevenue = days * Cars[Alocated[i].Key].Priceperperiod;
@@ -139,7 +143,7 @@ int main(){
 						Cars[Alocated[i].Key].Alocated = true;
 					}
 					else{
-						Alocation aux(Alocated[i].Key,auxId,false);
+						Alocation aux(Alocated[i].Key,auxagencyid,false);
 						Queue.push_back(aux);
 						Cars[Alocated[i].Key].Alocated = true;	
 					}

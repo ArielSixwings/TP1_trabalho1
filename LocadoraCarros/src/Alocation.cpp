@@ -91,9 +91,6 @@ int Alocation::howmanydays()
 	if ( x != (std::time_t)(-1) && y != (std::time_t)(-1) )
     {
         difference = std::difftime(y, x) / (60 * 60 * 24);
-        std::cout << std::ctime(&x);
-        std::cout << std::ctime(&y);
-        std::cout << "difference = " << difference << " days" << std::endl;
     }
 	return difference;
 }
