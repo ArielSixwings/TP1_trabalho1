@@ -1,8 +1,13 @@
 #include "Exceptions.hpp"
+#include "Person.hpp"
 
 ExceptionsInputs::ExceptionsInputs(int a, int b){
 	this->x = a;
 	this->y = b;
+}
+
+ExceptionsInputs::ExceptionsInputs(std::string AUX){
+	this->aux = AUX;
 }
 
 int ExceptionsInputs::VerifyInputs(int a, int b){
@@ -76,6 +81,22 @@ std::string ExceptionsInputs::VerifyExactInputs(unsigned int a, int which){
 				}
 			}while(aux < 0);
 			return word;
+		case CPF:
+			do{
+				try{
+					std::cin>>word;
+					if(word.length() < a || word.length() > a){
+						throw ExceptionsInputs(a, 0);
+					}else{
+						aux = 0;
+					}
+				}
+				catch(ExceptionsInputs& ex){
+					std::cout<<"Insira algo com " << a << " caracteres: ";
+					aux = -1;
+				}
+			}while(aux < 0);
+			return word;
 	}
 	return "0";
 }
@@ -98,6 +119,27 @@ std::string ExceptionsInputs::VerifyAgencyId(std::map<std::string, int> AgencysI
 		}
 	}while(aux < 0);
 	return agencyid;		
+}
+
+std::string ExceptionsInputs::VerifyCPF(std::vector <Person*> People){
+	int aux;
+	std::string cpf;
+	do{
+		try{
+			std::cin>>cpf;
+			if(SearchInList(People, cpf) == 0){
+				throw ExceptionsInputs(cpf);
+			}
+			else{
+				aux = 0;
+			}
+		}
+		catch(ExceptionsInputs& ex){
+			std::cout<<"CPF não cadastrado, insira alguém cadastrado: "<<std::endl;
+			aux = -1;
+		}
+	}while(aux < 0);
+	return cpf;
 }
 
 int VerifyTypeInputs(){

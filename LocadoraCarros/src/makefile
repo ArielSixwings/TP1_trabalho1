@@ -7,10 +7,10 @@ LDIR =../lib
 
 LIBS=-lm
 
-_DEPS = Vehicles.hpp Alocation.hpp Person.hpp Client.hpp Agency.hpp Employee.hpp Exceptions.hpp
+_DEPS = Vehicles.hpp Alocation.hpp Person.hpp Client.hpp Agency.hpp Employee.hpp Exceptions.hpp Interface.hpp
 DEPS = $(patsubst %,$(IDIR)/%,$(_DEPS))
 
-_OBJ = Vehicles.o Alocation.o Main.o Person.o Client.o Agency.o Employee.o Exceptions.o
+_OBJ = Vehicles.o Alocation.o Main.o Person.o Client.o Agency.o Employee.o Exceptions.o Interface.o
 OBJ = $(patsubst %,$(ODIR)/%,$(_OBJ))
 
 all: Atividade1

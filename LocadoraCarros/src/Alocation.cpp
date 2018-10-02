@@ -1,5 +1,6 @@
 #include <iostream>
 #include "Alocation.hpp"
+#include "Exceptions.hpp"
 
 Alocation::Alocation(std::vector <int>  alocationData, std::vector <int>  alocationHour, std::vector <int>  devolutionData, std::vector <int>  devolutionHour){
 	this->AlocationData = alocationData;
@@ -9,14 +10,14 @@ Alocation::Alocation(std::vector <int>  alocationData, std::vector <int>  alocat
 }
 
 // se a alocação for por dia, a data e hora de devolução são inseridas posteriormente
-Alocation::Alocation(int which,std::string Agency,bool byperiod)
+Alocation::Alocation(int which,std::string Agency,bool byperiod, std::vector <Person*> People)
 {
 	int day, month, year, hour, minutes;
 	whichvehicle = which;
 	this->Agency = Agency;
 
 	std::cout<<"Insira a identificação do cliente(CPF): " ;
-	std::cin>>CustomerId;
+	CustomerId = ExceptionsInputs::VerifyCPF(People);
 	std::cout<<"Insira a o dia da data de alocação: ";
 	std::cin>>day;
 	AlocationData.push_back(day);

@@ -1,5 +1,6 @@
 #ifndef ALOCATION_HPP
 #define ALOCATION_HPP
+#include "Person.hpp"
 #include <vector>
 #include <string>
 #include <ctime>
@@ -18,7 +19,7 @@ public:
 public:
 	/*!construtor da classe,recebe informações do veículo, agencia e tipo de alocação 
 	e pede as demais informações ao cliente*/
-	Alocation(int which,std::string Agency,bool byperiod);
+	Alocation(int which,std::string Agency,bool byperiod, std::vector <Person*> People);
 	//!construtor da classe que já recebe todas as informações sobre a alocação
 	Alocation(std::vector <int> alocationData, std::vector <int>  alocationHour,
 	 std::vector <int>  devolutionData, std::vector <int>  devolutionHour);

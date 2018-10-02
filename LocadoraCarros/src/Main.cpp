@@ -10,6 +10,7 @@
 #include "Alocation.hpp"
 #include "Agency.hpp"
 #include "Exceptions.hpp"
+#include "Interface.hpp"
 
 const std::map<std::string, int> AgencysIdmap = {
   {"074",0},{"893",1},{"182",2}
@@ -57,11 +58,13 @@ int main(){
 	Employee* P02 = new Employee("00000000000", "Ariel", 19, 5000, "Pivosinho", "tururu");
 	Client* CL1 = new Client("34956918320", "Pedro", 22, "BJ", "ia");
 	Client* CL2 = new Client("28359481723", "Victor", 19, "Cubo", "cachorro");
+	Client* CL3 = new Client("23571113171", "Breno", 19, "AvestruzQueTeSeduz", "autovatores");
 
 	People.push_back(P01);
 	People.push_back(P02);
 	People.push_back(CL1);
 	People.push_back(CL2);
+	People.push_back(CL3);
 	
 	// Menu
 	MENU:
@@ -92,11 +95,8 @@ int main(){
 
 				option = VerifyRegistration(People);
 				if(option == -1 || option == 1){
-					std::cout<<"Cadastro do cliente não encontrado!" << std::endl;
-					std::cout<<"Pressione qualquer tecla para continuar...";
-					getchar();
-					getchar();
-					system("clear");
+					std::cout<<"Cadastro do cliente não encontrado!";
+					BackToMenu();
 					goto MENU;
 				}
 
@@ -134,7 +134,7 @@ int main(){
 					auxagencyid = ExceptionsInputs::VerifyAgencyId(AgencysIdmap);
 
 					if(option == 0){
-						Alocation aux(Alocated[i].Key,auxagencyid,true);
+						Alocation aux(Alocated[i].Key,auxagencyid,true, People);
 						Queue.push_back(aux);
 						int days = Queue[i].howmanydays();
 						double salesrevenue = days * Cars[Alocated[i].Key].Priceperperiod;
@@ -143,7 +143,7 @@ int main(){
 						Cars[Alocated[i].Key].Alocated = true;
 					}
 					else{
-						Alocation aux(Alocated[i].Key,auxagencyid,false);
+						Alocation aux(Alocated[i].Key,auxagencyid,false, People);
 						Queue.push_back(aux);
 						Cars[Alocated[i].Key].Alocated = true;	
 					}
@@ -156,21 +156,14 @@ int main(){
 				// 	a.getAgency();
 				// }
 				// Agency::getGeneralData();
-				std::cout << std::endl;
-				std::cout<<"Pressione qualquer tecla para continuar...";
-				getchar();
-				getchar();
-				system("clear");
+				BackToMenu();
 				goto MENU;
 			case 1:
 
 				option = VerifyRegistration(People);
 				if(option == -1 || option == 0){
-					std::cout<<"Cadastro do funcionário não encontrado!" << std::endl;
-					std::cout<<"Pressione qualquer tecla para continuar...";
-					getchar();
-					getchar();
-					system("clear");
+					std::cout<<"Cadastro do funcionário não encontrado!";
+					BackToMenu();
 					goto MENU;
 				}
 
@@ -191,11 +184,7 @@ int main(){
 						Vehicle aux(i);
 						Cars.push_back(aux);
 					}
-					std::cout << std::endl;
-					std::cout<<"Pressione qualquer tecla para continuar...";
-					getchar();
-					getchar();
-					system("clear");
+					BackToMenu();
 					goto MENU;
 				}
 				if(option == 1){
@@ -222,11 +211,7 @@ int main(){
 							goto MENU;
 						}
 					}
-					std::cout << std::endl;
-					std::cout<<"Pressione qualquer tecla para continuar..." << std::endl;
-					getchar();
-					getchar();
-					system("clear");
+					BackToMenu();
 					goto MENU;
 				}
 				if(option == 2){
@@ -234,11 +219,7 @@ int main(){
 					for(auto c : Cars){
 						c.getVehicle();
 					}
-					std::cout << std::endl;
-					std::cout<<"Pressione qualquer tecla para continuar..." << std::endl;
-					getchar();
-					getchar();
-					system("clear");
+					BackToMenu();
 					goto MENU;
 				}
 				if(option == 3){
@@ -254,22 +235,14 @@ int main(){
 							std::cout << std::endl;
 						}
 					}
-					std::cout << std::endl;
-					std::cout<<"Pressione qualquer tecla para continuar..." << std::endl;
-					getchar();
-					getchar();
-					system("clear");
+					BackToMenu();
 					goto MENU;
 				}
 				if(option == 4){
 						for(auto c : Queue){
 						c.getAlocation();
 					}
-					std::cout << std::endl;
-					std::cout<<"Pressione qualquer tecla para continuar..." << std::endl;
-					getchar();
-					getchar();
-					system("clear");
+					BackToMenu();
 					goto MENU;
 				}
 				else{

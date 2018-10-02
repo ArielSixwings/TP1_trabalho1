@@ -64,3 +64,12 @@ int VerifyRegistration(std::vector <Person*> People){
 	}
 	return -1;
 }
+
+int SearchInList(std::vector <Person*> People, std::string cpf){
+	for(auto c : People){
+		if(c->CPF == cpf){
+			return 1;
+		}
+	}
+	return 0;
+}
