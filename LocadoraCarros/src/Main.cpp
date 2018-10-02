@@ -148,10 +148,10 @@ int main(){
 				for(auto c : Queue){
 					c.getAlocation();
 				}
-				for(auto a : Agencys){
-					a.getAgency();
-				}
-				Agency::getGeneralData();
+				// for(auto a : Agencys){
+				// 	a.getAgency();
+				// }
+				// Agency::getGeneralData();
 				std::cout << std::endl;
 				std::cout<<"Pressione qualquer tecla para continuar...";
 				getchar();
@@ -176,6 +176,7 @@ int main(){
 				std::cout<<"Inserir usuários            -  1" <<std::endl;
 				std::cout<<"Ver lista de veículos       -  2" <<std::endl;
 				std::cout<<"Ver lista de usuários       -  3" <<std::endl;
+				std::cout<<"Ver alocações               -  4" <<std::endl;
 				std::cout<<"Opção: ";
 				option = VerifyTypeInputs();
 				std::cout<< std::endl;
@@ -248,6 +249,17 @@ int main(){
 							c1->ShowInformation();
 							std::cout << std::endl;
 						}
+					}
+					std::cout << std::endl;
+					std::cout<<"Pressione qualquer tecla para continuar..." << std::endl;
+					getchar();
+					getchar();
+					system("clear");
+					goto MENU;
+				}
+				if(option == 4){
+						for(auto c : Queue){
+						c.getAlocation();
 					}
 					std::cout << std::endl;
 					std::cout<<"Pressione qualquer tecla para continuar..." << std::endl;
