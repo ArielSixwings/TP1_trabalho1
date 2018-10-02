@@ -89,6 +89,16 @@ int main(){
 
 			case 0:
 
+				option = VerifyRegistration(People);
+				if(option == -1 || option == 1){
+					std::cout<<"Cadastro do cliente não encontrado!" << std::endl;
+					std::cout<<"Pressione qualquer tecla para continuar...";
+					getchar();
+					getchar();
+					system("clear");
+					goto MENU;
+				}
+
 				std::cout<< "Veículos Disponíveis: " << std::endl << std::endl;
 				for(auto c : Cars){
 					c.getVehicle();
@@ -150,85 +160,104 @@ int main(){
 				goto MENU;
 			case 1:
 
-				std::cout<<"Insira a Senha de Acesso: ";
-				std::cout << std::endl;
-				std::cin >>check;
-				if(check == "ECEM"){
-					std::cout<<"\nAções disponíveis"<< std::endl;
-					std::cout<<"Inserir veículos            -  0" <<std::endl;
-					std::cout<<"Inserir usuários            -  1" <<std::endl;
-					std::cout<<"Ver lista de usuários       -  2" <<std::endl;
-					std::cout<<"Opção: ";
-					option = VerifyTypeInputs();
-					std::cout<< std::endl;
-					if(option == 0){
-						std::cout<<"Quantos veículos serão inseridos: " << std::endl;
-						std::cin>>howmany;
-						for(i = 0; i < howmany; i++){
-							Vehicle aux(i);
-							Cars.push_back(aux);
-						}
-						std::cout << std::endl;
-						std::cout<<"Pressione qualquer tecla para continuar...";
-						getchar();
-						getchar();
-						system("clear");
-						goto MENU;
+				option = VerifyRegistration(People);
+				if(option == -1 || option == 0){
+					std::cout<<"Cadastro do funcionário não encontrado!" << std::endl;
+					std::cout<<"Pressione qualquer tecla para continuar...";
+					getchar();
+					getchar();
+					system("clear");
+					goto MENU;
+				}
+
+				
+				std::cout<<"\nAções disponíveis"<< std::endl;
+				std::cout<<"Inserir veículos            -  0" <<std::endl;
+				std::cout<<"Inserir usuários            -  1" <<std::endl;
+				std::cout<<"Ver lista de veículos       -  2" <<std::endl;
+				std::cout<<"Ver lista de usuários       -  3" <<std::endl;
+				std::cout<<"Opção: ";
+				option = VerifyTypeInputs();
+				std::cout<< std::endl;
+				if(option == 0){
+					std::cout<<"Quantos veículos serão inseridos: " << std::endl;
+					std::cin>>howmany;
+					for(i = 0; i < howmany; i++){
+						Vehicle aux(i);
+						Cars.push_back(aux);
 					}
-					if(option == 1){
-						std::cout<<"Quantos usuários serão inseridos: " << std::endl;
-						std::cin>>howmany;
-						for(i = 0; i < howmany; i++){
+					std::cout << std::endl;
+					std::cout<<"Pressione qualquer tecla para continuar...";
+					getchar();
+					getchar();
+					system("clear");
+					goto MENU;
+				}
+				if(option == 1){
+					std::cout<<"Quantos usuários serão inseridos: " << std::endl;
+					std::cin>>howmany;
+					for(i = 0; i < howmany; i++){
+						std::cout << std::endl;
+						std::cout<<"Usuário " << i << std::endl;
+						std::cout<<"Cliente         -  0" <<std::endl;
+						std::cout<<"Funcionário     -  1" <<std::endl;
+						std::cout<<"Tipo de usuário: ";
+						option = VerifyTypeInputs();
+						if(option == 0){
 							std::cout << std::endl;
-							std::cout<<"Usuário " << i << std::endl;
-							std::cout<<"Cliente         -  0" <<std::endl;
-							std::cout<<"Funcionário     -  1" <<std::endl;
-							std::cout<<"Tipo de usuário: ";
-							option = VerifyTypeInputs();
-							if(option == 0){
-								std::cout << std::endl;
-								Client* aux = new Client();
-								People.push_back(aux);
-							}
-							if(option == 1){
-								std::cout << std::endl;
-								Employee* aux = new Employee();
-								People.push_back(aux);
-							}
-							if(option != 0 && option != 1){
-								goto MENU;
-							}
+							Client* aux = new Client();
+							People.push_back(aux);
 						}
-						std::cout << std::endl;
-						std::cout<<"Pressione qualquer tecla para continuar..." << std::endl;
-						getchar();
-						getchar();
-						system("clear");
-						goto MENU;
-					}
-					if(option == 2){
-						for(i = 0; i < (int)People.size(); i++){
-							if(People[i]->ReturnType() == 1){
-								Client* c1 = (Client*)People[i];
-								c1->ShowInformation();
-								std::cout << std::endl;
-							}
-							if(People[i]->ReturnType() == 2){
-								Employee* c1 = (Employee*)People[i];
-								c1->ShowInformation();
-								std::cout << std::endl;
-							}
+						if(option == 1){
+							std::cout << std::endl;
+							Employee* aux = new Employee();
+							People.push_back(aux);
 						}
-						std::cout << std::endl;
-						std::cout<<"Pressione qualquer tecla para continuar..." << std::endl;
-						getchar();
-						getchar();
-						system("clear");
-						goto MENU;
+						if(option != 0 && option != 1){
+							goto MENU;
+						}
 					}
-					else{
-						goto MENU;
+					std::cout << std::endl;
+					std::cout<<"Pressione qualquer tecla para continuar..." << std::endl;
+					getchar();
+					getchar();
+					system("clear");
+					goto MENU;
+				}
+				if(option == 2){
+					std::cout<< "Veículos Disponíveis: " << std::endl << std::endl;
+					for(auto c : Cars){
+						c.getVehicle();
 					}
+					std::cout << std::endl;
+					std::cout<<"Pressione qualquer tecla para continuar..." << std::endl;
+					getchar();
+					getchar();
+					system("clear");
+					goto MENU;
+				}
+				if(option == 3){
+					for(i = 0; i < (int)People.size(); i++){
+						if(People[i]->ReturnType() == 1){
+							Client* c1 = (Client*)People[i];
+							c1->ShowInformation();
+							std::cout << std::endl;
+						}
+						if(People[i]->ReturnType() == 2){
+							Employee* c1 = (Employee*)People[i];
+							c1->ShowInformation();
+							std::cout << std::endl;
+						}
+					}
+					std::cout << std::endl;
+					std::cout<<"Pressione qualquer tecla para continuar..." << std::endl;
+					getchar();
+					getchar();
+					system("clear");
+					goto MENU;
+				}
+				else{
+					goto MENU;
 				}
 			default:
 				goto MENU;

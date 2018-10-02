@@ -5,7 +5,7 @@
 
 /*!subclasse de pessoa, possui também informações de login de senha*/
 class Client : public Person{
-
+public:
 	std::string CustomerLogin;
 	std::string CustomerPassword;
 	//!auxiliar, chamada pelo construtor para atribuir login e senha

@@ -4,6 +4,7 @@
 #include <string>
 /*!subclasse de pessoa, possui informações de login,senha e salário*/
 class Employee : public Person{
+public:
     int salary;
     std::string employeelogin;
     std::string employeepassword;

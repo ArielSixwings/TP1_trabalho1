@@ -7,6 +7,7 @@
 número total de vendas.
 */ 
 class Agency{
+public:
     static double generalrevenue;
     static double generalnumbersales; 
     std::string agencyId;

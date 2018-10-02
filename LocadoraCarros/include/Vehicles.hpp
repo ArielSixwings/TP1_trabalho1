@@ -10,6 +10,7 @@ public:
 	int Key;
 	int AlocationPrice;
 	bool Alocated;
+	std::string renavam;
 	std::string Board;
 	std::string Color;
 	std::string TypeFuel;
@@ -17,7 +18,6 @@ public:
 	int Year;
 	int Howmanydoors;
 	double Distance;
-	std::string Renavam;
 	double Priceperday;
 	double Priceperperiod;
 public:

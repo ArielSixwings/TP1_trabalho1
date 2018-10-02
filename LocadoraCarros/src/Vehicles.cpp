@@ -16,7 +16,7 @@ Vehicle::Vehicle(int key, std::string board, std::string color,std::string typef
 	this->Year = year;
 	this->Howmanydoors = howmanydoors;
 	this->Distance = distance;
-	this->Renavam = RENAVAM;
+	this->renavam = Renavam;
 	this->Priceperday = Priceperday;
 	this->Priceperperiod = Priceperperiod;
 }
@@ -40,7 +40,7 @@ Vehicle::Vehicle(int i){
 	std::cout<<"Quilometragem: ";
 	this->Distance = VerifyTypeInputs();
 	std::cout<<"RENAVAM: ";
-	this->Renavam = ExceptionsInputs::VerifyExactInputs(11, RENAVAM);
+	this->renavam = ExceptionsInputs::VerifyExactInputs(11, RENAVAM);
 	std::cout<<"Preço de alocação por dia: ";
 	std::cin>>this->Priceperday;
 	std::cout<<"Preço de alocação por período: ";
@@ -64,7 +64,7 @@ void Vehicle::getVehicle(){
 	std::cout<<"Ano de Fabricação: " << Year << std::endl;
 	std::cout<<"Número de Portas: " << Howmanydoors << std::endl;
 	std::cout<<"Quilometragem: " << Distance << std::endl;
-	std::cout<<"RENAVAM: " << this->Renavam << std::endl;
+	std::cout<<"RENAVAM: " << this->renavam << std::endl;
 	std::cout<<"Preço de alocação por dia: "<< Priceperday << std::endl;
 	std::cout<<"Preço de alocação por período: "<< Priceperperiod << std::endl;
 	std::cout << std::endl;
