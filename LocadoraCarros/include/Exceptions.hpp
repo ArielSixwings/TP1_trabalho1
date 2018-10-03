@@ -30,9 +30,7 @@ public:
 
 	static std::string VerifyCPF(std::vector <Person*> People);
 
-	static std::string VerifyBoardLettersInputs(std::string word);
-
-	static std::string VerifyBoardNumbersInputs(std::string word);
+	static void VerifyBoardInputs(std::string word, unsigned int a);
 
 	static std::string VerifyOnlyNumbersInputs(std::string word);
 
