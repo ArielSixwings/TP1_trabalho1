@@ -76,12 +76,14 @@ int main(){
 
 	// Creating basic people
 	std::vector <Person*> People;
-	Employee* P01 = new Employee("06462981199", "Eduardo", 19, 5000, "Rhaegal", "autovelores");
+	Employee* P00 = new Employee("29085746000", " Cristhian", 29, 10000, "TP1", "123");
+	Employee* P01 = new Employee("11111111111", "Eduardo", 19, 5000, "Rhaegal", "autovelores");
 	Employee* P02 = new Employee("00000000000", "Ariel", 19, 5000, "Pivosinho", "tururu");
 	Client* CL1 = new Client("34956918320", "Pedro", 22, "BJ", "ia");
 	Client* CL2 = new Client("28359481723", "Victor", 19, "Cubo", "cachorro");
 	Client* CL3 = new Client("23571113171", "Breno", 19, "AvestruzQueTeSeduz", "autovatores");
 
+	People.push_back(P00);
 	People.push_back(P01);
 	People.push_back(P02);
 	People.push_back(CL1);
@@ -132,6 +134,7 @@ int main(){
 					option = VerifyTypeInputs();
 					int auxid = 0;
 					std::string auxagencyid;
+					std::cout<< std::endl;
 					for(auto a : Agencys){
 						 
 						std::cout<< "Agencia " << auxid << std::endl << "Identificação: "<<a.agencyId<<std::endl;
@@ -142,7 +145,7 @@ int main(){
 					auxagencyid = ExceptionsInputs::VerifyAgencyId(AgencysIdmap);
 
 					if(option == 0){
-						Alocation aux(Alocated[i].Key,auxagencyid,true, People[who[1]]->CPF, Cars[i].Priceperperiod);
+						Alocation aux(Alocated[i].Key,auxagencyid,true, People[who[1]]->CPF, Cars[Alocated[i].Key].Priceperperiod);
 						Queue.push_back(aux);
 						int days = Queue[i].howmanydays();
 						double salesrevenue = days * Cars[Alocated[i].Key].Priceperperiod;
@@ -151,7 +154,7 @@ int main(){
 						Cars[Alocated[i].Key].Alocated = true;
 					}
 					else{
-						Alocation aux(Alocated[i].Key,auxagencyid,false, People[who[1]]->CPF, Cars[i].Priceperday);
+						Alocation aux(Alocated[i].Key,auxagencyid,false, People[who[1]]->CPF, Cars[Alocated[i].Key].Priceperday);
 						Queue.push_back(aux);
 						Cars[Alocated[i].Key].Alocated = true;	
 					}

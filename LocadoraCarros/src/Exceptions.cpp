@@ -119,7 +119,7 @@ std::string ExceptionsInputs::VerifyAgencyId(std::map<std::string, int> AgencysI
 			}
 		}
 		catch(ExceptionsInputs& ex){
-			std::cout<<"Insira um valor valido para a agencia "<<std::endl;
+			std::cout<<"Insira um valor valido para a agência: ";
 			aux = -1;
 		}
 	}while(aux < 0);
