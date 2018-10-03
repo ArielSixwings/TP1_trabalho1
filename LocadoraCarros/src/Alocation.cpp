@@ -51,12 +51,14 @@ Alocation::Alocation(int which,std::string Agency,bool byperiod, std::string cpf
 		std::cout<<"Insira os minutos de devolução: ";
 		minutes = VerifyTypeInputs();
 		DevolutionHour.push_back(minutes);
+		std::cout<< std::endl;
 		std::cout<<"Valor Total: " << (double)CalculateCost(price, 1)  << " reais" << std::endl;
 	}
 	else{
 		Type = "daily";
 		std::cout<<"Insira a quantidade de dias que se pretende alugar o veículo: ";
 		days = VerifyTypeInputs();
+		std::cout<< std::endl;
 		std::cout<<"Valor Total: " << (double)CalculateCost(price, 0) << " reais" << std::endl;
 	}
 

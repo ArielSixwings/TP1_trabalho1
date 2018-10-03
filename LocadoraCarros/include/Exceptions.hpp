@@ -35,6 +35,10 @@ public:
 	static std::string VerifyBoardNumbersInputs(std::string word);
 
 	static std::string VerifyOnlyNumbersInputs(std::string word);
+
+	static std::string VerifyBrandsInputs(std::vector <std::string> Brands);
+
+	static std::string VerifyModelsInputs(std::string Brand, std::vector <std::vector <std::string>> Models);
 };
 
 int VerifyTypeInputs();

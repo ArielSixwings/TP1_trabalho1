@@ -46,6 +46,7 @@ std::string ExceptionsInputs::VerifyExactInputs(unsigned int a, int which){
 							throw ExceptionsInputs(a, 0);
 						}
 						word = ExceptionsInputs::VerifyBoardNumbersInputs(word);
+						word = ExceptionsInputs::VerifyBoardLettersInputs(word);
 						if(word.length() < a || word.length() > a){
 							throw ExceptionsInputs(a, 0);
 						}
@@ -238,4 +239,78 @@ std::string ExceptionsInputs::VerifyOnlyNumbersInputs(std::string word){
 		}
 	}while(aux < 0);
 	return word;
+}
+
+std::string ExceptionsInputs::VerifyBrandsInputs(std::vector <std::string> Brands){
+	int aux = -1;
+	std::string word;
+	do{
+		try{
+			int i;
+			std::cin>>word;
+			for(i = 0; i < (int)Brands.size(); i++){
+				if(word == Brands[i]){
+					aux = 0;
+					break;
+				}
+			}
+			if(aux == -1){
+				throw ExceptionsInputs(word);
+			}
+		}
+		catch(ExceptionsInputs &ex){
+			std::cout<<std::endl;
+			std::cout<<"Insira uma marca listada: ";
+		}
+	}while(aux < 0);
+	return word;	
+}
+
+std::string ExceptionsInputs::VerifyModelsInputs(std::string Brand, std::vector <std::vector <std::string>> Models){
+	int aux = -1;
+	std::string word;
+	do{
+		try{
+			std::cin>>word;
+			if(Brand == "Chevrolet"){
+				if(word == Models[0][0] || word == Models[0][1] || word == Models[0][2]){
+					aux = 0;
+				}
+				else{
+					throw ExceptionsInputs(word);
+				}
+			}
+			if(Brand == "BMW"){
+				if(word == Models[1][0] || word == Models[1][1] || word == Models[1][2]){
+					aux = 0;
+				}
+				else{
+					throw ExceptionsInputs(word);
+				}
+			}
+			if(Brand == "Ford"){
+				if(word == Models[2][0] || word == Models[2][1] || word == Models[2][2]){
+					aux = 0;
+				}
+				else{
+					throw ExceptionsInputs(word);
+				}
+			}
+			if(Brand == "Tesla"){
+				if(word == Models[3][0] || word == Models[3][1] || word == Models[3][2]){
+					aux = 0;
+				}
+				else{
+					throw ExceptionsInputs(word);
+				}
+			}
+		}
+		catch(ExceptionsInputs &ex){
+			std::cout<<std::endl;
+			std::cout<<"Modelo " << ex.aux << " inserido não pertence a marca " << Brand << "!" << std::endl;
+			std::cout<<"Insira um modelo válido: ";
+			aux = -1;
+		}
+	}while(aux < 0);
+	return word;	
 }

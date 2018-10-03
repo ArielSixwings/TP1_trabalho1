@@ -26,9 +26,31 @@ int main(){
 	std::vector <int> who;
 	std::vector <Vehicle> Cars;
 	int i, which, howmany;
+	std::vector <std::string> Brands;
+	std::vector <std::vector <std::string>> Models(4, std::vector<std::string>(3));
 	std::vector <Alocation> Queue;
 	std::vector <Vehicle> Alocated;
 	std::vector <Agency> Agencys;
+
+	//Creating basic Brands
+	Brands.push_back("Chevrolet");
+	Brands.push_back("BMW");
+	Brands.push_back("Ford");
+	Brands.push_back("Tesla");
+
+	//Creating basic Models
+	Models[0][0] = "Agile";
+	Models[0][1] = "Tigra";
+	Models[0][2] = "Camaro";
+	Models[1][0] = "X1";
+	Models[1][1] = "M5";
+	Models[1][2] = "i3";
+	Models[2][0] = "Edge";
+	Models[2][1] = "Ecosport";
+	Models[2][2] = "Fusion";
+	Models[3][0] = "ModelS";
+	Models[3][1] = "ModelX";
+	Models[3][2] = "Model3";
 
 	//Creating basic Agencys
 	Agency A1("074","Aeroporto de Brasília, Juscelino Kubitschek, BSB, Brasil",0.0);
@@ -42,11 +64,11 @@ int main(){
 
 	// Creating basic vehicles
 	Vehicle V1(0, "VEG4064", "RED", "ALCOHOL", "3KI8S30KMN14IOM40",
-		 2015, 4, 923844.0, "00184729834",103.5,93.15);
+		 2015, 4, 923844.0, "00184729834", "Fusion", "Ford", 103.5,93.15);
 	Vehicle V2(1, "GTX1070", "BLUE", "GASOLINE", "2MX0P1KL3USKDNZPI",
-		 1999, 4, 10000.0, "00948571274",93.7,84.33);
+		 1999, 4, 10000.0, "00948571274", "Agile", "Chevrolet",93.7,84.33);
 	Vehicle V3(2, "RTX2080", "PINK WITH GREEN STRIPES", "ELETRIC", "0I59D03HBAMM3JU8K",
-		 2018, 7, 0.0, "00937458192",82.9,74.61);
+		 2018, 7, 0.0, "00937458192", "ModelS", "Tesla", 82.9,74.61);
 
 	Cars.push_back(V1);
 	Cars.push_back(V2);
@@ -112,7 +134,7 @@ int main(){
 					std::string auxagencyid;
 					for(auto a : Agencys){
 						 
-						std::cout<< "Agencia " << auxid <<" identificação: "<<a.agencyId<<std::endl;
+						std::cout<< "Agencia " << auxid << std::endl << "Identificação: "<<a.agencyId<<std::endl;
 						auxid++; 
 					}
 					std::cout<<"Insira a identificação da agência: ";
@@ -153,9 +175,10 @@ int main(){
 
 				if(option == 0){
 					std::cout<<"Quantos veículos serão inseridos: " << std::endl;
-					std::cin>>howmany;
-					for(i = 0; i < howmany; i++){
-						Vehicle aux(i);
+					howmany = VerifyTypeInputs();
+					int j = (int)Cars.size();
+					for(i = j; i < (j + howmany); i++){
+						Vehicle aux(i, Brands, Models);
 						Cars.push_back(aux);
 					}
 					BackToMenu();
