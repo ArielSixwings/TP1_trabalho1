@@ -23,8 +23,8 @@ int main(){
 	std::string check, auxId;;
 
 	// Program
+	std::vector <int> who;
 	std::vector <Vehicle> Cars;
-	//std::vector <int> 
 	int i, which, howmany;
 	std::vector <Alocation> Queue;
 	std::vector <Vehicle> Alocated;
@@ -68,24 +68,14 @@ int main(){
 	
 	// Menu
 	MENU:
-	std::cout <<"Menu" << std::endl;
-	std::cout << std::endl;
-	std::cout <<"Executar Programa     - 0" << std::endl;
-	std::cout <<"Finalizar Programa    - 1" << std::endl;
-	std::cout << std::endl;
-	std::cout << "Opção: ";
+	MainMenu();
 	option = VerifyTypeInputs();
 	std::cout << std::endl;
 
 	switch(option){
 		case 0:
 			// SubMenu
-			std::cout <<"Escolha o tipo de usuário:" << std::endl;
-			std::cout << std::endl;
-			std::cout <<"Cliente     - 0" << std::endl;
-			std::cout <<"Funcionário - 1" << std::endl;
-			std::cout << std::endl;
-			std::cout << "Opção: ";
+			SubMenu();
 			option = VerifyTypeInputs();
 			std::cout << std::endl;
 
@@ -93,18 +83,14 @@ int main(){
 
 			case 0:
 
-				option = VerifyRegistration(People);
-				if(option == -1 || option == 1){
+				who = VerifyRegistration(People);
+				if(who[0] == -1){
 					std::cout<<"Cadastro do cliente não encontrado!";
 					BackToMenu();
 					goto MENU;
 				}
-
-				std::cout<< "Veículos Disponíveis: " << std::endl << std::endl;
-				for(auto c : Cars){
-					c.getVehicle();
-				}
-
+				
+				AvailableVehicles(Cars);
 				std::cout<<"Quantos veículos desejam-se alugar?" << std::endl;
 				std::cin>>howmany;
 
@@ -126,15 +112,15 @@ int main(){
 					std::string auxagencyid;
 					for(auto a : Agencys){
 						 
-						std::cout<< "Agencia: " << auxid <<" identificação: "<<a.agencyId<<std::endl;
+						std::cout<< "Agencia " << auxid <<" identificação: "<<a.agencyId<<std::endl;
 						auxid++; 
 					}
-					std::cout<<"Insira a identificação da agencia: ";
+					std::cout<<"Insira a identificação da agência: ";
 					
 					auxagencyid = ExceptionsInputs::VerifyAgencyId(AgencysIdmap);
 
 					if(option == 0){
-						Alocation aux(Alocated[i].Key,auxagencyid,true, People);
+						Alocation aux(Alocated[i].Key,auxagencyid,true, People[who[1]]->CPF, Cars[i].Priceperperiod);
 						Queue.push_back(aux);
 						int days = Queue[i].howmanydays();
 						double salesrevenue = days * Cars[Alocated[i].Key].Priceperperiod;
@@ -143,40 +129,28 @@ int main(){
 						Cars[Alocated[i].Key].Alocated = true;
 					}
 					else{
-						Alocation aux(Alocated[i].Key,auxagencyid,false, People);
+						Alocation aux(Alocated[i].Key,auxagencyid,false, People[who[1]]->CPF, Cars[i].Priceperday);
 						Queue.push_back(aux);
 						Cars[Alocated[i].Key].Alocated = true;	
 					}
 				}
 				
-				for(auto c : Queue){
-					c.getAlocation();
-				}
-				// for(auto a : Agencys){
-				// 	a.getAgency();
-				// }
-				// Agency::getGeneralData();
+				AvailableAlocations(Queue);
 				BackToMenu();
 				goto MENU;
 			case 1:
 
-				option = VerifyRegistration(People);
-				if(option == -1 || option == 0){
+				who = VerifyRegistration(People);
+				if(who[0] == -1 || who[0] == 0){
 					std::cout<<"Cadastro do funcionário não encontrado!";
 					BackToMenu();
 					goto MENU;
 				}
 
-				
-				std::cout<<"\nAções disponíveis"<< std::endl;
-				std::cout<<"Inserir veículos            -  0" <<std::endl;
-				std::cout<<"Inserir usuários            -  1" <<std::endl;
-				std::cout<<"Ver lista de veículos       -  2" <<std::endl;
-				std::cout<<"Ver lista de usuários       -  3" <<std::endl;
-				std::cout<<"Ver alocações               -  4" <<std::endl;
-				std::cout<<"Opção: ";
+				EmployeeMenu();
 				option = VerifyTypeInputs();
 				std::cout<< std::endl;
+
 				if(option == 0){
 					std::cout<<"Quantos veículos serão inseridos: " << std::endl;
 					std::cin>>howmany;
@@ -188,60 +162,34 @@ int main(){
 					goto MENU;
 				}
 				if(option == 1){
-					std::cout<<"Quantos usuários serão inseridos: " << std::endl;
-					std::cin>>howmany;
-					for(i = 0; i < howmany; i++){
-						std::cout << std::endl;
-						std::cout<<"Usuário " << i << std::endl;
-						std::cout<<"Cliente         -  0" <<std::endl;
-						std::cout<<"Funcionário     -  1" <<std::endl;
-						std::cout<<"Tipo de usuário: ";
-						option = VerifyTypeInputs();
-						if(option == 0){
-							std::cout << std::endl;
-							Client* aux = new Client();
-							People.push_back(aux);
-						}
-						if(option == 1){
-							std::cout << std::endl;
-							Employee* aux = new Employee();
-							People.push_back(aux);
-						}
-						if(option != 0 && option != 1){
-							goto MENU;
-						}
+					option = UserCreation(&People);
+					if(option != 0 && option != 1){
+						goto MENU;
 					}
 					BackToMenu();
 					goto MENU;
 				}
 				if(option == 2){
-					std::cout<< "Veículos Disponíveis: " << std::endl << std::endl;
-					for(auto c : Cars){
-						c.getVehicle();
-					}
+					AvailableVehicles(Cars);
 					BackToMenu();
 					goto MENU;
 				}
 				if(option == 3){
-					for(i = 0; i < (int)People.size(); i++){
-						if(People[i]->ReturnType() == 1){
-							Client* c1 = (Client*)People[i];
-							c1->ShowInformation();
-							std::cout << std::endl;
-						}
-						if(People[i]->ReturnType() == 2){
-							Employee* c1 = (Employee*)People[i];
-							c1->ShowInformation();
-							std::cout << std::endl;
-						}
-					}
+					ShowInformation(People);
 					BackToMenu();
 					goto MENU;
 				}
 				if(option == 4){
-						for(auto c : Queue){
-						c.getAlocation();
-					}
+					AvailableAlocations(Queue);
+					BackToMenu();
+					goto MENU;
+				}
+				if(option == 5){
+					AvailableAlocations(Queue);
+					Queue = RemoveAlocation(Queue);
+				}
+				if(option == 6){
+					AvailableAgencys(Agencys);
 					BackToMenu();
 					goto MENU;
 				}

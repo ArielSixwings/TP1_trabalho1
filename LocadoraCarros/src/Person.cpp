@@ -1,6 +1,7 @@
 #include "Person.hpp"
 #include "Client.hpp"
 #include "Employee.hpp"
+#include "Exceptions.hpp"
 
 Person::Person(std::string CPF, int Age, std::string Name){
 	this->CPF = CPF;
@@ -10,7 +11,7 @@ Person::Person(std::string CPF, int Age, std::string Name){
 
 Person::Person(){
 	std::cout<<"CPF: ";
-	std::cin >> this->CPF;
+	this->CPF = ExceptionsInputs::VerifyExactInputs(11, cpf);
 	std::cout<<"Idade: ";
 	std::cin>> this->Age;
 	std::cout<<"Nome: ";
@@ -27,8 +28,10 @@ int Person::ReturnType(){
 	return 0;
 }
 
-int VerifyRegistration(std::vector <Person*> People){
+std::vector <int> VerifyRegistration(std::vector <Person*> People){
 	int i;
+	std::vector <int> aux;
+	aux.push_back(-1);
 	std::string user, password;
 	std::cout<<"Por favor insira seu Login: ";
 	std::cin >> user;
@@ -39,12 +42,14 @@ int VerifyRegistration(std::vector <Person*> People){
 			Client* c1 = (Client*)People[i];
 			if(c1->CustomerLogin == user){
 				if(c1->CustomerPassword == password){
-					return 0;
+					aux[0] = 0;
+					aux.push_back(i);
+					return aux;
 				}
 				else{
 					std::cout<<"Senha Incorreta!";
 					std::cout << std::endl;
-					return -1;
+					return aux;
 				}
 			}
 		}
@@ -52,17 +57,19 @@ int VerifyRegistration(std::vector <Person*> People){
 			Employee* c1 = (Employee*)People[i];
 			if(c1->employeelogin == user){
 				if(c1->employeepassword == password){
-					return 1;
+					aux[0] = 1;
+					aux.push_back(i);
+					return aux;
 				}
 				else{
 					std::cout<<"Senha Incorreta!";
 					std::cout << std::endl;
-					return -1;
+					return aux;
 				}
 			}
 		}
 	}
-	return -1;
+	return aux;
 }
 
 int SearchInList(std::vector <Person*> People, std::string cpf){

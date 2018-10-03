@@ -39,7 +39,16 @@ std::string ExceptionsInputs::VerifyExactInputs(unsigned int a, int which){
 					std::cin>>word;
 					if(word.length() < a || word.length() > a){
 						throw ExceptionsInputs(a, 0);
-					}else{
+					}
+					else{
+						word = ExceptionsInputs::VerifyBoardLettersInputs(word);
+						if(word.length() < a || word.length() > a){
+							throw ExceptionsInputs(a, 0);
+						}
+						word = ExceptionsInputs::VerifyBoardNumbersInputs(word);
+						if(word.length() < a || word.length() > a){
+							throw ExceptionsInputs(a, 0);
+						}
 						aux = 0;
 					}
 				}
@@ -72,6 +81,10 @@ std::string ExceptionsInputs::VerifyExactInputs(unsigned int a, int which){
 					if(word.length() < a || word.length() > a){
 						throw ExceptionsInputs(a, 0);
 					}else{
+						word = ExceptionsInputs::VerifyOnlyNumbersInputs(word);
+						if(word.length() < a || word.length() > a){
+							throw ExceptionsInputs(a, 0);
+						}
 						aux = 0;
 					}
 				}
@@ -81,13 +94,18 @@ std::string ExceptionsInputs::VerifyExactInputs(unsigned int a, int which){
 				}
 			}while(aux < 0);
 			return word;
-		case CPF:
+		case cpf:
 			do{
 				try{
 					std::cin>>word;
 					if(word.length() < a || word.length() > a){
 						throw ExceptionsInputs(a, 0);
-					}else{
+					}
+					else{
+						word = ExceptionsInputs::VerifyOnlyNumbersInputs(word);
+						if(word.length() < a || word.length() > a){
+							throw ExceptionsInputs(a, 0);
+						}
 						aux = 0;
 					}
 				}
@@ -159,3 +177,65 @@ int VerifyTypeInputs(){
 	return option;
 }
 
+std::string ExceptionsInputs::VerifyBoardLettersInputs(std::string word){
+	int aux;
+	do{
+		try{
+			if(((int)word[0] < 65 || (int)word[0] > 90) || ((int)word[1] < 65 || (int)word[1] > 90) || ((int)word[2] < 65 || (int)word[2] > 90)){
+				throw ExceptionsInputs(0, 0);
+			}
+			else{
+				aux = 0;
+			}
+		}
+		catch(ExceptionsInputs &ex){
+			std::cout<<std::endl;
+			std::cout<<"Algum dos 3 primeiros dígitos não é uma letra maiúscula! Insira novamente: ";
+			std::cin >>word;
+			aux = -1;
+		}
+	}while(aux < 0);
+	return word;
+}
+
+std::string ExceptionsInputs::VerifyBoardNumbersInputs(std::string word){
+	int aux;
+	do{
+		try{
+			if(((int)word[3] < 48 || (int)word[3] > 57) || ((int)word[4] < 48 || (int)word[4] > 57) || ((int)word[5] < 48 || (int)word[5] > 57) || ((int)word[6] < 48 || (int)word[6] > 57)){
+				throw ExceptionsInputs(word);
+			}
+			else{
+				aux = 0;
+			}
+		}
+		catch(ExceptionsInputs &ex){
+			std::cout<<std::endl;
+			std::cout<<"Algum dos 4 últimos dígitos não é um número! Insira novamente: ";
+			std::cin >>word;
+			aux = -1;
+		}
+	}while(aux < 0);
+	return word;
+}
+
+std::string ExceptionsInputs::VerifyOnlyNumbersInputs(std::string word){
+	int aux;
+	do{
+		try{
+			int i;
+			for(i = 0; i < (int)word.size(); i++){
+				if((int)word[i] < 48 || (int)word[i] > 57){
+					throw ExceptionsInputs(word);
+				}
+			}
+			aux = 0;
+		}
+		catch(ExceptionsInputs &ex){
+			std::cout<<std::endl;
+			std::cout<<"Insira apenas números: ";
+			std::cin >>word;
+		}
+	}while(aux < 0);
+	return word;
+}

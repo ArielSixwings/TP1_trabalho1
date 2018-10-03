@@ -21,7 +21,7 @@ public:
 	virtual int ReturnType();
 };
 
-int VerifyRegistration(std::vector <Person*> People);
+std::vector <int> VerifyRegistration(std::vector <Person*> People);
 int SearchInList(std::vector <Person*> People, std::string cpf);
 
 #endif /* PERSON_HPP */

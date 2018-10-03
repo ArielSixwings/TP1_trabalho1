@@ -9,7 +9,7 @@
 const int PLACA   = 1;
 const int CHASSI  = 2;
 const int RENAVAM = 3;
-const int CPF = 4;
+const int cpf = 4;
 
 /*!classe dedicada a verificar entradas e lidar com exeções*/
 class ExceptionsInputs{
@@ -29,6 +29,12 @@ public:
 	static std::string VerifyAgencyId(std::map<std::string, int> AgencysIdmap);
 
 	static std::string VerifyCPF(std::vector <Person*> People);
+
+	static std::string VerifyBoardLettersInputs(std::string word);
+
+	static std::string VerifyBoardNumbersInputs(std::string word);
+
+	static std::string VerifyOnlyNumbersInputs(std::string word);
 };
 
 int VerifyTypeInputs();
