@@ -28,6 +28,11 @@
               <Anchor>ac956bf0c7cfb56a4bc81fc4db9e37d69</Anchor>
              </Node>
              <Node>
+              <Name>getComments</Name>
+              <Path>dc/d71/class_agency.html</Path>
+              <Anchor>a4b579f6ee31175023bbd20f38d846cf0</Anchor>
+             </Node>
+             <Node>
               <Name>getGeneralData</Name>
               <Path>dc/d71/class_agency.html</Path>
               <Anchor>a3783081af6d68308bbedfd0ddd8c1ed0</Anchor>
@@ -81,7 +86,7 @@
              <Node>
               <Name>Alocation</Name>
               <Path>d2/dd1/class_alocation.html</Path>
-              <Anchor>a8dcf51143445f32c5455493387009e82</Anchor>
+              <Anchor>a711e96106341b94a9592bcb37978a39a</Anchor>
              </Node>
              <Node>
               <Name>Alocation</Name>
@@ -92,6 +97,16 @@
               <Name>~Alocation</Name>
               <Path>d2/dd1/class_alocation.html</Path>
               <Anchor>ad4217b96073e8863476fd94acf066ece</Anchor>
+             </Node>
+             <Node>
+              <Name>Alocation</Name>
+              <Path>d2/dd1/class_alocation.html</Path>
+              <Anchor>a04ae714d6fa88601a298d4c34515908c</Anchor>
+             </Node>
+             <Node>
+              <Name>CalculateCost</Name>
+              <Path>d2/dd1/class_alocation.html</Path>
+              <Anchor>a551911515e24a9a98be71bb1c7f9137d</Anchor>
              </Node>
              <Node>
               <Name>getAlocation</Name>
@@ -119,9 +134,19 @@
               <Anchor>a0f43124bac2d8f5574854f7eb7a6c43a</Anchor>
              </Node>
              <Node>
+              <Name>cost</Name>
+              <Path>d2/dd1/class_alocation.html</Path>
+              <Anchor>a68042e66b81c786b6723dc23816310e0</Anchor>
+             </Node>
+             <Node>
               <Name>CustomerId</Name>
               <Path>d2/dd1/class_alocation.html</Path>
               <Anchor>ac07bf5966364e552c97bafd67b6cceb1</Anchor>
+             </Node>
+             <Node>
+              <Name>days</Name>
+              <Path>d2/dd1/class_alocation.html</Path>
+              <Anchor>a59f019f5c1ff922ad1dabe050bcd6102</Anchor>
              </Node>
              <Node>
               <Name>DevolutionData</Name>
@@ -153,6 +178,11 @@
               <Name>Client</Name>
               <Path>d3/d7a/class_client.html</Path>
               <Anchor>a754e2f775b20ce1f49e0d491d7c2c3a6</Anchor>
+             </Node>
+             <Node>
+              <Name>Client</Name>
+              <Path>d3/d7a/class_client.html</Path>
+              <Anchor>ae51af7aa6b8f591496a8f6a4a87a14bf</Anchor>
              </Node>
              <Node>
               <Name>Person</Name>
@@ -199,6 +229,16 @@
               <Name>Employee</Name>
               <Path>dc/d5c/class_employee.html</Path>
               <Anchor>a7d58445d1519b307fd38b0859d20b49b</Anchor>
+             </Node>
+             <Node>
+              <Name>Employee</Name>
+              <Path>dc/d5c/class_employee.html</Path>
+              <Anchor>a003c7bd08c40924e381eb0750cbb906f</Anchor>
+             </Node>
+             <Node>
+              <Name>getComments</Name>
+              <Path>dc/d5c/class_employee.html</Path>
+              <Anchor>ac422f979fb766b1661ae904a61c00050</Anchor>
              </Node>
              <Node>
               <Name>Person</Name>
@@ -252,6 +292,31 @@
               <Anchor>ad78cfdc156675df936228bd195a87fd6</Anchor>
              </Node>
              <Node>
+              <Name>ExceptionsInputs</Name>
+              <Path>da/d73/class_exceptions_inputs.html</Path>
+              <Anchor>a216d80139ef64b9054e642dc484c9482</Anchor>
+             </Node>
+             <Node>
+              <Name>VerifyAgencyId</Name>
+              <Path>da/d73/class_exceptions_inputs.html</Path>
+              <Anchor>acd02b890d31908317eec3267ac13f05e</Anchor>
+             </Node>
+             <Node>
+              <Name>VerifyBoardInputs</Name>
+              <Path>da/d73/class_exceptions_inputs.html</Path>
+              <Anchor>aa886f03cc4934681acc67ef6aef1ccd8</Anchor>
+             </Node>
+             <Node>
+              <Name>VerifyBrandsInputs</Name>
+              <Path>da/d73/class_exceptions_inputs.html</Path>
+              <Anchor>ae24f1578a8984401a57461a7d5030c76</Anchor>
+             </Node>
+             <Node>
+              <Name>VerifyCPF</Name>
+              <Path>da/d73/class_exceptions_inputs.html</Path>
+              <Anchor>a670e6ab0389f4e22516b86fcab91aaf3</Anchor>
+             </Node>
+             <Node>
               <Name>VerifyExactInputs</Name>
               <Path>da/d73/class_exceptions_inputs.html</Path>
               <Anchor>a56819152265f18cb84bd66a8f9c4f859</Anchor>
@@ -260,6 +325,16 @@
               <Name>VerifyInputs</Name>
               <Path>da/d73/class_exceptions_inputs.html</Path>
               <Anchor>ace7ff32005db248e4f6e3e3492c73151</Anchor>
+             </Node>
+             <Node>
+              <Name>VerifyModelsInputs</Name>
+              <Path>da/d73/class_exceptions_inputs.html</Path>
+              <Anchor>a4744126d61f682527fdd95d429fa5894</Anchor>
+             </Node>
+             <Node>
+              <Name>VerifyOnlyNumbersInputs</Name>
+              <Path>da/d73/class_exceptions_inputs.html</Path>
+              <Anchor>aa784a9672a48cbbdbf8ca9e0a4787279</Anchor>
              </Node>
              <Node>
               <Name>aux</Name>
@@ -279,6 +354,22 @@
             </Subnodes>
            </Node>
            <Node>
+            <Name>Members</Name>
+            <Path>df/dfc/class_members.html</Path>
+            <Subnodes>
+             <Node>
+              <Name>getComments</Name>
+              <Path>df/dfc/class_members.html</Path>
+              <Anchor>aaf93851908013ffd0ab94317da6c83f0</Anchor>
+             </Node>
+             <Node>
+              <Name>comments</Name>
+              <Path>df/dfc/class_members.html</Path>
+              <Anchor>a0169c1da3c58536a0b41fb4bb9c39312</Anchor>
+             </Node>
+            </Subnodes>
+           </Node>
+           <Node>
             <Name>Person</Name>
             <Path>d5/d4a/class_person.html</Path>
             <Subnodes>
@@ -291,6 +382,11 @@
               <Name>Person</Name>
               <Path>d5/d4a/class_person.html</Path>
               <Anchor>a29cb5c23fb6037cf546bf94d53cb553e</Anchor>
+             </Node>
+             <Node>
+              <Name>getComments</Name>
+              <Path>d5/d4a/class_person.html</Path>
+              <Anchor>a2189f4a735c43100b37584231e670c64</Anchor>
              </Node>
              <Node>
               <Name>ReturnType</Name>
@@ -326,17 +422,12 @@
              <Node>
               <Name>Vehicle</Name>
               <Path>dd/df6/class_vehicle.html</Path>
-              <Anchor>a3ff1d13c4eda82e4ce2c0df50a0e0e6d</Anchor>
+              <Anchor>afd5e0985db0613095d19a55218f438f0</Anchor>
              </Node>
              <Node>
               <Name>Vehicle</Name>
               <Path>dd/df6/class_vehicle.html</Path>
-              <Anchor>a51b0b5e392ea366c86fc8d6ba5371327</Anchor>
-             </Node>
-             <Node>
-              <Name>Alocate</Name>
-              <Path>dd/df6/class_vehicle.html</Path>
-              <Anchor>a243d4dc1cc928f1ce42d611e6b925a44</Anchor>
+              <Anchor>a51ea570522b847d05862871b5ef5a7bc</Anchor>
              </Node>
              <Node>
               <Name>getVehicle</Name>
@@ -357,6 +448,11 @@
               <Name>Board</Name>
               <Path>dd/df6/class_vehicle.html</Path>
               <Anchor>a56e7d1b5a1bf6465ac0c96d28836536b</Anchor>
+             </Node>
+             <Node>
+              <Name>Brand</Name>
+              <Path>dd/df6/class_vehicle.html</Path>
+              <Anchor>a9b372aa997d90adfe5119a8bdcfffa13</Anchor>
              </Node>
              <Node>
               <Name>Chassi</Name>
@@ -384,6 +480,11 @@
               <Anchor>a6370abfc65b510b417e1f41565f4be65</Anchor>
              </Node>
              <Node>
+              <Name>Model</Name>
+              <Path>dd/df6/class_vehicle.html</Path>
+              <Anchor>ae0cc80fad24037aad0af103a75e26e26</Anchor>
+             </Node>
+             <Node>
               <Name>Priceperday</Name>
               <Path>dd/df6/class_vehicle.html</Path>
               <Anchor>a9cc8983f5a7ea6ed135a091372b4bab5</Anchor>
@@ -394,9 +495,9 @@
               <Anchor>a8f3061a69869c072ac0c99a96f218b03</Anchor>
              </Node>
              <Node>
-              <Name>Renavam</Name>
+              <Name>renavam</Name>
               <Path>dd/df6/class_vehicle.html</Path>
-              <Anchor>aff6e9f343ecbf63d42a80f88155186b0</Anchor>
+              <Anchor>acda8ccc556b629a1b081d138af62ca86</Anchor>
              </Node>
              <Node>
               <Name>TypeFuel</Name>
@@ -421,10 +522,6 @@
           <Path>hierarchy.html</Path>
           <Subnodes>
            <Node>
-            <Name>Agency</Name>
-            <Path>dc/d71/class_agency.html</Path>
-           </Node>
-           <Node>
             <Name>Alocation</Name>
             <Path>d2/dd1/class_alocation.html</Path>
            </Node>
@@ -433,16 +530,26 @@
             <Path>da/d73/class_exceptions_inputs.html</Path>
            </Node>
            <Node>
-            <Name>Person</Name>
-            <Path>d5/d4a/class_person.html</Path>
+            <Name>Members</Name>
+            <Path>df/dfc/class_members.html</Path>
             <Subnodes>
              <Node>
-              <Name>Client</Name>
-              <Path>d3/d7a/class_client.html</Path>
+              <Name>Agency</Name>
+              <Path>dc/d71/class_agency.html</Path>
              </Node>
              <Node>
-              <Name>Employee</Name>
-              <Path>dc/d5c/class_employee.html</Path>
+              <Name>Person</Name>
+              <Path>d5/d4a/class_person.html</Path>
+              <Subnodes>
+               <Node>
+                <Name>Client</Name>
+                <Path>d3/d7a/class_client.html</Path>
+               </Node>
+               <Node>
+                <Name>Employee</Name>
+                <Path>dc/d5c/class_employee.html</Path>
+               </Node>
+              </Subnodes>
              </Node>
             </Subnodes>
            </Node>
@@ -501,6 +608,11 @@
                   <Name>getAgency</Name>
                   <Path>dc/d71/class_agency.html</Path>
                   <Anchor>ac956bf0c7cfb56a4bc81fc4db9e37d69</Anchor>
+                 </Node>
+                 <Node>
+                  <Name>getComments</Name>
+                  <Path>dc/d71/class_agency.html</Path>
+                  <Anchor>a4b579f6ee31175023bbd20f38d846cf0</Anchor>
                  </Node>
                  <Node>
                   <Name>getGeneralData</Name>
@@ -562,7 +674,7 @@
                  <Node>
                   <Name>Alocation</Name>
                   <Path>d2/dd1/class_alocation.html</Path>
-                  <Anchor>a8dcf51143445f32c5455493387009e82</Anchor>
+                  <Anchor>a711e96106341b94a9592bcb37978a39a</Anchor>
                  </Node>
                  <Node>
                   <Name>Alocation</Name>
@@ -573,6 +685,16 @@
                   <Name>~Alocation</Name>
                   <Path>d2/dd1/class_alocation.html</Path>
                   <Anchor>ad4217b96073e8863476fd94acf066ece</Anchor>
+                 </Node>
+                 <Node>
+                  <Name>Alocation</Name>
+                  <Path>d2/dd1/class_alocation.html</Path>
+                  <Anchor>a04ae714d6fa88601a298d4c34515908c</Anchor>
+                 </Node>
+                 <Node>
+                  <Name>CalculateCost</Name>
+                  <Path>d2/dd1/class_alocation.html</Path>
+                  <Anchor>a551911515e24a9a98be71bb1c7f9137d</Anchor>
                  </Node>
                  <Node>
                   <Name>getAlocation</Name>
@@ -600,9 +722,19 @@
                   <Anchor>a0f43124bac2d8f5574854f7eb7a6c43a</Anchor>
                  </Node>
                  <Node>
+                  <Name>cost</Name>
+                  <Path>d2/dd1/class_alocation.html</Path>
+                  <Anchor>a68042e66b81c786b6723dc23816310e0</Anchor>
+                 </Node>
+                 <Node>
                   <Name>CustomerId</Name>
                   <Path>d2/dd1/class_alocation.html</Path>
                   <Anchor>ac07bf5966364e552c97bafd67b6cceb1</Anchor>
+                 </Node>
+                 <Node>
+                  <Name>days</Name>
+                  <Path>d2/dd1/class_alocation.html</Path>
+                  <Anchor>a59f019f5c1ff922ad1dabe050bcd6102</Anchor>
                  </Node>
                  <Node>
                   <Name>DevolutionData</Name>
@@ -626,6 +758,11 @@
                  </Node>
                 </Subnodes>
                </Node>
+               <Node>
+                <Name>RemoveAlocation</Name>
+                <Path>dc/de3/_alocation_8hpp.html</Path>
+                <Anchor>a4464bf33d74bf0691604f9e28bd04d9c</Anchor>
+               </Node>
               </Subnodes>
              </Node>
              <Node>
@@ -640,6 +777,11 @@
                   <Name>Client</Name>
                   <Path>d3/d7a/class_client.html</Path>
                   <Anchor>a754e2f775b20ce1f49e0d491d7c2c3a6</Anchor>
+                 </Node>
+                 <Node>
+                  <Name>Client</Name>
+                  <Path>d3/d7a/class_client.html</Path>
+                  <Anchor>ae51af7aa6b8f591496a8f6a4a87a14bf</Anchor>
                  </Node>
                  <Node>
                   <Name>Person</Name>
@@ -692,6 +834,16 @@
                   <Name>Employee</Name>
                   <Path>dc/d5c/class_employee.html</Path>
                   <Anchor>a7d58445d1519b307fd38b0859d20b49b</Anchor>
+                 </Node>
+                 <Node>
+                  <Name>Employee</Name>
+                  <Path>dc/d5c/class_employee.html</Path>
+                  <Anchor>a003c7bd08c40924e381eb0750cbb906f</Anchor>
+                 </Node>
+                 <Node>
+                  <Name>getComments</Name>
+                  <Path>dc/d5c/class_employee.html</Path>
+                  <Anchor>ac422f979fb766b1661ae904a61c00050</Anchor>
                  </Node>
                  <Node>
                   <Name>Person</Name>
@@ -751,6 +903,31 @@
                   <Anchor>ad78cfdc156675df936228bd195a87fd6</Anchor>
                  </Node>
                  <Node>
+                  <Name>ExceptionsInputs</Name>
+                  <Path>da/d73/class_exceptions_inputs.html</Path>
+                  <Anchor>a216d80139ef64b9054e642dc484c9482</Anchor>
+                 </Node>
+                 <Node>
+                  <Name>VerifyAgencyId</Name>
+                  <Path>da/d73/class_exceptions_inputs.html</Path>
+                  <Anchor>acd02b890d31908317eec3267ac13f05e</Anchor>
+                 </Node>
+                 <Node>
+                  <Name>VerifyBoardInputs</Name>
+                  <Path>da/d73/class_exceptions_inputs.html</Path>
+                  <Anchor>aa886f03cc4934681acc67ef6aef1ccd8</Anchor>
+                 </Node>
+                 <Node>
+                  <Name>VerifyBrandsInputs</Name>
+                  <Path>da/d73/class_exceptions_inputs.html</Path>
+                  <Anchor>ae24f1578a8984401a57461a7d5030c76</Anchor>
+                 </Node>
+                 <Node>
+                  <Name>VerifyCPF</Name>
+                  <Path>da/d73/class_exceptions_inputs.html</Path>
+                  <Anchor>a670e6ab0389f4e22516b86fcab91aaf3</Anchor>
+                 </Node>
+                 <Node>
                   <Name>VerifyExactInputs</Name>
                   <Path>da/d73/class_exceptions_inputs.html</Path>
                   <Anchor>a56819152265f18cb84bd66a8f9c4f859</Anchor>
@@ -759,6 +936,16 @@
                   <Name>VerifyInputs</Name>
                   <Path>da/d73/class_exceptions_inputs.html</Path>
                   <Anchor>ace7ff32005db248e4f6e3e3492c73151</Anchor>
+                 </Node>
+                 <Node>
+                  <Name>VerifyModelsInputs</Name>
+                  <Path>da/d73/class_exceptions_inputs.html</Path>
+                  <Anchor>a4744126d61f682527fdd95d429fa5894</Anchor>
+                 </Node>
+                 <Node>
+                  <Name>VerifyOnlyNumbersInputs</Name>
+                  <Path>da/d73/class_exceptions_inputs.html</Path>
+                  <Anchor>aa784a9672a48cbbdbf8ca9e0a4787279</Anchor>
                  </Node>
                  <Node>
                   <Name>aux</Name>
@@ -788,6 +975,11 @@
                 <Anchor>a679a6ea846342c1d647ec4f87b650001</Anchor>
                </Node>
                <Node>
+                <Name>cpf</Name>
+                <Path>de/d24/_exceptions_8hpp.html</Path>
+                <Anchor>a426548e844df9ebda40b0bba062ee323</Anchor>
+               </Node>
+               <Node>
                 <Name>PLACA</Name>
                 <Path>de/d24/_exceptions_8hpp.html</Path>
                 <Anchor>a94a26ebceded688bec11715844a66da8</Anchor>
@@ -796,6 +988,99 @@
                 <Name>RENAVAM</Name>
                 <Path>de/d24/_exceptions_8hpp.html</Path>
                 <Anchor>a1aa4a1411d66ce7b2f33be42610f11e7</Anchor>
+               </Node>
+              </Subnodes>
+             </Node>
+             <Node>
+              <Name>Interface.hpp</Name>
+              <Path>dc/dba/_interface_8hpp.html</Path>
+              <Subnodes>
+               <Node>
+                <Name>AvailableAgencys</Name>
+                <Path>dc/dba/_interface_8hpp.html</Path>
+                <Anchor>ad3a3b5be75d9b3fb16778bb6a75681c8</Anchor>
+               </Node>
+               <Node>
+                <Name>AvailableAlocations</Name>
+                <Path>dc/dba/_interface_8hpp.html</Path>
+                <Anchor>a363fdd9f7488811c2be68608abf7bf1d</Anchor>
+               </Node>
+               <Node>
+                <Name>AvailableVehicles</Name>
+                <Path>dc/dba/_interface_8hpp.html</Path>
+                <Anchor>a3da5c4fc2f79426dc895737cdd4418e9</Anchor>
+               </Node>
+               <Node>
+                <Name>BackToMenu</Name>
+                <Path>dc/dba/_interface_8hpp.html</Path>
+                <Anchor>a769ff081dbb999a74ccfb982bb38a23e</Anchor>
+               </Node>
+               <Node>
+                <Name>ClientMenu</Name>
+                <Path>dc/dba/_interface_8hpp.html</Path>
+                <Anchor>a5a980e2140fd9f12a40b079a4d6ba7c6</Anchor>
+               </Node>
+               <Node>
+                <Name>CommentMenu</Name>
+                <Path>dc/dba/_interface_8hpp.html</Path>
+                <Anchor>ad0f53900efb9cd280f5239474214c482</Anchor>
+               </Node>
+               <Node>
+                <Name>EmployeeMenu</Name>
+                <Path>dc/dba/_interface_8hpp.html</Path>
+                <Anchor>a71e3e08abe3810edb4e133b762592527</Anchor>
+               </Node>
+               <Node>
+                <Name>MainMenu</Name>
+                <Path>dc/dba/_interface_8hpp.html</Path>
+                <Anchor>ab98dbf196398d8aeaa4ac97f87ae54a1</Anchor>
+               </Node>
+               <Node>
+                <Name>MenuCreation</Name>
+                <Path>dc/dba/_interface_8hpp.html</Path>
+                <Anchor>a1a6226db653cdfa1c8bc7cf96ebb75c7</Anchor>
+               </Node>
+               <Node>
+                <Name>RemoveAlocation</Name>
+                <Path>dc/dba/_interface_8hpp.html</Path>
+                <Anchor>a4464bf33d74bf0691604f9e28bd04d9c</Anchor>
+               </Node>
+               <Node>
+                <Name>ShowInformation</Name>
+                <Path>dc/dba/_interface_8hpp.html</Path>
+                <Anchor>a214eadcece4ddab7a2b90c69fcb245eb</Anchor>
+               </Node>
+               <Node>
+                <Name>SubMenu</Name>
+                <Path>dc/dba/_interface_8hpp.html</Path>
+                <Anchor>a70eeb8f60e96d3c2e0c7ff337c17dfd0</Anchor>
+               </Node>
+               <Node>
+                <Name>UserCreation</Name>
+                <Path>dc/dba/_interface_8hpp.html</Path>
+                <Anchor>a8b10aaed8925483ee38dc274d9c5f1cf</Anchor>
+               </Node>
+              </Subnodes>
+             </Node>
+             <Node>
+              <Name>members.hpp</Name>
+              <Path>d2/d0f/members_8hpp.html</Path>
+              <Subnodes>
+               <Node>
+                <Name>Members</Name>
+                <Path>df/dfc/class_members.html</Path>
+                <Subnodes>
+                 <Node>
+                  <Name>getComments</Name>
+                  <Path>df/dfc/class_members.html</Path>
+                  <Anchor>aaf93851908013ffd0ab94317da6c83f0</Anchor>
+                 </Node>
+                 <Node>
+                  <Name>comments</Name>
+                  <Path>df/dfc/class_members.html</Path>
+                  <Anchor>a0169c1da3c58536a0b41fb4bb9c39312</Anchor>
+                 </Node>
+                </Subnodes>
                </Node>
               </Subnodes>
              </Node>
@@ -816,6 +1101,11 @@
                   <Name>Person</Name>
                   <Path>d5/d4a/class_person.html</Path>
                   <Anchor>a29cb5c23fb6037cf546bf94d53cb553e</Anchor>
+                 </Node>
+                 <Node>
+                  <Name>getComments</Name>
+                  <Path>d5/d4a/class_person.html</Path>
+                  <Anchor>a2189f4a735c43100b37584231e670c64</Anchor>
                  </Node>
                  <Node>
                   <Name>ReturnType</Name>
@@ -844,6 +1134,16 @@
                  </Node>
                 </Subnodes>
                </Node>
+               <Node>
+                <Name>SearchInList</Name>
+                <Path>db/dad/_person_8hpp.html</Path>
+                <Anchor>a76ff8fb30fd0f43b0cb2d033b8ae2444</Anchor>
+               </Node>
+               <Node>
+                <Name>VerifyRegistration</Name>
+                <Path>db/dad/_person_8hpp.html</Path>
+                <Anchor>a910bc9d008230038cf5977bd0eb9939c</Anchor>
+               </Node>
               </Subnodes>
              </Node>
              <Node>
@@ -857,17 +1157,12 @@
                  <Node>
                   <Name>Vehicle</Name>
                   <Path>dd/df6/class_vehicle.html</Path>
-                  <Anchor>a3ff1d13c4eda82e4ce2c0df50a0e0e6d</Anchor>
+                  <Anchor>afd5e0985db0613095d19a55218f438f0</Anchor>
                  </Node>
                  <Node>
                   <Name>Vehicle</Name>
                   <Path>dd/df6/class_vehicle.html</Path>
-                  <Anchor>a51b0b5e392ea366c86fc8d6ba5371327</Anchor>
-                 </Node>
-                 <Node>
-                  <Name>Alocate</Name>
-                  <Path>dd/df6/class_vehicle.html</Path>
-                  <Anchor>a243d4dc1cc928f1ce42d611e6b925a44</Anchor>
+                  <Anchor>a51ea570522b847d05862871b5ef5a7bc</Anchor>
                  </Node>
                  <Node>
                   <Name>getVehicle</Name>
@@ -888,6 +1183,11 @@
                   <Name>Board</Name>
                   <Path>dd/df6/class_vehicle.html</Path>
                   <Anchor>a56e7d1b5a1bf6465ac0c96d28836536b</Anchor>
+                 </Node>
+                 <Node>
+                  <Name>Brand</Name>
+                  <Path>dd/df6/class_vehicle.html</Path>
+                  <Anchor>a9b372aa997d90adfe5119a8bdcfffa13</Anchor>
                  </Node>
                  <Node>
                   <Name>Chassi</Name>
@@ -915,6 +1215,11 @@
                   <Anchor>a6370abfc65b510b417e1f41565f4be65</Anchor>
                  </Node>
                  <Node>
+                  <Name>Model</Name>
+                  <Path>dd/df6/class_vehicle.html</Path>
+                  <Anchor>ae0cc80fad24037aad0af103a75e26e26</Anchor>
+                 </Node>
+                 <Node>
                   <Name>Priceperday</Name>
                   <Path>dd/df6/class_vehicle.html</Path>
                   <Anchor>a9cc8983f5a7ea6ed135a091372b4bab5</Anchor>
@@ -925,9 +1230,9 @@
                   <Anchor>a8f3061a69869c072ac0c99a96f218b03</Anchor>
                  </Node>
                  <Node>
-                  <Name>Renavam</Name>
+                  <Name>renavam</Name>
                   <Path>dd/df6/class_vehicle.html</Path>
-                  <Anchor>aff6e9f343ecbf63d42a80f88155186b0</Anchor>
+                  <Anchor>acda8ccc556b629a1b081d138af62ca86</Anchor>
                  </Node>
                  <Node>
                   <Name>TypeFuel</Name>
@@ -940,6 +1245,16 @@
                   <Anchor>a7792fefded04c7957d39859ddbd45342</Anchor>
                  </Node>
                 </Subnodes>
+               </Node>
+               <Node>
+                <Name>ShowBrands</Name>
+                <Path>d4/d2b/_vehicles_8hpp.html</Path>
+                <Anchor>a9201d502974c41762571491271314eb0</Anchor>
+               </Node>
+               <Node>
+                <Name>ShowModels</Name>
+                <Path>d4/d2b/_vehicles_8hpp.html</Path>
+                <Anchor>af2383aec2645a283642a496f37821515</Anchor>
                </Node>
               </Subnodes>
              </Node>
@@ -956,6 +1271,13 @@
              <Node>
               <Name>Alocation.cpp</Name>
               <Path>db/d4c/_alocation_8cpp.html</Path>
+              <Subnodes>
+               <Node>
+                <Name>RemoveAlocation</Name>
+                <Path>db/d4c/_alocation_8cpp.html</Path>
+                <Anchor>a4464bf33d74bf0691604f9e28bd04d9c</Anchor>
+               </Node>
+              </Subnodes>
              </Node>
              <Node>
               <Name>Client.cpp</Name>
@@ -977,6 +1299,72 @@
               </Subnodes>
              </Node>
              <Node>
+              <Name>Interface.cpp</Name>
+              <Path>d2/d35/_interface_8cpp.html</Path>
+              <Subnodes>
+               <Node>
+                <Name>AvailableAgencys</Name>
+                <Path>d2/d35/_interface_8cpp.html</Path>
+                <Anchor>ad3a3b5be75d9b3fb16778bb6a75681c8</Anchor>
+               </Node>
+               <Node>
+                <Name>AvailableAlocations</Name>
+                <Path>d2/d35/_interface_8cpp.html</Path>
+                <Anchor>a363fdd9f7488811c2be68608abf7bf1d</Anchor>
+               </Node>
+               <Node>
+                <Name>AvailableVehicles</Name>
+                <Path>d2/d35/_interface_8cpp.html</Path>
+                <Anchor>a3da5c4fc2f79426dc895737cdd4418e9</Anchor>
+               </Node>
+               <Node>
+                <Name>BackToMenu</Name>
+                <Path>d2/d35/_interface_8cpp.html</Path>
+                <Anchor>a769ff081dbb999a74ccfb982bb38a23e</Anchor>
+               </Node>
+               <Node>
+                <Name>ClientMenu</Name>
+                <Path>d2/d35/_interface_8cpp.html</Path>
+                <Anchor>a5a980e2140fd9f12a40b079a4d6ba7c6</Anchor>
+               </Node>
+               <Node>
+                <Name>CommentMenu</Name>
+                <Path>d2/d35/_interface_8cpp.html</Path>
+                <Anchor>ad0f53900efb9cd280f5239474214c482</Anchor>
+               </Node>
+               <Node>
+                <Name>EmployeeMenu</Name>
+                <Path>d2/d35/_interface_8cpp.html</Path>
+                <Anchor>a71e3e08abe3810edb4e133b762592527</Anchor>
+               </Node>
+               <Node>
+                <Name>MainMenu</Name>
+                <Path>d2/d35/_interface_8cpp.html</Path>
+                <Anchor>ab98dbf196398d8aeaa4ac97f87ae54a1</Anchor>
+               </Node>
+               <Node>
+                <Name>MenuCreation</Name>
+                <Path>d2/d35/_interface_8cpp.html</Path>
+                <Anchor>a1a6226db653cdfa1c8bc7cf96ebb75c7</Anchor>
+               </Node>
+               <Node>
+                <Name>ShowInformation</Name>
+                <Path>d2/d35/_interface_8cpp.html</Path>
+                <Anchor>a214eadcece4ddab7a2b90c69fcb245eb</Anchor>
+               </Node>
+               <Node>
+                <Name>SubMenu</Name>
+                <Path>d2/d35/_interface_8cpp.html</Path>
+                <Anchor>a70eeb8f60e96d3c2e0c7ff337c17dfd0</Anchor>
+               </Node>
+               <Node>
+                <Name>UserCreation</Name>
+                <Path>d2/d35/_interface_8cpp.html</Path>
+                <Anchor>a8b10aaed8925483ee38dc274d9c5f1cf</Anchor>
+               </Node>
+              </Subnodes>
+             </Node>
+             <Node>
               <Name>Main.cpp</Name>
               <Path>d5/d12/_main_8cpp.html</Path>
               <Subnodes>
@@ -984,6 +1372,11 @@
                 <Name>main</Name>
                 <Path>d5/d12/_main_8cpp.html</Path>
                 <Anchor>ae66f6b31b5ad750f1fe042a706a4e3d4</Anchor>
+               </Node>
+               <Node>
+                <Name>showComments</Name>
+                <Path>d5/d12/_main_8cpp.html</Path>
+                <Anchor>ad3fc233b75e65fef9cf674fb05e500da</Anchor>
                </Node>
                <Node>
                 <Name>AgencysIdmap</Name>
@@ -995,10 +1388,34 @@
              <Node>
               <Name>Person.cpp</Name>
               <Path>d5/d87/_person_8cpp.html</Path>
+              <Subnodes>
+               <Node>
+                <Name>SearchInList</Name>
+                <Path>d5/d87/_person_8cpp.html</Path>
+                <Anchor>a76ff8fb30fd0f43b0cb2d033b8ae2444</Anchor>
+               </Node>
+               <Node>
+                <Name>VerifyRegistration</Name>
+                <Path>d5/d87/_person_8cpp.html</Path>
+                <Anchor>a910bc9d008230038cf5977bd0eb9939c</Anchor>
+               </Node>
+              </Subnodes>
              </Node>
              <Node>
               <Name>Vehicles.cpp</Name>
               <Path>d2/d7e/_vehicles_8cpp.html</Path>
+              <Subnodes>
+               <Node>
+                <Name>ShowBrands</Name>
+                <Path>d2/d7e/_vehicles_8cpp.html</Path>
+                <Anchor>a9201d502974c41762571491271314eb0</Anchor>
+               </Node>
+               <Node>
+                <Name>ShowModels</Name>
+                <Path>d2/d7e/_vehicles_8cpp.html</Path>
+                <Anchor>af2383aec2645a283642a496f37821515</Anchor>
+               </Node>
+              </Subnodes>
              </Node>
             </Subnodes>
            </Node>

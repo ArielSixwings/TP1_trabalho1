@@ -31,6 +31,7 @@ public:
 	void getAlocation();
 	//!retorna o número de dias da alocação
 	int howmanydays();
+	//!calcula valor total da alocação
 	double CalculateCost(double Price, int byperiod);
 };
 

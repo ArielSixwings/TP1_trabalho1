@@ -1,6 +1,7 @@
 var class_client =
 [
     [ "Client", "d3/d7a/class_client.html#a754e2f775b20ce1f49e0d491d7c2c3a6", null ],
+    [ "Client", "d3/d7a/class_client.html#ae51af7aa6b8f591496a8f6a4a87a14bf", null ],
     [ "Person", "d3/d7a/class_client.html#a0397c6f89fafc12e738923f612bc41a3", null ],
     [ "Person", "d3/d7a/class_client.html#a29cb5c23fb6037cf546bf94d53cb553e", null ],
     [ "ReturnType", "d3/d7a/class_client.html#ae527106929a92d8776829764c9d5f429", null ],

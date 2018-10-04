@@ -169,7 +169,6 @@ int main(){
 							Cars[Alocated[i].Key].Alocated = true;	
 						}
 					}
-					
 					AvailableAlocations(Queue);
 					BackToMenu();
 					goto MENU;

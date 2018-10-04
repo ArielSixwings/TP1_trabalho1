@@ -82,9 +82,12 @@ $(document).ready(function(){initNavTree('d5/d12/_main_8cpp.html','../../');});
 </div><!--header-->
 <div class="contents">
 <div class="textblock"><code>#include &lt;iostream&gt;</code><br />
+<code>#include &lt;istream&gt;</code><br />
+<code>#include &lt;ostream&gt;</code><br />
 <code>#include &lt;vector&gt;</code><br />
 <code>#include &lt;string&gt;</code><br />
 <code>#include &lt;map&gt;</code><br />
+<code>#include &lt;cstdlib&gt;</code><br />
 <code>#include &quot;<a class="el" href="../../db/dad/_person_8hpp_source.html">Person.hpp</a>&quot;</code><br />
 <code>#include &quot;<a class="el" href="../../d3/dba/_employee_8hpp_source.html">Employee.hpp</a>&quot;</code><br />
 <code>#include &quot;<a class="el" href="../../d9/dbb/_client_8hpp_source.html">Client.hpp</a>&quot;</code><br />
@@ -92,19 +95,21 @@ $(document).ready(function(){initNavTree('d5/d12/_main_8cpp.html','../../');});
 <code>#include &quot;<a class="el" href="../../dc/de3/_alocation_8hpp_source.html">Alocation.hpp</a>&quot;</code><br />
 <code>#include &quot;<a class="el" href="../../d6/d02/_agency_8hpp_source.html">Agency.hpp</a>&quot;</code><br />
 <code>#include &quot;<a class="el" href="../../de/d24/_exceptions_8hpp_source.html">Exceptions.hpp</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="../../dc/dba/_interface_8hpp_source.html">Interface.hpp</a>&quot;</code><br />
 </div><div class="textblock"><div id="dynsection-0" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
   <img id="dynsection-0-trigger" src="../../closed.png" alt="+"/> Include dependency graph for Main.cpp:</div>
 <div id="dynsection-0-summary" class="dynsummary" style="display:block;">
 </div>
 <div id="dynsection-0-content" class="dyncontent" style="display:none;">
-<div class="center"><div class="zoom"><iframe scrolling="no" frameborder="0" src="../../df/dfb/_main_8cpp__incl.svg" width="100%" height="496"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
-</div>
+<div class="center"><div class="zoom"><iframe scrolling="no" frameborder="0" src="../../df/dfb/_main_8cpp__incl.svg" width="100%" height="600"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div></div>
 </div>
 </div>
 <p><a href="../../d5/d12/_main_8cpp_source.html">Go to the source code of this file.</a></p>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
 Functions</h2></td></tr>
+<tr class="memitem:ad3fc233b75e65fef9cf674fb05e500da"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d5/d12/_main_8cpp.html#ad3fc233b75e65fef9cf674fb05e500da">showComments</a> (<a class="el" href="../../df/dfc/class_members.html">Members</a> *member)</td></tr>
+<tr class="separator:ad3fc233b75e65fef9cf674fb05e500da"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ae66f6b31b5ad750f1fe042a706a4e3d4"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d5/d12/_main_8cpp.html#ae66f6b31b5ad750f1fe042a706a4e3d4">main</a> ()</td></tr>
 <tr class="separator:ae66f6b31b5ad750f1fe042a706a4e3d4"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
@@ -129,9 +134,33 @@ Variables</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="../../d5/d12/_main_8cpp_source.html#l00022">22</a> of file <a class="el" href="../../d5/d12/_main_8cpp_source.html">Main.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../d5/d12/_main_8cpp_source.html#l00024">24</a> of file <a class="el" href="../../d5/d12/_main_8cpp_source.html">Main.cpp</a>.</p>
 
-<p class="reference">References <a class="el" href="../../d5/d12/_main_8cpp_source.html#l00018">AgencysIdmap</a>, <a class="el" href="../../dc/da3/_agency_8cpp_source.html#l00023">Agency::getGeneralData()</a>, <a class="el" href="../../d2/dcf/_client_8cpp_source.html#l00015">Client::ShowInformation()</a>, <a class="el" href="../../de/de6/_employee_8cpp_source.html#l00017">Employee::ShowInformation()</a>, <a class="el" href="../../dc/da3/_agency_8cpp_source.html#l00034">Agency::startSalesMonth()</a>, <a class="el" href="../../dc/da3/_agency_8cpp_source.html#l00028">Agency::sumGeneralRevenue()</a>, <a class="el" href="../../d7/d9e/_exceptions_8cpp_source.html#l00008">ExceptionsInputs::VerifyInputs()</a>, and <a class="el" href="../../d7/d9e/_exceptions_8cpp_source.html#l00083">VerifyTypeInputs()</a>.</p>
+<p class="reference">References <a class="el" href="../../d5/d12/_main_8cpp_source.html#l00017">AgencysIdmap</a>, <a class="el" href="../../d2/d35/_interface_8cpp_source.html#l00063">AvailableAgencys()</a>, <a class="el" href="../../d2/d35/_interface_8cpp_source.html#l00057">AvailableAlocations()</a>, <a class="el" href="../../d2/d35/_interface_8cpp_source.html#l00050">AvailableVehicles()</a>, <a class="el" href="../../d2/d35/_interface_8cpp_source.html#l00004">BackToMenu()</a>, <a class="el" href="../../d2/d35/_interface_8cpp_source.html#l00107">ClientMenu()</a>, <a class="el" href="../../d2/d35/_interface_8cpp_source.html#l00116">CommentMenu()</a>, <a class="el" href="../../d2/d35/_interface_8cpp_source.html#l00030">EmployeeMenu()</a>, <a class="el" href="../../d2/d35/_interface_8cpp_source.html#l00012">MainMenu()</a>, <a class="el" href="../../db/dad/_person_8hpp_source.html#l00014">Person::Name</a>, <a class="el" href="../../db/d4c/_alocation_8cpp_source.html#l00114">RemoveAlocation()</a>, <a class="el" href="../../d5/d12/_main_8cpp_source.html#l00021">showComments()</a>, <a class="el" href="../../d2/d35/_interface_8cpp_source.html#l00070">ShowInformation()</a>, <a class="el" href="../../dc/da3/_agency_8cpp_source.html#l00034">Agency::startSalesMonth()</a>, <a class="el" href="../../d2/d35/_interface_8cpp_source.html#l00021">SubMenu()</a>, <a class="el" href="../../d2/d35/_interface_8cpp_source.html#l00086">UserCreation()</a>, <a class="el" href="../../d7/d9e/_exceptions_8cpp_source.html#l00109">ExceptionsInputs::VerifyAgencyId()</a>, <a class="el" href="../../d7/d9e/_exceptions_8cpp_source.html#l00013">ExceptionsInputs::VerifyInputs()</a>, <a class="el" href="../../d5/d87/_person_8cpp_source.html#l00031">VerifyRegistration()</a>, and <a class="el" href="../../d7/d9e/_exceptions_8cpp_source.html#l00150">VerifyTypeInputs()</a>.</p>
+
+</div>
+</div>
+<a id="ad3fc233b75e65fef9cf674fb05e500da"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad3fc233b75e65fef9cf674fb05e500da">&#9670;&nbsp;</a></span>showComments()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void showComments </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="../../df/dfc/class_members.html">Members</a> *&#160;</td>
+          <td class="paramname"><em>member</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="../../d5/d12/_main_8cpp_source.html#l00021">21</a> of file <a class="el" href="../../d5/d12/_main_8cpp_source.html">Main.cpp</a>.</p>
+
+<p class="reference">References <a class="el" href="../../df/dfc/class_members.html#aaf93851908013ffd0ab94317da6c83f0">Members::getComments()</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="../../d5/d12/_main_8cpp_source.html#l00024">main()</a>.</p>
 
 </div>
 </div>
@@ -147,11 +176,10 @@ Variables</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<b>Initial value:</b><div class="fragment"><div class="line">= {</div><div class="line">  {<span class="stringliteral">&quot;074&quot;</span>,0},{<span class="stringliteral">&quot;893&quot;</span>,1},{<span class="stringliteral">&quot;182&quot;</span>,2}</div><div class="line">}</div></div><!-- fragment --><p class="">Autores: Ariel Serafim Eduardo Lemos </p>
+<b>Initial value:</b><div class="fragment"><div class="line">= {</div><div class="line">  {<span class="stringliteral">&quot;074&quot;</span>,0},{<span class="stringliteral">&quot;893&quot;</span>,1},{<span class="stringliteral">&quot;182&quot;</span>,2}</div><div class="line">}</div></div><!-- fragment -->
+<p class="definition">Definition at line <a class="el" href="../../d5/d12/_main_8cpp_source.html#l00017">17</a> of file <a class="el" href="../../d5/d12/_main_8cpp_source.html">Main.cpp</a>.</p>
 
-<p class="definition">Definition at line <a class="el" href="../../d5/d12/_main_8cpp_source.html#l00018">18</a> of file <a class="el" href="../../d5/d12/_main_8cpp_source.html">Main.cpp</a>.</p>
-
-<p class="reference">Referenced by <a class="el" href="../../d5/d12/_main_8cpp_source.html#l00022">main()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="../../d5/d12/_main_8cpp_source.html#l00024">main()</a>, and <a class="el" href="../../d7/d9e/_exceptions_8cpp_source.html#l00109">ExceptionsInputs::VerifyAgencyId()</a>.</p>
 
 </div>
 </div>
@@ -161,7 +189,7 @@ Variables</h2></td></tr>
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="../../dir_68267d1309a1af8e8297ef4c3efbcdba.html">src</a></li><li class="navelem"><a class="el" href="../../d5/d12/_main_8cpp.html">Main.cpp</a></li>
-    <li class="footer">Generated on Fri Sep 28 2018 11:55:20 for Doxygen by
+    <li class="footer">Generated on Thu Oct 4 2018 00:35:28 for Doxygen by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="../../doxygen.png" alt="doxygen"/></a> 1.8.15 </li>
   </ul>

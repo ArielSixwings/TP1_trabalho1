@@ -5,6 +5,7 @@ var annotated_dup =
     [ "Client", "d3/d7a/class_client.html", "d3/d7a/class_client" ],
     [ "Employee", "dc/d5c/class_employee.html", "dc/d5c/class_employee" ],
     [ "ExceptionsInputs", "da/d73/class_exceptions_inputs.html", "da/d73/class_exceptions_inputs" ],
+    [ "Members", "df/dfc/class_members.html", "df/dfc/class_members" ],
     [ "Person", "d5/d4a/class_person.html", "d5/d4a/class_person" ],
     [ "Vehicle", "dd/df6/class_vehicle.html", "dd/df6/class_vehicle" ]
 ];

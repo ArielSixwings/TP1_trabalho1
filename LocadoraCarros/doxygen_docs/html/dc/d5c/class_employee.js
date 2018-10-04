@@ -1,6 +1,8 @@
 var class_employee =
 [
     [ "Employee", "dc/d5c/class_employee.html#a7d58445d1519b307fd38b0859d20b49b", null ],
+    [ "Employee", "dc/d5c/class_employee.html#a003c7bd08c40924e381eb0750cbb906f", null ],
+    [ "getComments", "dc/d5c/class_employee.html#ac422f979fb766b1661ae904a61c00050", null ],
     [ "Person", "dc/d5c/class_employee.html#a0397c6f89fafc12e738923f612bc41a3", null ],
     [ "Person", "dc/d5c/class_employee.html#a29cb5c23fb6037cf546bf94d53cb553e", null ],
     [ "ReturnType", "dc/d5c/class_employee.html#a139e9badb8345b8458885121ad81477b", null ],

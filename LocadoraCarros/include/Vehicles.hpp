@@ -31,15 +31,12 @@ public:
 	Vehicle(int key, std::string board, std::string color, std::string typefuel, 
 		std::string chassi, int year, int howmanydoors, double distance, 
 		std::string RENAVAM,std::string MODEL, std::string BRAND, double Priceperday, double Priceperperiod);
-	//!retorna um objeto do tipo alocação e recebe como parametro arrays com as informações de alocação e devolução
-	Alocation Alocate(std::vector <int> AlocationData, std::vector <int> AlocationHour, 
-						std::vector <int> DevolutionData, std::vector <int> DevolutionHour);
 	//!mostra em tela informações do veículo
 	void getVehicle();
 };
-
+//!mostra em tela as marcas disponiveis
 void ShowBrands(std::vector <std::string> Brands);
-
+//!mostra em tela os modelos disponiveis
 void ShowModels(std::string Brand, std::vector <std::vector <std::string>> Models);
 
 #endif /* VEHICLE_HPP */

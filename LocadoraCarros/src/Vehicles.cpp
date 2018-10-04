@@ -56,12 +56,6 @@ Vehicle::Vehicle(int i, std::vector <std::string> Brands, std::vector <std::vect
 	std::cout << std::endl;
 }
 
-Alocation Vehicle::Alocate(std::vector <int> AlocationData, std::vector <int> AlocationHour, std::vector <int> DevolutionData, std::vector <int> DevolutionHour){
-	Alocated = true;
-	Alocation aux(AlocationData, AlocationHour, DevolutionData, DevolutionHour);
-	return aux;
-}
-
 void Vehicle::getVehicle(){
 	std::cout<<"Chave do Veículo: " << Key << std::endl;
 	std::cout<<"Está alocado: " << Alocated << std::endl;

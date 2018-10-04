@@ -28,6 +28,7 @@ public:
     static void getGeneralData();
     //!zera a receita de todas as receitas e a receita geral
     void startSalesMonth();
+    //!mostra em tela os comentarios feitos pelos clientes sobre a agencia
     void getComments() override;
 };
 

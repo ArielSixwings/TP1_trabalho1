@@ -2,6 +2,7 @@ var class_agency =
 [
     [ "Agency", "dc/d71/class_agency.html#a9d24f1fc7bd00ad0b3759fcf418e1713", null ],
     [ "getAgency", "dc/d71/class_agency.html#ac956bf0c7cfb56a4bc81fc4db9e37d69", null ],
+    [ "getComments", "dc/d71/class_agency.html#a4b579f6ee31175023bbd20f38d846cf0", null ],
     [ "getGeneralData", "dc/d71/class_agency.html#a3783081af6d68308bbedfd0ddd8c1ed0", null ],
     [ "startSalesMonth", "dc/d71/class_agency.html#a1359860a191464273f594fe30d354efe", null ],
     [ "sumGeneralRevenue", "dc/d71/class_agency.html#a72bc22cd0f6ebc888ebc06c5703fdf23", null ],

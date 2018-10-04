@@ -21,6 +21,7 @@ public:
     void ShowInformation() override;
     //!retorna o tipo da subclasse de pessoa, nesse caso,2 para empregado
     int ReturnType() override;
+    //!mostra em tela comentarios feitos sobre o funcionario
     void getComments() override;
 };
 
