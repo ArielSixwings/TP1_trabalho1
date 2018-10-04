@@ -169,6 +169,7 @@ int main(){
 							Cars[Alocated[i].Key].Alocated = true;	
 						}
 					}
+					Cars.erase(Cars.begin()+ which);
 					AvailableAlocations(Queue);
 					BackToMenu();
 					goto MENU;
