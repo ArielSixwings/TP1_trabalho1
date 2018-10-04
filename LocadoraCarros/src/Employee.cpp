@@ -34,3 +34,7 @@ Employee::Employee(){
 	std::cout<<"Senha de Funcionário: ";
 	std::cin>>this->employeepassword;
 }
+
+void Employee::getComments(){
+	std::cout << comments << std::endl;
+}

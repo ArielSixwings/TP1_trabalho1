@@ -80,3 +80,6 @@ int SearchInList(std::vector <Person*> People, std::string cpf){
 	}
 	return 0;
 }
+void Person::getComments(){
+	std::cout<<"no comments for this class"<<std::endl;
+}

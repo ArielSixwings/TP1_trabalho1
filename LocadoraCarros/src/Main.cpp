@@ -1,4 +1,6 @@
 #include <iostream>
+#include <istream>
+#include <ostream>
 #include <vector>
 #include <string>
 #include <map>
@@ -16,10 +18,13 @@ const std::map<std::string, int> AgencysIdmap = {
   {"074",0},{"893",1},{"182",2}
 };
 
+void showComments(Members* member){
+	member->getComments();
+}
 int main(){
-
+	Employee* auxEmp;
 	// Menu's Variables
-	int option;
+	int option,commenttype,clienteoption;
 	std::string check, auxId;;
 
 	// Program
@@ -31,6 +36,9 @@ int main(){
 	std::vector <Alocation> Queue;
 	std::vector <Vehicle> Alocated;
 	std::vector <Agency> Agencys;
+	std::vector<Person*> Emp;
+	std::string auxcomments;
+	std::string auxagencyid;
 
 	//Creating basic Brands
 	Brands.push_back("Chevrolet");
@@ -106,63 +114,105 @@ int main(){
 			switch(option){
 
 			case 0:
+				clienteoption = ClientMenu();
+				std::cout << std::endl;
+				switch(clienteoption){
+				case 0:
+					who = VerifyRegistration(People);
+					if(who[0] == -1){
+						std::cout<<"Cadastro do cliente não encontrado!";
+						BackToMenu();
+						goto MENU;
+					}
+					
+					AvailableVehicles(Cars);
+					std::cout<<"Quantos veículos desejam-se alugar?" << std::endl;
+					std::cin>>howmany;
 
-				who = VerifyRegistration(People);
-				if(who[0] == -1){
-					std::cout<<"Cadastro do cliente não encontrado!";
+
+					for(i = 0; i < howmany; i++){
+						std::cout<<"Insira a chave do veículo: ";
+						which = ExceptionsInputs::VerifyInputs(0, Cars.size());
+						Alocated.push_back(Cars[which]);
+					}
+
+
+					for(i = 0; i < howmany; i++){
+						std::cout<<"\nEscolha o tipo de alocação para o carro "<< Alocated[i].Key <<std::endl;
+						std::cout<<"Período  -  0" <<std::endl;
+						std::cout<<"Diária   -  1" <<std::endl;
+						std::cout<<"Opção: ";
+						option = VerifyTypeInputs();
+						int auxid = 0;
+						std::cout<< std::endl;
+						for(auto a : Agencys){
+							
+							std::cout<< "Agencia " << auxid << std::endl << "Identificação: "<<a.agencyId<<std::endl;
+							auxid++; 
+						}
+						std::cout<<"Insira a identificação da agência: ";
+						
+						auxagencyid = ExceptionsInputs::VerifyAgencyId(AgencysIdmap);
+
+						if(option == 0){
+							Alocation aux(Alocated[i].Key,auxagencyid,true, People[who[1]]->CPF, Cars[Alocated[i].Key].Priceperperiod);
+							Queue.push_back(aux);
+							int days = Queue[i].howmanydays();
+							double salesrevenue = days * Cars[Alocated[i].Key].Priceperperiod;
+							double index = AgencysIdmap.at(Queue[i].Agency);
+							Agencys[index].sumRevenue(salesrevenue);
+							Cars[Alocated[i].Key].Alocated = true;
+						}
+						else{
+							Alocation aux(Alocated[i].Key,auxagencyid,false, People[who[1]]->CPF, Cars[Alocated[i].Key].Priceperday);
+							Queue.push_back(aux);
+							Cars[Alocated[i].Key].Alocated = true;	
+						}
+					}
+					
+					AvailableAlocations(Queue);
 					BackToMenu();
 					goto MENU;
-				}
 				
-				AvailableVehicles(Cars);
-				std::cout<<"Quantos veículos desejam-se alugar?" << std::endl;
-				std::cin>>howmany;
-
-
-				for(i = 0; i < howmany; i++){
-					std::cout<<"Insira a chave do veículo: ";
-					which = ExceptionsInputs::VerifyInputs(0, Cars.size());
-					Alocated.push_back(Cars[which]);
-				}
-
-
-				for(i = 0; i < howmany; i++){
-					std::cout<<"\nEscolha o tipo de alocação para o carro "<< Alocated[i].Key <<std::endl;
-					std::cout<<"Período  -  0" <<std::endl;
-					std::cout<<"Diária   -  1" <<std::endl;
-					std::cout<<"Opção: ";
-					option = VerifyTypeInputs();
-					int auxid = 0;
-					std::string auxagencyid;
-					std::cout<< std::endl;
-					for(auto a : Agencys){
-						 
-						std::cout<< "Agencia " << auxid << std::endl << "Identificação: "<<a.agencyId<<std::endl;
-						auxid++; 
-					}
-					std::cout<<"Insira a identificação da agência: ";
-					
-					auxagencyid = ExceptionsInputs::VerifyAgencyId(AgencysIdmap);
-
-					if(option == 0){
-						Alocation aux(Alocated[i].Key,auxagencyid,true, People[who[1]]->CPF, Cars[Alocated[i].Key].Priceperperiod);
-						Queue.push_back(aux);
-						int days = Queue[i].howmanydays();
-						double salesrevenue = days * Cars[Alocated[i].Key].Priceperperiod;
-						double index = AgencysIdmap.at(Queue[i].Agency);
-						Agencys[index].sumRevenue(salesrevenue);
-						Cars[Alocated[i].Key].Alocated = true;
+				case 1:
+					commenttype = CommentMenu();
+					if(commenttype == 0 ){
+						for(auto e : People){
+							if(e->ReturnType() == 2){
+								auxEmp = (Employee*)e;
+								Emp.push_back(auxEmp);
+							}	
+						}
+						std::cout<<"Selecione o funcionario"<<std::endl;
+						int auxi = 0;
+						for(auto e2: Emp){
+							std::cout<<auxi<<"   "<<e2->Name<<std::endl;
+							auxi++;
+						}
+						which = ExceptionsInputs::VerifyInputs(0, Emp.size());
+						std::cout<<"Faça o comentario"<<std::endl;
+						std::cin.get();
+						std::getline(std::cin, auxcomments);
+						Emp[which]->comments = auxcomments;
+						showComments(Emp[which]);
 					}
 					else{
-						Alocation aux(Alocated[i].Key,auxagencyid,false, People[who[1]]->CPF, Cars[Alocated[i].Key].Priceperday);
-						Queue.push_back(aux);
-						Cars[Alocated[i].Key].Alocated = true;	
+						std::cout<<"Selecione a agencia"<<std::endl;
+						int auxi = 0;
+						for(auto a: Agencys){
+							std::cout<<auxi<<"   "<<a.agencyId<<std::endl;
+							auxi++;
+						}
+						auxagencyid = ExceptionsInputs::VerifyAgencyId(AgencysIdmap);
+						std::cout<<"Faça o comentario"<<std::endl;
+						std::cin.get();
+						std::getline(std::cin, auxcomments);
+						Agencys[AgencysIdmap.at(auxagencyid)].comments = auxcomments;
+						showComments(&Agencys[AgencysIdmap.at(auxagencyid)]);										
 					}
+				default:
+					goto MENU;
 				}
-				
-				AvailableAlocations(Queue);
-				BackToMenu();
-				goto MENU;
 			case 1:
 
 				who = VerifyRegistration(People);

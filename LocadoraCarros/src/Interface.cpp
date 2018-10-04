@@ -103,3 +103,21 @@ int UserCreation(std::vector <Person*> *People){
 	}
 	return option;			
 }
+
+int ClientMenu(){
+	int option;
+	std::cout<<"Escolha a ação do cliente"<<std::endl;
+	std::cout<<"Alugar um carro                                  0" <<std::endl;
+	std::cout<<"Fazer comentario sobre funcionario ou agencia -  1" <<std::endl;
+	std::cin>>option;
+	return option;
+}
+
+int CommentMenu(){
+	int commenttype;
+	std::cout<<"escolha para quem sera feito o comentario"<<std::endl;
+	std::cout<<"funcionario   0"<<std::endl;
+	std::cout<<"agencia       1"<<std::endl;
+	std::cin>>commenttype;
+	return commenttype;
+}

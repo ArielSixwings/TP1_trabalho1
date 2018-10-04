@@ -4,9 +4,10 @@
 #include <vector>
 #include <iostream>
 #include <string>
+#include "members.hpp"
 
 /*!classe pessoa, usada como super classe para funcionarios,clientes e etc*/
-class Person{
+class Person : public Members{
 public:
 	int Age;
 	std::string CPF;
@@ -19,6 +20,7 @@ public:
 	virtual void ShowInformation();
 	//!metodo virtual para identificar para qual subclasse um objeto do tipo pessoa foi atribuido
 	virtual int ReturnType();
+	void getComments() override;
 };
 
 std::vector <int> VerifyRegistration(std::vector <Person*> People);

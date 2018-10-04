@@ -37,3 +37,7 @@ void Agency::startSalesMonth()
     generalrevenue = 0;
     generalnumbersales = 0;
 }
+
+void Agency::getComments(){
+	std::cout << this->comments << std::endl;
+}

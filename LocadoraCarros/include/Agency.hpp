@@ -3,10 +3,11 @@
 
 #include <iostream>
 #include <string>
+#include "members.hpp"
 /*!Representa as agencias da compania, todas as agencias possuem em comum a receita total e o
 número total de vendas.
 */ 
-class Agency{
+class Agency : public Members{
 public:
     static double generalrevenue;
     static double generalnumbersales; 
@@ -27,6 +28,7 @@ public:
     static void getGeneralData();
     //!zera a receita de todas as receitas e a receita geral
     void startSalesMonth();
+    void getComments() override;
 };
 
 #endif //AGENCY_HPP

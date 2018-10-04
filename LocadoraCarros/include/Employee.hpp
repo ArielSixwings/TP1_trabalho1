@@ -1,6 +1,7 @@
 #ifndef EMPLOYEE_HPP
 #define EMPLOYEE_HPP
 #include "Person.hpp"
+#include "members.hpp"
 #include <string>
 /*!subclasse de pessoa, possui informações de login,senha e salário*/
 class Employee : public Person{
@@ -20,6 +21,7 @@ public:
     void ShowInformation() override;
     //!retorna o tipo da subclasse de pessoa, nesse caso,2 para empregado
     int ReturnType() override;
+    void getComments() override;
 };
 
 #endif //EMPLOYEE_HPP
