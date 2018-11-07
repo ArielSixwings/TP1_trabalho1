@@ -1,6 +1,6 @@
 IDIR =../include
 CC=g++ -std=c++17
-CFLAGS=-I$(IDIR) -Wpedantic -Wall -g
+CFLAGS=-I$(IDIR) -Wpedantic -Wall -g -lsqlite3
 
 ODIR=obj
 TDIR =../test

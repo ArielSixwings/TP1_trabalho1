@@ -5,6 +5,7 @@
 #include <string>
 #include <map>
 #include <cstdlib>
+#include <sqlite3.h>
 #include "Person.hpp"
 #include "Employee.hpp"
 #include "Client.hpp"
