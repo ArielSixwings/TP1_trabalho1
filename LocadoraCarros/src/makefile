@@ -1,6 +1,6 @@
 IDIR =../include
 CC=g++ -std=c++17
-CFLAGS=-I$(IDIR) -Wpedantic -Wall -g -fprofile-arcs -ftest-coverage
+CFLAGS=-I$(IDIR) -Wpedantic -Wall -g
 
 ODIR=obj
 TDIR =../test
