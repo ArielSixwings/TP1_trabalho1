@@ -83,3 +83,85 @@ int SearchInList(std::vector <Person*> People, std::string cpf){
 void Person::getComments(){
 	std::cout<<"no comments for this class"<<std::endl;
 }
+
+// ########################################################################################## //
+
+int ModelPerson::callback(void *NotUsed, int argc, char **argv, char **szColName){
+
+	for(int i = 0; i < argc; i++){
+    	std::cout << szColName[i] << " = " << argv[i] << std::endl;
+  	}
+
+  	std::cout << "\n";
+
+  	return 0;
+}
+
+int ModelPerson::callbackcount(void *data, int argc, char **argv, char **szColName){
+
+	int* aux = static_cast<int*>(data);
+	*aux = (atoi(argv[0]));
+
+  	return 0;
+}
+
+int ModelPerson::callbackperson(void *data, int argc, char **argv, char **szColName){
+
+  Person* aux = static_cast<Person*>(data);
+  aux->CPF = argv[0];
+  aux->Name =  argv[1];
+  aux->Age = atoi(argv[2]);
+
+  return 0;
+}
+
+int ModelPerson::HowMany(sqlite3 *db){
+	int* countEmp = (int*) malloc(sizeof(int));
+	int* countCli = (int*) malloc(sizeof(int));
+	char* szErrMsg = nullptr;
+	std::string pSQL("SELECT COUNT(CPF) FROM Employee");
+	int rc = sqlite3_exec(db, pSQL.c_str(), callbackcount, countEmp, &szErrMsg);
+	if(rc != SQLITE_OK){
+    	std::cout << "SQL Error: " << szErrMsg << std::endl;
+    	sqlite3_free(szErrMsg);
+    	free(countEmp);
+    	free(countCli);
+    	return 0;
+  	}
+  	std::string pSQL1("SELECT COUNT(CPF) FROM Client");
+	rc = sqlite3_exec(db, pSQL1.c_str(), callbackcount, countCli, &szErrMsg);
+	if(rc != SQLITE_OK){
+    	std::cout << "SQL Error: " << szErrMsg << std::endl;
+    	sqlite3_free(szErrMsg);
+    	free(countEmp);
+    	free(countCli);
+    	return 0;
+  	}
+  	return (*countEmp + *countCli);
+}
+
+flags ModelPerson::InsertIntoTablePerson(Person* aux, sqlite3 *db){
+  char* szErrMsg = nullptr;
+  std::string pSQL("INSERT OR IGNORE INTO Person(CPF, Age, Name) VALUES ('"
+  + aux->CPF + "', " + std::to_string(aux->Age) + ", '" 
+  + aux->Name + "')");
+  int rc = sqlite3_exec(db, pSQL.c_str(), callback, 0, &szErrMsg);
+  if(rc != SQLITE_OK){
+    std::cout << "SQL Error: " << szErrMsg << std::endl;
+    sqlite3_free(szErrMsg);
+    return RETURNERROR;
+  }
+  return RETURNOK;
+}
+
+flags ModelPerson::DeleteFromTablePerson(std::string CPF, sqlite3 *db){
+	char* szErrMsg = nullptr;
+  	std::string pSQL("DELETE FROM Person WHERE CPF = '" + CPF + "'");
+  	int rc = sqlite3_exec(db, pSQL.c_str(), callback, 0, &szErrMsg);
+  	if(rc != SQLITE_OK){
+  	  std::cout << "SQL Error: " << szErrMsg << std::endl;
+  	  sqlite3_free(szErrMsg);
+  	  return RETURNERROR;
+  	}
+  	return RETURNOK;	
+}

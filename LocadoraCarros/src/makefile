@@ -8,10 +8,10 @@ LDIR =../lib
 
 LIBS=-lm
 
-_DEPS = Vehicles.hpp Alocation.hpp Person.hpp Client.hpp Agency.hpp Employee.hpp Exceptions.hpp Interface.hpp
+_DEPS = Vehicles.hpp Alocation.hpp Person.hpp Client.hpp Agency.hpp Employee.hpp Exceptions.hpp Interface.hpp DataBank.hpp
 DEPS = $(patsubst %,$(IDIR)/%,$(_DEPS))
 
-_OBJ = Vehicles.o Alocation.o Main.o Person.o Client.o Agency.o Employee.o Exceptions.o Interface.o
+_OBJ = Vehicles.o Alocation.o Main.o Person.o Client.o Agency.o Employee.o Exceptions.o Interface.o DataBank.o
 OBJ = $(patsubst %,$(ODIR)/%,$(_OBJ))
 
 _OBJ2 = Agency.o TEST_Agency.o

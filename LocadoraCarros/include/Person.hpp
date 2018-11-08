@@ -3,7 +3,7 @@
 #include <string>
 #include <vector>
 #include <iostream>
-#include <string>
+#include "DataBank.hpp"
 #include "members.hpp"
 
 /*!classe pessoa, usada como super classe para funcionarios,clientes e etc*/
@@ -21,6 +21,21 @@ public:
 	//!metodo virtual para identificar para qual subclasse um objeto do tipo pessoa foi atribuido
 	virtual int ReturnType();
 	void getComments() override;
+};
+
+class ModelPerson{
+public:
+	static int callback(void *NotUsed, int argc, char **argv, char **szColName);
+
+    static int callbackperson(void* data, int argc, char **argv, char **szColName);
+
+    static int callbackcount(void *data, int argc, char **argv, char **szColName);
+
+    static int HowMany(sqlite3 *db);
+
+    static flags InsertIntoTablePerson(Person* aux, sqlite3 *db);
+
+    static flags DeleteFromTablePerson(std::string CPF, sqlite3 *db);
 };
 
 std::vector <int> VerifyRegistration(std::vector <Person*> People);
