@@ -19,7 +19,7 @@ OBJ2 = $(patsubst %,$(ODIR)/%,$(_OBJ2))
 
 all: TEST_Agency Atividade1
 
-$(ODIR)/%.o: %.cpp $(DEPS)
+$(ODIR)/%.o: ./%.cpp $(DEPS)
 	$(CC) -c -o $@ $< $(CFLAGS)
 
 Atividade1: $(OBJ)
