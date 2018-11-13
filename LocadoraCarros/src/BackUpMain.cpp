@@ -17,3 +17,21 @@
 	// Agency A1("074","Aeroporto de Brasília, Juscelino Kubitschek, BSB, Brasil",0.0);
 	// Agency A2("893","Q CSD 06 LOTE 34 LOJA 01, St. D Sul - TAGUATINGA SUL, Brasília - DF, 72020-065",0.0);
 	// Agency A3("182","St. A Sul QSA 20 - Taguatinga, Brasília - DF, 72015-200",0.0);
+
+// Brands.push_back("Chevrolet");
+	// Brands.push_back("BMW");
+	// Brands.push_back("Ford");
+	// Brands.push_back("Tesla");
+
+	// Models[0][0] = "Agile";
+	// Models[0][1] = "Tigra";
+	// Models[0][2] = "Camaro";
+	// Models[1][0] = "X1";
+	// Models[1][1] = "M5";
+	// Models[1][2] = "i3";
+	// Models[2][0] = "Edge";
+	// Models[2][1] = "Ecosport";
+	// Models[2][2] = "Fusion";
+	// Models[3][0] = "ModelS";
+	// Models[3][1] = "ModelX";
+	// Models[3][2] = "Model3";

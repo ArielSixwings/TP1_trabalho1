@@ -70,7 +70,7 @@ int ModelAgency::callbackcount(void *data, int argc, char **argv, char **szColNa
 }
 
 Agency ModelAgency::GiveAgencys(int i, sqlite3 *db){
-  Agency aux("0", "0", 0);
+  Agency aux("0", "Error", 0);
   char* szErrMsg = nullptr;
   std::string pSQL("SELECT * FROM Agency WHERE rowid = " + std::to_string(i+1));
   int rc = sqlite3_exec(db, pSQL.c_str(), callbackagency, &aux, &szErrMsg);
@@ -97,7 +97,7 @@ int ModelAgency::HowMany(sqlite3 *db){
 }
 
 Agency ModelAgency::FindAgency(std::string Id, sqlite3 *db){
-  Agency aux("0", "0", 0);
+  Agency aux("0", "Error", 0);
   char* szErrMsg = nullptr;
   std::string pSQL("SELECT * FROM Agency WHERE agencyId = '" + Id + "'");
   int rc = sqlite3_exec(db, pSQL.c_str(), callbackagency, &aux, &szErrMsg);

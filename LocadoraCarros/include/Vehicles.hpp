@@ -1,5 +1,6 @@
 #ifndef VEHICLE_HPP
 #define VEHICLE_HPP
+#include "DataBank.hpp"
 #include "Alocation.hpp"
 #include <string>
 #include <vector>
@@ -9,7 +10,6 @@
 class Vehicle{
 public:
 	int Key;
-	int AlocationPrice;
 	bool Alocated;
 	std::string renavam;
 	std::string Board;
@@ -38,5 +38,26 @@ public:
 void ShowBrands(std::vector <std::string> Brands);
 //!mostra em tela os modelos disponiveis
 void ShowModels(std::string Brand, std::vector <std::vector <std::string>> Models);
+
+class ModelVehicle{
+public:
+
+    static int callback(void *NotUsed, int argc, char **argv, char **szColName);
+
+    static int callbackvehicle(void* data, int argc, char **argv, char **szColName);
+
+    static int callbackcount(void *data, int argc, char **argv, char **szColName);
+
+    static Vehicle* FindVehicle(int Key, sqlite3 *db);
+
+    static Vehicle* GiveVehicles(int i, sqlite3 *db);
+
+    static int HowMany(sqlite3 *db);
+
+    static flags InsertIntoTableVehicle(Vehicle aux, sqlite3 *db);
+
+    static flags DeleteFromTableVehicle(int Key, sqlite3 *db);
+
+};
 
 #endif /* VEHICLE_HPP */
