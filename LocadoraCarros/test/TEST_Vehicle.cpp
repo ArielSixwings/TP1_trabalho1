@@ -1,3 +1,4 @@
+#define CATCH_CONFIG_MAIN
 #include "catch2.hpp"
 #include "Vehicle.hpp"
 #include <string>
@@ -20,3 +21,5 @@ TEST_CASE("ConstructorTest") {
     REQUIRE(car.Priceperday == 103.5);
     REQUIRE(car.Priceperperiod == 93.15);
 }
+
+//TODO testar acupado apos alugar
