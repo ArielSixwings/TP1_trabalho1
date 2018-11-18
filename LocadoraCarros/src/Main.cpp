@@ -7,6 +7,8 @@
 #include <cstdlib>
 #include <sqlite3.h>
 #include "DataBank.hpp"
+#include "Brand.hpp"
+#include "Model.hpp"
 #include "Person.hpp"
 #include "Employee.hpp"
 #include "Client.hpp"
@@ -25,6 +27,7 @@ void showComments(Members* member){
 }
 
 int main(){
+	int i;
 	sqlite3 *db = GeneralBank::CreateSchema();
 	// Employee* auxEmp;
 	// // Menu's Variables
@@ -36,32 +39,30 @@ int main(){
 	// std::vector <Vehicle> Cars;
 	// int i, which, howmany;
 	// std::vector <std::string> Brands;
-	// std::vector <std::vector <std::string>> Models(4, std::vector<std::string>(3));
+	// std::vector <std::vector <std::string>> Models(ModelBrand::HowMany(db), std::vector<std::string>((ModelModel::HowMany(db)/ModelBrand::HowMany(db))));
 	// std::vector <Alocation> Queue;
 	// std::vector <Vehicle> Alocated;
 	// std::vector<Person*> Emp;
 	// std::string auxcomments;
 	// std::string auxagencyid;
 
-	// //Creating basic Brands
-	// Brands.push_back("Chevrolet");
-	// Brands.push_back("BMW");
-	// Brands.push_back("Ford");
-	// Brands.push_back("Tesla");
 
+
+	//Creating basic Brands
+	std::vector <Brand> Brands;
+	for(i = 0; i < ModelBrand::HowMany(db); i++){
+		Brand auxBrd = ModelBrand::GiveBrands(i, db);
+		Brands.push_back(auxBrd);		
+	}
+
+	
 	// //Creating basic Models
-	// Models[0][0] = "Agile";
-	// Models[0][1] = "Tigra";
-	// Models[0][2] = "Camaro";
-	// Models[1][0] = "X1";
-	// Models[1][1] = "M5";
-	// Models[1][2] = "i3";
-	// Models[2][0] = "Edge";
-	// Models[2][1] = "Ecosport";
-	// Models[2][2] = "Fusion";
-	// Models[3][0] = "ModelS";
-	// Models[3][1] = "ModelX";
-	// Models[3][2] = "Model3";
+	std::vector <Model> Models;
+	for(i = 0; i < ModelModel::HowMany(db); i++){
+		Model auxMdl = ModelModel::GiveModels(i, db);
+		Models.push_back(auxMdl);		
+	}
+
 
 	// // Creating basic vehicles
 	// Vehicle V1(0, "VEG4064", "RED", "ALCOHOL", "3KI8S30KMN14IOM40",
@@ -77,19 +78,19 @@ int main(){
 
 	//Creating basic Agencys
 	std::vector <Agency> Agencys;
-	for(int i = 0; i < ModelAgency::HowMany(db); i++){
+	for(i = 0; i < ModelAgency::HowMany(db); i++){
 		Agency auxAgy = ModelAgency::GiveAgencys(i, db);
 		Agencys.push_back(auxAgy);		
 	}
 
 	// Creating basic people
 	std::vector <Person*> People;
-	for(int i = 0; i < ModelEmployee::HowMany(db); i++){
+	for(i = 0; i < ModelEmployee::HowMany(db); i++){
 		Employee* auxEmp = ModelEmployee::GiveEmployees(i, db);
 		People.push_back(auxEmp);		
 	}
 
-	for(int i = 0; i < ModelClient::HowMany(db); i++){
+	for(i = 0; i < ModelClient::HowMany(db); i++){
 		Client* auxCli = ModelClient::GiveClients(i, db);
 		People.push_back(auxCli);		
 	}

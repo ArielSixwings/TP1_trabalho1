@@ -109,3 +109,102 @@ void ShowModels(std::string Brand, std::vector <std::vector <std::string>> Model
 		std::cout<<Models[3][2] << std::endl;
 	}
 }
+
+// ########################################################################################## //
+
+// int ModelVehicle::callback(void *NotUsed, int argc, char **argv, char **szColName){
+//   for(int i = 0; i < argc; i++){
+//     std::cout << szColName[i] << " = " << argv[i] << std::endl;
+//   }
+
+//   std::cout << "\n";
+
+//   return 0;
+// }
+
+// int ModelVehicle::callbackVehicle(void *data, int argc, char **argv, char **szColName){
+
+//   Vehicle* aux = static_cast<Vehicle*>(data);
+//   aux->CPF = argv[0];
+//   aux->Name =  argv[1];
+//   aux->Age = atoi(argv[2]);
+//   aux->salary = atoi(argv[3]);
+//   aux->Vehiclelogin = argv[4];
+//   aux->Vehiclepassword = argv[5];
+
+//   return 0;
+// }
+
+// int ModelVehicle::callbackcount(void *data, int argc, char **argv, char **szColName){
+
+//   int* aux = static_cast<int*>(data);
+//   *aux = (atoi(argv[0]));
+
+//     return 0;
+// }
+
+// Vehicle* ModelVehicle::GiveVehicles(int i, sqlite3 *db){
+//   Vehicle* aux = new Vehicle("0", "0", 0, 0, "0", "0");
+//   char* szErrMsg = nullptr;
+//   std::string pSQL("SELECT * FROM Vehicle WHERE rowid = " + std::to_string(i+2));
+//   int rc = sqlite3_exec(db, pSQL.c_str(), callbackVehicle, aux, &szErrMsg);
+//     if(rc != SQLITE_OK){
+//       std::cout << "SQL Error: " << szErrMsg << std::endl;
+//       sqlite3_free(szErrMsg);
+//       return nullptr;
+//     }
+//     return aux;
+// }
+
+// int ModelVehicle::HowMany(sqlite3 *db){
+//   int* countEmp = (int*) malloc(sizeof(int));
+//   char* szErrMsg = nullptr;
+//   std::string pSQL("SELECT COUNT(CPF) FROM Vehicle");
+//   int rc = sqlite3_exec(db, pSQL.c_str(), callbackcount, countEmp, &szErrMsg);
+//   if(rc != SQLITE_OK){
+//       std::cout << "SQL Error: " << szErrMsg << std::endl;
+//       sqlite3_free(szErrMsg);
+//       free(countEmp);
+//       return 0;
+//     }
+//   return (*countEmp);
+// }
+
+// Vehicle* ModelVehicle::FindVehicle(std::string Login, sqlite3 *db){
+//   Vehicle* aux = new Vehicle("0", "0", 0, 0, "0", "0");
+//   char* szErrMsg = nullptr;
+//   std::string pSQL("SELECT * FROM Vehicle WHERE Vehiclelogin = '" + Login + "'");
+//   int rc = sqlite3_exec(db, pSQL.c_str(), callbackVehicle, aux, &szErrMsg);
+//   if(rc != SQLITE_OK){
+//     std::cout << "SQL Error: " << szErrMsg << std::endl;
+//     sqlite3_free(szErrMsg);
+//     return nullptr;
+//   }
+//   return aux;
+// }
+
+// flags ModelVehicle::InsertIntoTableVehicle(Vehicle aux, sqlite3 *db){
+//   char* szErrMsg = nullptr;
+//   std::string pSQL("INSERT OR IGNORE INTO Vehicle(CPF, Name, Age, salary, Vehiclelogin, Vehiclepassword) VALUES ('"
+//   + aux.CPF + "', '" + aux.Name + "', " + std::to_string(aux.Age) + ", " + std::to_string(aux.salary) + ", '" 
+//   + aux.Vehiclelogin + "', '" + aux.Vehiclepassword + "')");
+//   int rc = sqlite3_exec(db, pSQL.c_str(), callback, 0, &szErrMsg);
+//   if(rc != SQLITE_OK){
+//     std::cout << "SQL Error: " << szErrMsg << std::endl;
+//     sqlite3_free(szErrMsg);
+//     return RETURNERROR;
+//   }
+//   return RETURNOK;
+// }
+
+// flags ModelVehicle::DeleteFromTableVehicle(std::string CPF, sqlite3 *db){
+// 	char* szErrMsg = nullptr;
+//   	std::string pSQL("DELETE FROM Vehicle WHERE CPF = '" + CPF + "'");
+//   	int rc = sqlite3_exec(db, pSQL.c_str(), callback, 0, &szErrMsg);
+//   	if(rc != SQLITE_OK){
+//   	  std::cout << "SQL Error: " << szErrMsg << std::endl;
+//   	  sqlite3_free(szErrMsg);
+//   	  return RETURNERROR;
+//   	}
+//   	return RETURNOK;	
+// }
