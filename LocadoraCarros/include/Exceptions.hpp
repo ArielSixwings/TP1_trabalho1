@@ -1,6 +1,10 @@
 #ifndef EXCEPTIONS_HPP
 #define EXCEPTIONS_HPP
 #include "Person.hpp"
+#include "Brand.hpp"
+#include "Model.hpp"
+#include <sqlite3.h>
+#include "Vehicles.hpp"
 #include <iostream>
 #include <exception>
 #include <string>
@@ -34,9 +38,11 @@ public:
 	//!Verifica se a entrada recebida são numeros
 	static std::string VerifyOnlyNumbersInputs(std::string word);
 	//!verifica se a marca esta na lista de marcas
-	static std::string VerifyBrandsInputs(std::vector <std::string> Brands);
+	static std::string VerifyBrandsInputs(std::vector <Brand> Brands);
 	//!verifica se o veiculo escolhido pertence à marca
-	static std::string VerifyModelsInputs(std::string Brand, std::vector <std::vector <std::string>> Models);
+	static std::string VerifyModelsInputs(std::string Brand, std::vector <Model> Models);
+
+	static void VerifyCar(std::vector<Vehicle> Alocated, std::vector<Vehicle> Cars, sqlite3 *db);
 };
 
 int VerifyTypeInputs();

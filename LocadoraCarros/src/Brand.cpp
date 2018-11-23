@@ -1,8 +1,21 @@
 #include "Brand.hpp"
+#include "Exceptions.hpp"
+#include <cstring>
 
 Brand::Brand(std::string name, int numberOfModels){
 	this->Name = name;
 	this->NumberOfModels = numberOfModels;
+}
+
+Brand::Brand(int i){
+  std::string string;
+  std::cout << "Marca: " << i << std::endl;
+  std::cout << "Insira o nome da Marca: " << std::endl;
+  std::cin >> string;
+  this->Name = string;
+  std::cout << "Insira o número de modelos da Marca: " << std::endl;
+  int number = VerifyTypeInputs();
+  this->NumberOfModels = number;
 }
 
 void Brand::getBrand(){
@@ -42,6 +55,13 @@ int ModelBrand::callbackcount(void *data, int argc, char **argv, char **szColNam
   *aux = (atoi(argv[0]));
 
     return 0;
+}
+
+int ModelBrand::callbackname(void *data, int argc, char **argv, char **szColName){
+
+  memcpy(data, argv[0], 15*sizeof(char));
+
+  return 0;
 }
 
 Brand ModelBrand::GiveBrands(int i, sqlite3 *db){
@@ -107,4 +127,28 @@ flags ModelBrand::DeleteFromTableBrand(std::string Name, sqlite3 *db){
   	  return RETURNERROR;
   	}
   	return RETURNOK;	
+}
+
+std::vector <Brand> ModelBrand::GetBrands(sqlite3 *db){
+  std::vector<Brand> aux;
+  for (int i = 0; i < ModelBrand::HowMany(db); i++){
+    Brand auxBrd = ModelBrand::GiveBrands(i, db);
+    aux.push_back(auxBrd);
+  }
+  return aux;
+}
+
+char* ModelBrand::FindFromName(std::string name, sqlite3 *db){
+  char *szErrMsg = nullptr;
+  char* key = (char*) malloc(15*sizeof(char));
+
+  std::string pSQL("SELECT Brand.Name FROM Brand WHERE Brand.Name = '" + name + "'");
+  int rc = sqlite3_exec(db, pSQL.c_str(), callbackname, key, &szErrMsg);
+  
+  if (rc != SQLITE_OK){
+    std::cout << "SQL Error: " << szErrMsg << std::endl;
+    sqlite3_free(szErrMsg);
+    return nullptr;
+  }
+  return key;
 }

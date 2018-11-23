@@ -73,7 +73,7 @@ int ModelEmployee::callbackcount(void *data, int argc, char **argv, char **szCol
 Employee* ModelEmployee::GiveEmployees(int i, sqlite3 *db){
   Employee* aux = new Employee("0", "0", 0, 0, "0", "0");
   char* szErrMsg = nullptr;
-  std::string pSQL("SELECT * FROM Employee WHERE rowid = " + std::to_string(i+2));
+  std::string pSQL("SELECT * FROM Employee WHERE rowid = " + std::to_string(i+1));
   int rc = sqlite3_exec(db, pSQL.c_str(), callbackemployee, aux, &szErrMsg);
     if(rc != SQLITE_OK){
       std::cout << "SQL Error: " << szErrMsg << std::endl;

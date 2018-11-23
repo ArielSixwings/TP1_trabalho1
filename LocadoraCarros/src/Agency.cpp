@@ -133,3 +133,12 @@ flags ModelAgency::DeleteFromTableAgency(std::string agencyId, sqlite3 *db){
     }
     return RETURNOK;    
 }
+
+std::vector<Agency> ModelAgency::GetAgencys(sqlite3 *db){
+  std::vector<Agency> aux;
+  for (int i = 0; i < ModelAgency::HowMany(db); i++){
+    Agency auxAgy = ModelAgency::GiveAgencys(i, db);
+    aux.push_back(auxAgy);
+  }
+  return aux;
+}

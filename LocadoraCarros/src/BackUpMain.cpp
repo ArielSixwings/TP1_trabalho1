@@ -35,3 +35,11 @@
 	// Models[3][0] = "ModelS";
 	// Models[3][1] = "ModelX";
 	// Models[3][2] = "Model3";
+
+// Creating basic vehicles
+// Vehicle V1(0, "VEG4064", "RED", "ALCOHOL", "3KI8S30KMN14IOM40",
+//  	 2015, 4, 923844.0, "00184729834", "Fusion", "Ford", 103.5,93.15);
+// Vehicle V2(1, "GTX1070", "BLUE", "GASOLINE", "2MX0P1KL3USKDNZPI",
+// 	 1999, 4, 10000.0, "00948571274", "Agile", "Chevrolet",93.7,84.33);
+// Vehicle V3(2, "RTX2080", "PINK WITH GREEN STRIPES", "ELETRIC", "0I59D03HBAMM3JU8K",
+// 	 2018, 7, 0.0, "00937458192", "ModelS", "Tesla", 82.9,74.61);

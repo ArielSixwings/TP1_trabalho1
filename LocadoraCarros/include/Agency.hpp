@@ -51,6 +51,7 @@ public:
 
     static flags DeleteFromTableAgency(std::string agencyId, sqlite3 *db);
 
+    static std::vector<Agency> GetAgencys(sqlite3 *db);
 };
 
 #endif //AGENCY_HPP

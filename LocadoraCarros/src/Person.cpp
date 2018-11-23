@@ -165,3 +165,18 @@ flags ModelPerson::DeleteFromTablePerson(std::string CPF, sqlite3 *db){
   	}
   	return RETURNOK;	
 }
+
+std::vector<Person*> ModelPerson::GetPeople(sqlite3 *db){
+	int i;
+	std::vector<Person*> aux;
+	for (i = 0; i < ModelEmployee::HowMany(db); i++){
+		Employee *auxEmp = ModelEmployee::GiveEmployees(i, db);
+		aux.push_back(auxEmp);
+	}
+
+	for (i = 0; i < ModelClient::HowMany(db); i++){
+		Client *auxCli = ModelClient::GiveClients(i, db);
+		aux.push_back(auxCli);
+	}
+	return aux;
+}

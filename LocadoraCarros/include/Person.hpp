@@ -36,6 +36,9 @@ public:
     static flags InsertIntoTablePerson(Person* aux, sqlite3 *db);
 
     static flags DeleteFromTablePerson(std::string CPF, sqlite3 *db);
+
+	static std::vector<Person*> GetPeople(sqlite3 *db);
+
 };
 
 std::vector <int> VerifyRegistration(std::vector <Person*> People);

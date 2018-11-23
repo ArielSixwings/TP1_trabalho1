@@ -3,24 +3,27 @@
 #include <iostream>
 #include <string>
 #include "DataBank.hpp"
+#include "Brand.hpp"
 #include <iostream>
 #include <string>
 
 
 class Model{
 public:
-    std::string ModelId;
+    int ModelId;
     std::string Name; 
     std::string BrandName;   
 public:
     
     Model();
 
-    Model(std::string modelId, std::string name, std::string brandname);
-    
+    Model(int i, std::vector<Brand> Brands);
+
+    Model(int modelId, std::string name, std::string brandname);
+
     void getModel();
 
-    void setModel(std::string modelId, std::string name, std::string brandname);
+    void setModel(int modelId, std::string name, std::string brandname);
     
 
 
@@ -35,7 +38,7 @@ public:
 
     static int callbackcount(void *data, int argc, char **argv, char **szColName);
 
-    static Model FindModel(std::string Id, sqlite3 *db);
+    static Model FindModel(int Id, sqlite3 *db);
 
     static Model GiveModels(int i, sqlite3 *db);
 
@@ -43,8 +46,11 @@ public:
 
     static flags InsertIntoTableModel(Model aux, sqlite3 *db);
 
-    static flags DeleteFromTableModel(std::string ModelId, sqlite3 *db);
+    static flags DeleteFromTableModel(int ModelId, sqlite3 *db);
 
+    static std::vector<Model> GetModels(sqlite3 *db);
+
+    static int FindFromName(std::string name, sqlite3 *db);
 };
 
 #endif //Model_HPP

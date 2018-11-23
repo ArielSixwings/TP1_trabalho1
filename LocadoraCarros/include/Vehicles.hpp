@@ -2,6 +2,8 @@
 #define VEHICLE_HPP
 #include "DataBank.hpp"
 #include "Alocation.hpp"
+#include "Brand.hpp"
+#include "Model.hpp"
 #include <string>
 #include <vector>
 
@@ -16,17 +18,17 @@ public:
 	std::string Color;
 	std::string TypeFuel;
 	std::string Chassi;
-	std::string Model;
-	std::string Brand;
 	int Year;
 	int Howmanydoors;
-	double Distance;
 	double Priceperday;
 	double Priceperperiod;
+	double Distance;
+	std::string model;
+	std::string brand;
 public:
 	/*!construtor da classe,recebe como parametro a chave do veículo no array de veículos da agencia 
 		e recebe do terminal as demais informações*/
-	Vehicle(int i, std::vector <std::string> Brands, std::vector <std::vector <std::string>> Models);
+	Vehicle(int i, std::vector <Brand> Brands, std::vector <Model> Models);
 	//!construtor da classe, recebe como parametro todas as informações do veiculo
 	Vehicle(int key, std::string board, std::string color, std::string typefuel, 
 		std::string chassi, int year, int howmanydoors, double distance, 
@@ -35,9 +37,9 @@ public:
 	void getVehicle();
 };
 //!mostra em tela as marcas disponiveis
-void ShowBrands(std::vector <std::string> Brands);
+void ShowBrands(std::vector <Brand> Brands);
 //!mostra em tela os modelos disponiveis
-void ShowModels(std::string Brand, std::vector <std::vector <std::string>> Models);
+void ShowModels(std::string Brand, std::vector <Model> Models);
 
 class ModelVehicle{
 public:
@@ -48,9 +50,9 @@ public:
 
     static int callbackcount(void *data, int argc, char **argv, char **szColName);
 
-    static Vehicle* FindVehicle(int Key, sqlite3 *db);
+    static Vehicle FindVehicle(int Key, sqlite3 *db);
 
-    static Vehicle* GiveVehicles(int i, sqlite3 *db);
+    static Vehicle GiveVehicles(int i, sqlite3 *db);
 
     static int HowMany(sqlite3 *db);
 
@@ -58,6 +60,11 @@ public:
 
     static flags DeleteFromTableVehicle(int Key, sqlite3 *db);
 
+	static flags UpdateFromTableVehicle(int Key, sqlite3 *db);
+
+	static std::vector<Vehicle> GetVehicles(sqlite3 *db);
+
+	static int FindBoard(std::string board, sqlite3 *db);
 };
 
 #endif /* VEHICLE_HPP */

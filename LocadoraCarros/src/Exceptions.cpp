@@ -29,7 +29,29 @@ int ExceptionsInputs::VerifyInputs(int a, int b){
 	return given;
 }
 
-std::string ExceptionsInputs::VerifyExactInputs(unsigned int a, int which){
+void ExceptionsInputs::VerifyCar(std::vector <Vehicle> Alocated, std::vector <Vehicle> Cars, sqlite3* db){
+	int which;
+	int option = 0;
+	flags X;
+	do{
+		try{
+			std::cout << "Insira a chave de veículo cadastrado: ";
+			which = ExceptionsInputs::VerifyInputs(0, Cars.size());
+			X = ModelVehicle::UpdateFromTableVehicle(which, db);
+			GeneralBank::ExitDataBase(X, db);
+			Alocated.push_back(Cars[which]);
+			option = 1;
+		}
+		catch(std::logic_error &ex){
+			std::cout<<"Chave de veículo não encontrada!" <<  std::endl;
+
+		}
+
+	}while(option == 0);
+}
+
+	std::string ExceptionsInputs::VerifyExactInputs(unsigned int a, int which)
+{
 	int aux;
 	std::string word;
 	switch (which){
@@ -204,7 +226,7 @@ std::string ExceptionsInputs::VerifyOnlyNumbersInputs(std::string word){
 	return word;
 }
 
-std::string ExceptionsInputs::VerifyBrandsInputs(std::vector <std::string> Brands){
+std::string ExceptionsInputs::VerifyBrandsInputs(std::vector <Brand> Brands){
 	int aux = -1;
 	std::string word;
 	do{
@@ -212,7 +234,7 @@ std::string ExceptionsInputs::VerifyBrandsInputs(std::vector <std::string> Brand
 			int i;
 			std::cin>>word;
 			for(i = 0; i < (int)Brands.size(); i++){
-				if(word == Brands[i]){
+				if(word == Brands[i].Name){
 					aux = 0;
 					break;
 				}
@@ -229,43 +251,22 @@ std::string ExceptionsInputs::VerifyBrandsInputs(std::vector <std::string> Brand
 	return word;	
 }
 
-std::string ExceptionsInputs::VerifyModelsInputs(std::string Brand, std::vector <std::vector <std::string>> Models){
+std::string ExceptionsInputs::VerifyModelsInputs(std::string Brand, std::vector <Model> Models){
 	int aux = -1;
 	std::string word;
 	do{
 		try{
 			std::cin>>word;
-			if(Brand == "Chevrolet"){
-				if(word == Models[0][0] || word == Models[0][1] || word == Models[0][2]){
-					aux = 0;
-				}
-				else{
-					throw ExceptionsInputs(word);
-				}
-			}
-			if(Brand == "BMW"){
-				if(word == Models[1][0] || word == Models[1][1] || word == Models[1][2]){
-					aux = 0;
-				}
-				else{
-					throw ExceptionsInputs(word);
+			for(auto c : Models){
+				if(Brand == c.BrandName){
+					if(word == c.Name){
+						aux = 0;
+						break;
+					}
 				}
 			}
-			if(Brand == "Ford"){
-				if(word == Models[2][0] || word == Models[2][1] || word == Models[2][2]){
-					aux = 0;
-				}
-				else{
-					throw ExceptionsInputs(word);
-				}
-			}
-			if(Brand == "Tesla"){
-				if(word == Models[3][0] || word == Models[3][1] || word == Models[3][2]){
-					aux = 0;
-				}
-				else{
-					throw ExceptionsInputs(word);
-				}
+			if(aux != 0){
+				throw ExceptionsInputs(word);
 			}
 		}
 		catch(ExceptionsInputs &ex){

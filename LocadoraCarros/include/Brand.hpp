@@ -16,7 +16,9 @@ public:
     Brand();
 
     Brand(std::string name, int numberOfModels);
-    
+
+    Brand(int i);
+
     void getBrand();
 
     void setBrand(std::string name, int numberOfModels);
@@ -34,6 +36,8 @@ public:
 
     static int callbackcount(void *data, int argc, char **argv, char **szColName);
 
+    static int callbackname(void *data, int argc, char **argv, char **szColName);
+
     static Brand FindBrand(std::string Id, sqlite3 *db);
 
     static Brand GiveBrands(int i, sqlite3 *db);
@@ -43,6 +47,10 @@ public:
     static flags InsertIntoTableBrand(Brand aux, sqlite3 *db);
 
     static flags DeleteFromTableBrand(std::string Name, sqlite3 *db);
+
+    static std::vector<Brand> GetBrands(sqlite3 *db);
+
+    static char* FindFromName(std::string name, sqlite3 *db);
 
 };
 
