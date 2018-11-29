@@ -1,5 +1,5 @@
 #include "Exceptions.hpp"
-#include "Person.hpp"
+#include <exception>
 
 ExceptionsInputs::ExceptionsInputs(int a, int b){
 	this->x = a;
@@ -50,8 +50,7 @@ void ExceptionsInputs::VerifyCar(std::vector <Vehicle> Alocated, std::vector <Ve
 	}while(option == 0);
 }
 
-	std::string ExceptionsInputs::VerifyExactInputs(unsigned int a, int which)
-{
+std::string ExceptionsInputs::VerifyExactInputs(unsigned int a, int which){
 	int aux;
 	std::string word;
 	switch (which){
@@ -128,9 +127,9 @@ void ExceptionsInputs::VerifyCar(std::vector <Vehicle> Alocated, std::vector <Ve
 	return "0";
 }
 
-std::string ExceptionsInputs::VerifyAgencyId(std::map<std::string, int> AgencysIdmap){
+int ExceptionsInputs::VerifyAgencyId(std::map<int, int> AgencysIdmap){
 	int aux;
-	std::string agencyid;
+	int agencyid;
 	do{
 		try{
 			std::cin>>agencyid;

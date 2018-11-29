@@ -1,4 +1,5 @@
 #include "Interface.hpp"
+#include "Exceptions.hpp"
 #include <iostream>
 
 void BackToMenu()

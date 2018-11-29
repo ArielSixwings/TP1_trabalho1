@@ -10,7 +10,7 @@
 #include "Agency.hpp"
 #include "Client.hpp"
 #include "Employee.hpp"
-#include "Exceptions.hpp"
+//#include "Exceptions.hpp"
 
 //!todas são funções auxiliares para comunicação com o usuario via terminal
 void BackToMenu();

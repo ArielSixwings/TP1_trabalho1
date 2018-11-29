@@ -8,5 +8,5 @@ TEST_CASE("ConstructorTest") {
 	REQUIRE(&Alam != NULL);
 	REQUIRE((Alam.CPF).compare("06324683266") == 0);
 	REQUIRE(Alam.Age == 19);
-	REQUIRE(Alam.Name).compare("Alam Castro Pinto") == 0);
+	REQUIRE((Alam.Name).compare("Alam Castro Pinto") == 0);
 }

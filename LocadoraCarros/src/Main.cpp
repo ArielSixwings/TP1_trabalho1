@@ -18,8 +18,8 @@
 #include "Exceptions.hpp"
 #include "Interface.hpp"
 
-const std::map<std::string, int> AgencysIdmap = {
-  {"074",0},{"893",1},{"182",2}
+const std::map<int, int> AgencysIdmap = {
+  {074,0},{893,1},{182,2}
 };
 
 void showComments(Members* member){
@@ -38,9 +38,9 @@ int main(){
 	std::vector <Employee*> Emp;
 	std::vector <int> who;
 	int i, which, howmany;
+	int auxagencyid;
 	std::vector <Vehicle> Alocated;
 	std::string auxcomments;
-	std::string auxagencyid;
 	std::string genericaux;
 
 	std::vector <Alocation> Queue = ModelAlocation::GetAlocations(db);
@@ -136,18 +136,18 @@ int main(){
 						auxagencyid = ExceptionsInputs::VerifyAgencyId(AgencysIdmap);
 
 						if(option == 0){
-							Alocation aux(ModelAlocation::HowMany(db) + 1, Alocated[i].Key,auxagencyid,true, People[who[1]]->CPF, Cars[Alocated[i].Key].Priceperperiod);
+							Alocation aux(ModelAlocation::HowMany(db) + 1, Alocated[i].Key,std::to_string(auxagencyid),true, People[who[1]]->CPF, Cars[Alocated[i].Key].Priceperperiod);
                          	X = ModelAlocation::InsertIntoTableAlocation(true, aux, db);
                      		GeneralBank::ExitDataBase(X, db);
 							Queue.push_back(aux);
 							int days = Queue[i].howmanydays();
 							double salesrevenue = days * Cars[Alocated[i].Key].Priceperperiod;
-							double index = AgencysIdmap.at(Queue[i].Agency);
+							double index = AgencysIdmap.at(std::stoi(Queue[i].agency));
 							Agencys[index].sumRevenue(salesrevenue);
 							Cars[Alocated[i].Key].Alocated = true;
 						}
 						else{
-							Alocation aux(ModelAlocation::HowMany(db) + 1, Alocated [i].Key, auxagencyid, false, People[who[1]]->CPF, Cars[Alocated[i].Key].Priceperday);
+							Alocation aux(ModelAlocation::HowMany(db) + 1, Alocated [i].Key, std::to_string(auxagencyid), false, People[who[1]]->CPF, Cars[Alocated[i].Key].Priceperday);
 							Queue.push_back(aux);
 							X = ModelAlocation::InsertIntoTableAlocation(false, aux, db);
                      		GeneralBank::ExitDataBase(X, db);

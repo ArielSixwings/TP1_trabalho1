@@ -1,6 +1,6 @@
+#include "Exceptions.hpp"
 #include "Alocation.hpp"
 #include "Vehicles.hpp"
-#include "Exceptions.hpp"
 
 Alocation::Alocation(int id){
 	this->AlocationId = id;
@@ -15,12 +15,12 @@ Alocation::Alocation(int id, std::vector <int>  alocationData, std::vector <int>
 }
 
 // se a alocação for por dia, a data e hora de devolução são inseridas posteriormente
-Alocation::Alocation(int id, int which,std::string Agency,bool byperiod, std::string cpf, double price){
+Alocation::Alocation(int id, int which,std::string agency,bool byperiod, std::string cpf, double price){
 	int day, month, year, hour, minutes;
 
 	whichvehicle = which;
 	this->AlocationId = id;
-	this->Agency = Agency;
+	this->agency = agency;
 	this->cost = price;
 
 	CustomerId = cpf;
@@ -178,7 +178,7 @@ int ModelAlocation::callbackalocation(void *data, int argc, char **argv, char **
 	aux->AlocationHour = String_to_vecInt(argv[6], 1);
 	aux->DevolutionData = String_to_vecInt(argv[7], 0);
 	aux->DevolutionHour = String_to_vecInt(argv[8], 1);
-	aux->Agency = argv[9];
+	aux->agency = argv[9];
 	
 
 	return 0;
@@ -251,7 +251,7 @@ flags ModelAlocation::InsertIntoTableAlocation(bool type, Alocation aux, sqlite3
 		+ std::to_string(aux.AlocationId) + ", " + std::to_string(aux.whichvehicle)
 		+ ", '" + aux.Type + "', '" + aux.CustomerId + "', " 
 		+ std::to_string(aux.cost) + ", '" + AlocData + "', '" + AlocHour + "', '" + DevData 
-		+ "', '" + DevHour + "', '" + aux.Agency + "')");
+		+ "', '" + DevHour + "', '" + aux.agency + "')");
 		int rc = sqlite3_exec(db, pSQL.c_str(), callback, 0, &szErrMsg);
 		if (rc != SQLITE_OK){
 			std::cout << "SQL Error: " << szErrMsg << std::endl;
@@ -265,7 +265,7 @@ flags ModelAlocation::InsertIntoTableAlocation(bool type, Alocation aux, sqlite3
 		AlocationData, AlocationHour, Agency) VALUES (" 
 		+ std::to_string(aux.AlocationId) + ", " + std::to_string(aux.whichvehicle) + ", '" 
 		+ aux.Type + "', '" + aux.CustomerId + "', " + std::to_string(aux.cost) + ", '" 
-		+ AlocData + "', '" + AlocHour + "', '" + aux.Agency + "')");
+		+ AlocData + "', '" + AlocHour + "', '" + aux.agency + "')");
 		int rc = sqlite3_exec(db, pSQL.c_str(), callback, 0, &szErrMsg);
 		if (rc != SQLITE_OK){
 			std::cout << "SQL Error: " << szErrMsg << std::endl;

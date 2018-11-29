@@ -1,0 +1,619 @@
+Function '_GLOBAL__sub_I__ZN6Agency14generalrevenueE'
+Lines executed:100.00% of 1
+No branches
+No calls
+
+Function '_Z41__static_initialization_and_destruction_0ii'
+Lines executed:100.00% of 1
+No branches
+No calls
+
+Function '_ZNKSt13move_iteratorIP6AgencyE4baseEv'
+Lines executed:0.00% of 2
+No branches
+No calls
+
+Function '_ZSteqIP6AgencyEbRKSt13move_iteratorIT_ES6_'
+Lines executed:0.00% of 2
+No branches
+No calls
+
+Function '_ZSt10_ConstructI6AgencyJS0_EEvPT_DpOT0_'
+Lines executed:0.00% of 2
+No branches
+No calls
+
+Function '_ZSt7forwardI6AgencyEOT_RNSt16remove_referenceIS1_E4typeE'
+Lines executed:0.00% of 2
+No branches
+No calls
+
+Function '_ZNKSt13move_iteratorIP6AgencyEdeEv'
+Lines executed:0.00% of 2
+No branches
+No calls
+
+Function '_ZNSt13move_iteratorIP6AgencyEppEv'
+Lines executed:0.00% of 3
+No branches
+No calls
+
+Function '_ZStneIP6AgencyEbRKSt13move_iteratorIT_ES6_'
+Lines executed:0.00% of 2
+No branches
+No calls
+
+Function '_ZSt10__distanceIPcENSt15iterator_traitsIT_E15difference_typeES2_S2_St26random_access_iterator_tag'
+Lines executed:0.00% of 2
+No branches
+No calls
+
+Function '_ZSt19__iterator_categoryIPcENSt15iterator_traitsIT_E17iterator_categoryERKS2_'
+Lines executed:0.00% of 2
+No branches
+No calls
+
+Function '_ZNSt20__uninitialized_copyILb0EE13__uninit_copyISt13move_iteratorIP6AgencyES4_EET0_T_S7_S6_'
+Lines executed:0.00% of 8
+No branches
+No calls
+
+Function '_ZNK9__gnu_cxx13new_allocatorI6AgencyE8max_sizeEv'
+Lines executed:0.00% of 2
+No branches
+No calls
+
+Function '_ZSt8distanceIPcENSt15iterator_traitsIT_E15difference_typeES2_S2_'
+Lines executed:0.00% of 3
+No branches
+No calls
+
+Function '_ZN9__gnu_cxx17__is_null_pointerIcEEbPT_'
+Lines executed:0.00% of 2
+No branches
+No calls
+
+Function '_ZSt18uninitialized_copyISt13move_iteratorIP6AgencyES2_ET0_T_S5_S4_'
+Lines executed:0.00% of 3
+No branches
+No calls
+
+Function '_ZNSt13move_iteratorIP6AgencyEC2ES1_'
+Lines executed:0.00% of 2
+No branches
+No calls
+
+Function '_ZN9__gnu_cxx13new_allocatorI6AgencyE8allocateEmPKv'
+Lines executed:0.00% of 4
+No branches
+No calls
+
+Function '_ZNKSt12_Vector_baseI6AgencySaIS0_EE19_M_get_Tp_allocatorEv'
+Lines executed:0.00% of 2
+No branches
+No calls
+
+Function '_ZNSt16allocator_traitsISaI6AgencyEE8max_sizeERKS1_'
+Lines executed:0.00% of 2
+No branches
+No calls
+
+Function '_ZSt8_DestroyI6AgencyEvPT_'
+Lines executed:0.00% of 2
+No branches
+No calls
+
+Function '_ZSt11__addressofI6AgencyEPT_RS1_'
+Lines executed:0.00% of 2
+No branches
+No calls
+
+Function '_ZN9__gnu_cxx13new_allocatorI6AgencyE10deallocateEPS1_m'
+Lines executed:0.00% of 2
+No branches
+No calls
+
+Function '_ZN9__gnu_cxx13new_allocatorI6AgencyEC2Ev'
+Lines executed:0.00% of 1
+No branches
+No calls
+
+Function '_ZNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEE12_M_constructIPcEEvT_S7_St20forward_iterator_tag'
+Lines executed:0.00% of 13
+No branches
+No calls
+
+Function '_ZN9__gnu_cxx13new_allocatorI6AgencyE7destroyIS1_EEvPT_'
+Lines executed:0.00% of 1
+No branches
+No calls
+
+Function '_ZSt22__uninitialized_copy_aISt13move_iteratorIP6AgencyES2_S1_ET0_T_S5_S4_RSaIT1_E'
+Lines executed:0.00% of 2
+No branches
+No calls
+
+Function '_ZSt32__make_move_if_noexcept_iteratorIP6AgencySt13move_iteratorIS1_EET0_T_'
+Lines executed:0.00% of 2
+No branches
+No calls
+
+Function '_ZNSt16allocator_traitsISaI6AgencyEE8allocateERS1_m'
+Lines executed:0.00% of 2
+No branches
+No calls
+
+Function '_ZNKSt6vectorI6AgencySaIS0_EE8max_sizeEv'
+Lines executed:0.00% of 2
+No branches
+No calls
+
+Function '_ZNSt12_Destroy_auxILb0EE9__destroyIP6AgencyEEvT_S4_'
+Lines executed:0.00% of 4
+No branches
+No calls
+
+Function '_ZNSt16allocator_traitsISaI6AgencyEE10deallocateERS1_PS0_m'
+Lines executed:0.00% of 2
+No branches
+No calls
+
+Function '_ZN9__gnu_cxx13new_allocatorI6AgencyED2Ev'
+Lines executed:0.00% of 1
+No branches
+No calls
+
+Function '_ZNSaI6AgencyEC2Ev'
+Lines executed:0.00% of 1
+No branches
+No calls
+
+Function '_ZNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEE16_M_construct_auxIPcEEvT_S7_St12__false_type'
+Lines executed:0.00% of 3
+No branches
+No calls
+
+Function '_ZNSt16allocator_traitsISaI6AgencyEE7destroyIS0_EEvRS1_PT_'
+Lines executed:0.00% of 2
+No branches
+No calls
+
+Function '_ZSt34__uninitialized_move_if_noexcept_aIP6AgencyS1_SaIS0_EET0_T_S4_S3_RT1_'
+Lines executed:0.00% of 3
+No branches
+No calls
+
+Function '_ZNKSt6vectorI6AgencySaIS0_EE4sizeEv'
+Lines executed:0.00% of 2
+No branches
+No calls
+
+Function '_ZNSt12_Vector_baseI6AgencySaIS0_EE11_M_allocateEm'
+Lines executed:0.00% of 2
+No branches
+No calls
+
+Function '_ZNKSt6vectorI6AgencySaIS0_EE12_M_check_lenEmPKc'
+Lines executed:0.00% of 5
+No branches
+No calls
+
+Function '_ZSt3maxImERKT_S2_S2_'
+Lines executed:0.00% of 4
+No branches
+No calls
+
+Function '_ZN9__gnu_cxx13new_allocatorI6AgencyE9constructIS1_JRKS1_EEEvPT_DpOT0_'
+Lines executed:0.00% of 2
+No branches
+No calls
+
+Function '_ZN6AgencyC2ERKS_'
+Lines executed:0.00% of 1
+No branches
+No calls
+
+Function '_ZN7MembersC2ERKS_'
+Lines executed:0.00% of 1
+No branches
+No calls
+
+Function '_ZSt8_DestroyIP6AgencyEvT_S2_'
+Lines executed:0.00% of 3
+No branches
+No calls
+
+Function '_ZNSt12_Vector_baseI6AgencySaIS0_EE13_M_deallocateEPS0_m'
+Lines executed:0.00% of 4
+No branches
+No calls
+
+Function '_ZNSaI6AgencyED2Ev'
+Lines executed:0.00% of 1
+No branches
+No calls
+
+Function '_ZNSt12_Vector_baseI6AgencySaIS0_EE12_Vector_implC2Ev'
+Lines executed:0.00% of 3
+No branches
+No calls
+
+Function '_ZNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEE12_M_constructIPcEEvT_S7_'
+Lines executed:0.00% of 3
+No branches
+No calls
+
+Function '_ZNSt6vectorI6AgencySaIS0_EE19_M_emplace_back_auxIJRKS0_EEEvDpOT_'
+Lines executed:0.00% of 25
+No branches
+No calls
+
+Function '_ZNSt16allocator_traitsISaI6AgencyEE9constructIS0_JRKS0_EEEvRS1_PT_DpOT0_'
+Lines executed:0.00% of 2
+No branches
+No calls
+
+Function '_ZSt7forwardIRK6AgencyEOT_RNSt16remove_referenceIS3_E4typeE'
+No executable lines
+No branches
+No calls
+
+Function '_ZSt8_DestroyIP6AgencyS0_EvT_S2_RSaIT0_E'
+Lines executed:0.00% of 3
+No branches
+No calls
+
+Function '_ZNSt12_Vector_baseI6AgencySaIS0_EE19_M_get_Tp_allocatorEv'
+Lines executed:0.00% of 2
+No branches
+No calls
+
+Function '_ZNSt12_Vector_baseI6AgencySaIS0_EED2Ev'
+Lines executed:0.00% of 3
+No branches
+No calls
+
+Function '_ZNSt12_Vector_baseI6AgencySaIS0_EEC2Ev'
+Lines executed:0.00% of 2
+No branches
+No calls
+
+Function '_ZNSt12_Vector_baseI6AgencySaIS0_EE12_Vector_implD2Ev'
+Lines executed:0.00% of 1
+No branches
+No calls
+
+Function '_ZNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEC2IPcvEET_S7_RKS3_'
+Lines executed:0.00% of 3
+No branches
+No calls
+
+Function '_ZNSt6vectorI6AgencySaIS0_EE9push_backERKS0_'
+Lines executed:0.00% of 6
+No branches
+No calls
+
+Function '_ZNSt6vectorI6AgencySaIS0_EED2Ev'
+Lines executed:0.00% of 3
+No branches
+No calls
+
+Function '_ZNSt6vectorI6AgencySaIS0_EEC2Ev'
+Lines executed:0.00% of 2
+No branches
+No calls
+
+Function '_ZStplIcSt11char_traitsIcESaIcEENSt7__cxx1112basic_stringIT_T0_T1_EEOS8_RKS8_'
+Lines executed:0.00% of 2
+No branches
+No calls
+
+Function '_ZStplIcSt11char_traitsIcESaIcEENSt7__cxx1112basic_stringIT_T0_T1_EEOS8_PKS5_'
+Lines executed:0.00% of 2
+No branches
+No calls
+
+Function '_ZStplIcSt11char_traitsIcESaIcEENSt7__cxx1112basic_stringIT_T0_T1_EEPKS5_RKS8_'
+Lines executed:0.00% of 7
+No branches
+No calls
+
+Function '_ZStplIcSt11char_traitsIcESaIcEENSt7__cxx1112basic_stringIT_T0_T1_EEPKS5_OS8_'
+Lines executed:0.00% of 2
+No branches
+No calls
+
+Function '_ZStplIcSt11char_traitsIcESaIcEENSt7__cxx1112basic_stringIT_T0_T1_EEOS8_S9_'
+Lines executed:0.00% of 6
+No branches
+No calls
+
+Function '_ZSt4moveIRNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEEEONSt16remove_referenceIT_E4typeEOS8_'
+Lines executed:0.00% of 2
+No branches
+No calls
+
+Function '_ZNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEE12_Alloc_hiderD2Ev'
+Lines executed:0.00% of 1
+No branches
+No calls
+
+Function '_ZN9__gnu_cxx12__to_xstringINSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEEcEET_PFiPT0_mPKS8_P13__va_list_tagEmSB_z'
+Lines executed:0.00% of 7
+No branches
+No calls
+
+Function '_ZN11ModelAgency10GetAgencysEP7sqlite3'
+Lines executed:0.00% of 6
+No branches
+No calls
+
+Function '_ZN11ModelAgency21DeleteFromTableAgencyENSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEEP7sqlite3'
+Lines executed:0.00% of 9
+No branches
+No calls
+
+Function '_ZN11ModelAgency21InsertIntoTableAgencyE6AgencyP7sqlite3'
+Lines executed:0.00% of 9
+No branches
+No calls
+
+Function '_ZN11ModelAgency10FindAgencyENSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEEP7sqlite3'
+Lines executed:0.00% of 10
+No branches
+No calls
+
+Function '_ZN11ModelAgency7HowManyEP7sqlite3'
+Lines executed:0.00% of 11
+No branches
+No calls
+
+Function '_ZN11ModelAgency11GiveAgencysEiP7sqlite3'
+Lines executed:0.00% of 10
+No branches
+No calls
+
+Function '_ZN6AgencyC2EOS_'
+No executable lines
+No branches
+No calls
+
+Function '_ZN7MembersC2EOS_'
+No executable lines
+No branches
+No calls
+
+Function '_ZN6AgencyD2Ev'
+No executable lines
+No branches
+No calls
+
+Function '_ZN11ModelAgency13callbackcountEPviPPcS2_'
+Lines executed:0.00% of 4
+No branches
+No calls
+
+Function '_ZN11ModelAgency14callbackagencyEPviPPcS2_'
+Lines executed:0.00% of 6
+No branches
+No calls
+
+Function '_ZN11ModelAgency8callbackEPviPPcS2_'
+Lines executed:0.00% of 5
+No branches
+No calls
+
+Function '_ZN6Agency11getCommentsEv'
+Lines executed:0.00% of 3
+No branches
+No calls
+
+Function '_ZN6Agency15startSalesMonthEv'
+Lines executed:100.00% of 5
+No branches
+No calls
+
+Function '_ZN6Agency17sumGeneralRevenueEd'
+Lines executed:100.00% of 4
+No branches
+No calls
+
+Function '_ZN6Agency14getGeneralDataEv'
+Lines executed:0.00% of 4
+No branches
+No calls
+
+Function '_ZN6Agency9getAgencyEv'
+Lines executed:0.00% of 5
+No branches
+No calls
+
+Function '_ZN6Agency10sumRevenueEd'
+Lines executed:100.00% of 3
+No branches
+No calls
+
+Function '_ZN6AgencyC2ENSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEES5_d'
+Lines executed:100.00% of 5
+No branches
+No calls
+
+Function '_ZN7MembersD2Ev'
+No executable lines
+No branches
+No calls
+
+Function '_ZN7MembersC2Ev'
+No executable lines
+No branches
+No calls
+
+Function '_ZNSt7__cxx119to_stringEd'
+Lines executed:0.00% of 3
+No branches
+No calls
+
+Function '_ZNSt7__cxx119to_stringEi'
+Lines executed:0.00% of 2
+No branches
+No calls
+
+Function '_ZdlPvS_'
+Lines executed:0.00% of 1
+No branches
+No calls
+
+Function '_ZnwmPv'
+Lines executed:0.00% of 2
+No branches
+No calls
+
+Function '_ZNSt11char_traitsIcE6lengthEPKc'
+Lines executed:0.00% of 2
+No branches
+No calls
+
+File 'Agency.cpp'
+Lines executed:18.00% of 100
+Branches executed:4.42% of 113
+Taken at least once:2.65% of 113
+Calls executed:5.19% of 154
+Creating 'Agency.cpp.gcov'
+
+File '/usr/include/c++/5/iostream'
+Lines executed:100.00% of 1
+Branches executed:100.00% of 1
+Taken at least once:100.00% of 1
+No calls
+Creating 'iostream.gcov'
+
+File '/usr/include/c++/5/bits/stl_iterator.h'
+Lines executed:0.00% of 15
+No branches
+Calls executed:0.00% of 4
+Creating 'stl_iterator.h.gcov'
+
+File '/usr/include/c++/5/bits/stl_construct.h'
+Lines executed:0.00% of 14
+Branches executed:0.00% of 3
+Taken at least once:0.00% of 3
+Calls executed:0.00% of 8
+Creating 'stl_construct.h.gcov'
+
+File '/usr/include/c++/5/bits/move.h'
+Lines executed:0.00% of 6
+No branches
+No calls
+Creating 'move.h.gcov'
+
+File '/usr/include/c++/5/bits/stl_iterator_base_funcs.h'
+Lines executed:0.00% of 5
+No branches
+Calls executed:0.00% of 2
+Creating 'stl_iterator_base_funcs.h.gcov'
+
+File '/usr/include/c++/5/bits/stl_iterator_base_types.h'
+Lines executed:0.00% of 2
+No branches
+No calls
+Creating 'stl_iterator_base_types.h.gcov'
+
+File '/usr/include/c++/5/bits/stl_uninitialized.h'
+Lines executed:0.00% of 16
+Branches executed:0.00% of 6
+Taken at least once:0.00% of 6
+Calls executed:0.00% of 15
+Creating 'stl_uninitialized.h.gcov'
+
+File '/usr/include/c++/5/ext/new_allocator.h'
+Lines executed:0.00% of 13
+Branches executed:0.00% of 6
+Taken at least once:0.00% of 6
+Calls executed:0.00% of 10
+Creating 'new_allocator.h.gcov'
+
+File '/usr/include/c++/5/ext/type_traits.h'
+Lines executed:0.00% of 2
+No branches
+No calls
+Creating 'type_traits.h.gcov'
+
+File '/usr/include/c++/5/bits/stl_vector.h'
+Lines executed:0.00% of 39
+Branches executed:0.00% of 11
+Taken at least once:0.00% of 11
+Calls executed:0.00% of 24
+Creating 'stl_vector.h.gcov'
+
+File '/usr/include/c++/5/bits/alloc_traits.h'
+Lines executed:0.00% of 10
+No branches
+Calls executed:0.00% of 6
+Creating 'alloc_traits.h.gcov'
+
+File '/usr/include/c++/5/bits/basic_string.tcc'
+Lines executed:0.00% of 20
+Branches executed:0.00% of 23
+Taken at least once:0.00% of 23
+Calls executed:0.00% of 22
+Creating 'basic_string.tcc.gcov'
+
+File '/usr/include/c++/5/bits/allocator.h'
+Lines executed:0.00% of 2
+No branches
+Calls executed:0.00% of 2
+Creating 'allocator.h.gcov'
+
+File '/usr/include/c++/5/bits/basic_string.h'
+Lines executed:0.00% of 27
+Branches executed:0.00% of 10
+Taken at least once:0.00% of 10
+Calls executed:0.00% of 30
+Creating 'basic_string.h.gcov'
+
+File '/usr/include/c++/5/bits/stl_algobase.h'
+Lines executed:0.00% of 4
+Branches executed:0.00% of 2
+Taken at least once:0.00% of 2
+No calls
+Creating 'stl_algobase.h.gcov'
+
+File '../include/Agency.hpp'
+Lines executed:0.00% of 1
+Branches executed:0.00% of 4
+Taken at least once:0.00% of 4
+Calls executed:0.00% of 12
+Creating 'Agency.hpp.gcov'
+
+File '../include/members.hpp'
+Lines executed:0.00% of 1
+No branches
+Calls executed:0.00% of 4
+Creating 'members.hpp.gcov'
+
+File '/usr/include/c++/5/bits/vector.tcc'
+Lines executed:0.00% of 25
+Branches executed:0.00% of 12
+Taken at least once:0.00% of 12
+Calls executed:0.00% of 19
+Creating 'vector.tcc.gcov'
+
+File '/usr/include/c++/5/ext/string_conversions.h'
+Lines executed:0.00% of 7
+Branches executed:0.00% of 3
+Taken at least once:0.00% of 3
+Calls executed:0.00% of 6
+Creating 'string_conversions.h.gcov'
+
+File '/usr/include/c++/5/new'
+Lines executed:0.00% of 3
+No branches
+No calls
+Creating 'new.gcov'
+
+File '/usr/include/c++/5/bits/char_traits.h'
+Lines executed:0.00% of 2
+No branches
+No calls
+Creating 'char_traits.h.gcov'
+

@@ -1,7 +1,6 @@
-#ifndef VEHICLE_HPP
-#define VEHICLE_HPP
+#ifndef VEHICLES_HPP
+#define VEHICLES_HPP
 #include "DataBank.hpp"
-#include "Alocation.hpp"
 #include "Brand.hpp"
 #include "Model.hpp"
 #include <string>

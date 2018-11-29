@@ -1,0 +1,32 @@
+        -:    0:Source:../include/members.hpp
+        -:    0:Graph:obj/Agency.gcno
+        -:    0:Data:obj/Agency.gcda
+        -:    0:Runs:1
+        -:    0:Programs:1
+        -:    1:#ifndef MEMBERS_HPP
+        -:    2:#define MEMBERS_HPP
+        -:    3:#include <iostream>
+        -:    4:
+function _ZN7MembersC2ERKS_ called 0 returned 0% blocks executed 0%
+function _ZN7MembersC2EOS_ called 0 returned 0% blocks executed 0%
+function _ZN7MembersD2Ev called 0 returned 0% blocks executed 0%
+function _ZN7MembersC2Ev called 0 returned 0% blocks executed 0%
+    #####:    5:class Members{
+    $$$$$:    5-block  0
+    $$$$$:    5-block  1
+call    0 never executed
+    $$$$$:    5-block  2
+    $$$$$:    5-block  3
+call    1 never executed
+    $$$$$:    5-block  4
+    $$$$$:    5-block  5
+call    2 never executed
+    $$$$$:    5-block  6
+    $$$$$:    5-block  7
+call    3 never executed
+        -:    6:public:
+        -:    7:    std::string comments;
+        -:    8:    virtual void getComments() = 0;
+        -:    9:};
+        -:   10:
+        -:   11:#endif

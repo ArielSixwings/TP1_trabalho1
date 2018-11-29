@@ -1,0 +1,92 @@
+        -:    0:Source:../include/Agency.hpp
+        -:    0:Graph:obj/Agency.gcno
+        -:    0:Data:obj/Agency.gcda
+        -:    0:Runs:1
+        -:    0:Programs:1
+        -:    1:#ifndef AGENCY_HPP
+        -:    2:#define AGENCY_HPP
+        -:    3:#include <iostream>
+        -:    4:#include <string>
+        -:    5:#include "DataBank.hpp"
+        -:    6:#include "members.hpp"
+        -:    7:/*!Representa as agencias da compania, todas as agencias possuem em comum a receita total e o
+        -:    8:número total de vendas.
+        -:    9:*/ 
+function _ZN6AgencyC2ERKS_ called 0 returned 0% blocks executed 0%
+function _ZN6AgencyC2EOS_ called 0 returned 0% blocks executed 0%
+function _ZN6AgencyD2Ev called 0 returned 0% blocks executed 0%
+    #####:   10:class Agency : public Members{
+    $$$$$:   10-block  0
+    $$$$$:   10-block  1
+call    0 never executed
+call    1 never executed
+branch  2 never executed
+branch  3 never executed
+    $$$$$:   10-block  2
+call    4 never executed
+branch  5 never executed
+branch  6 never executed
+    $$$$$:   10-block  3
+unconditional  7 never executed
+    %%%%%:   10-block  4
+call    8 never executed
+unconditional  9 never executed
+    %%%%%:   10-block  5
+call   10 never executed
+    $$$$$:   10-block  6
+    $$$$$:   10-block  7
+call   11 never executed
+call   12 never executed
+call   13 never executed
+    $$$$$:   10-block  8
+    $$$$$:   10-block  9
+call   14 never executed
+call   15 never executed
+call   16 never executed
+        -:   11:public:
+        -:   12:    std::string agencyId;
+        -:   13:    std::string locality;
+        -:   14:    double revenue;
+        -:   15:    static double generalrevenue;
+        -:   16:    static double generalnumbersales; 
+        -:   17:    
+        -:   18:    //!soma à receita geral da compania a receita da ultima venda, é chamada por sumRevenue
+        -:   19:    static void sumGeneralRevenue(double salesrevenue);    
+        -:   20:public:
+        -:   21:    //!construtor da classe, não atribui valor à receita total e ao numero total de vendas
+        -:   22:    Agency(std::string agencyId, std::string locality,double revenue);
+        -:   23:    //!soma à receita da agencia a receita da venda atual, em seguida chama sumGeneralRevenue
+        -:   24:    void sumRevenue(double salesrevenue);
+        -:   25:    //!mostra na tela informações específicas da agencia
+        -:   26:    void getAgency();
+        -:   27:    //!mostra em tela dados compartilhados entre as agencias
+        -:   28:    static void getGeneralData();
+        -:   29:    //!zera a receita de todas as receitas e a receita geral
+        -:   30:    void startSalesMonth();
+        -:   31:    //!mostra em tela os comentarios feitos pelos clientes sobre a agencia
+        -:   32:    void getComments() override;
+        -:   33:};
+        -:   34:
+        -:   35:class ModelAgency{
+        -:   36:public:
+        -:   37:
+        -:   38:    static int callback(void *NotUsed, int argc, char **argv, char **szColName);
+        -:   39:
+        -:   40:    static int callbackagency(void* data, int argc, char **argv, char **szColName);
+        -:   41:
+        -:   42:    static int callbackcount(void *data, int argc, char **argv, char **szColName);
+        -:   43:
+        -:   44:    static Agency FindAgency(std::string Id, sqlite3 *db);
+        -:   45:
+        -:   46:    static Agency GiveAgencys(int i, sqlite3 *db);
+        -:   47:
+        -:   48:    static int HowMany(sqlite3 *db);
+        -:   49:
+        -:   50:    static flags InsertIntoTableAgency(Agency aux, sqlite3 *db);
+        -:   51:
+        -:   52:    static flags DeleteFromTableAgency(std::string agencyId, sqlite3 *db);
+        -:   53:
+        -:   54:    static std::vector<Agency> GetAgencys(sqlite3 *db);
+        -:   55:};
+        -:   56:
+        -:   57:#endif //AGENCY_HPP

@@ -1,0 +1,631 @@
+        -:    0:Source:Agency.cpp
+        -:    0:Graph:obj/Agency.gcno
+        -:    0:Data:obj/Agency.gcda
+        -:    0:Runs:1
+        -:    0:Programs:1
+        -:    1:#include "Agency.hpp"
+        -:    2:
+        -:    3:double Agency::generalrevenue;
+        -:    4:double Agency::generalnumbersales;
+        -:    5:
+function _ZN6AgencyC2ENSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEES5_d called 4 returned 100% blocks executed 58%
+        8:    6:Agency::Agency(std::string agencyId,std::string locality,double revenue){
+        4:    6-block  0
+        4:    6-block  1
+call    0 returned 4
+call    1 returned 4
+call    2 returned 4
+    %%%%%:    6-block  2
+call    3 never executed
+unconditional  4 never executed
+    %%%%%:    6-block  3
+call    5 never executed
+unconditional  6 never executed
+    %%%%%:    6-block  4
+call    7 never executed
+        4:    7:    this->agencyId = agencyId;
+call    0 returned 4
+branch  1 taken 4 (fallthrough)
+branch  2 taken 0 (throw)
+        4:    8:    this->locality = locality;
+        4:    8-block  0
+call    0 returned 4
+branch  1 taken 4 (fallthrough)
+branch  2 taken 0 (throw)
+        4:    9:    this->revenue = revenue;
+        4:   10:}
+        4:   10-block  0
+unconditional  0 taken 4
+        -:   11:
+function _ZN6Agency10sumRevenueEd called 1 returned 100% blocks executed 100%
+        1:   12:void Agency::sumRevenue(double salesrevenue){
+        1:   12-block  0
+        1:   13:    revenue += salesrevenue;
+        1:   14:}
+        -:   15:
+function _ZN6Agency9getAgencyEv called 0 returned 0% blocks executed 0%
+    #####:   16:void Agency::getAgency(){
+    $$$$$:   16-block  0
+    #####:   17:    std::cout<<"Identificação da agencia: "<<agencyId <<std::endl;
+    $$$$$:   17-block  0
+call    0 never executed
+call    1 never executed
+call    2 never executed
+    #####:   18:    std::cout<<"Localidade: "<<locality<<std::endl;
+call    0 never executed
+call    1 never executed
+call    2 never executed
+    #####:   19:    std::cout<<"Receita: "<<revenue<<std::endl;
+call    0 never executed
+call    1 never executed
+call    2 never executed
+    #####:   20:}
+        -:   21:
+function _ZN6Agency14getGeneralDataEv called 0 returned 0% blocks executed 0%
+    #####:   22:void Agency::getGeneralData(){
+    $$$$$:   22-block  0
+    #####:   23:    std::cout<<"Receita geral da soma das agencias: "<< generalrevenue << std::endl;
+    $$$$$:   23-block  0
+call    0 never executed
+call    1 never executed
+call    2 never executed
+    #####:   24:    std::cout<<"Numero total de vendas: "<<generalnumbersales << std::endl;
+call    0 never executed
+call    1 never executed
+call    2 never executed
+    #####:   25:}
+        -:   26:
+function _ZN6Agency17sumGeneralRevenueEd called 1 returned 100% blocks executed 100%
+        1:   27:void Agency::sumGeneralRevenue(double salesrevenue){
+        1:   27-block  0
+        1:   28:    generalrevenue += salesrevenue;
+        1:   29:    generalnumbersales++; 
+        1:   30:}
+        -:   31:
+function _ZN6Agency15startSalesMonthEv called 1 returned 100% blocks executed 100%
+        1:   32:void Agency::startSalesMonth(){
+        1:   32-block  0
+        1:   33:    revenue = 0;
+        1:   34:    generalrevenue = 0;
+        1:   35:    generalnumbersales = 0;
+        1:   36:}
+        -:   37:
+function _ZN6Agency11getCommentsEv called 0 returned 0% blocks executed 0%
+    #####:   38:void Agency::getComments(){
+    $$$$$:   38-block  0
+    #####:   39:	std::cout << this->comments << std::endl;
+    $$$$$:   39-block  0
+call    0 never executed
+call    1 never executed
+    #####:   40:}
+        -:   41:
+        -:   42:// ########################################################################################## //
+        -:   43:
+function _ZN11ModelAgency8callbackEPviPPcS2_ called 0 returned 0% blocks executed 0%
+    #####:   44:int ModelAgency::callback(void *NotUsed, int argc, char **argv, char **szColName){
+    $$$$$:   44-block  0
+    #####:   45:  for(int i = 0; i < argc; i++){
+    $$$$$:   45-block  0
+unconditional  0 never executed
+    $$$$$:   45-block  1
+branch  1 never executed
+branch  2 never executed
+unconditional  3 never executed
+    #####:   46:    std::cout << szColName[i] << " = " << argv[i] << std::endl;
+    $$$$$:   46-block  0
+call    0 never executed
+call    1 never executed
+call    2 never executed
+call    3 never executed
+        -:   47:  }
+        -:   48:
+    #####:   49:  std::cout << "\n";
+    $$$$$:   49-block  0
+call    0 never executed
+        -:   50:
+    #####:   51:  return 0;
+unconditional  0 never executed
+        -:   52:}
+        -:   53:
+function _ZN11ModelAgency14callbackagencyEPviPPcS2_ called 0 returned 0% blocks executed 0%
+    #####:   54:int ModelAgency::callbackagency(void *data, int argc, char **argv, char **szColName){
+    $$$$$:   54-block  0
+        -:   55:
+    #####:   56:  Agency* aux = static_cast<Agency*>(data);
+    #####:   57:  aux->agencyId = argv[0];
+    $$$$$:   57-block  0
+call    0 never executed
+    #####:   58:  aux->locality =  argv[1];
+call    0 never executed
+    #####:   59:  aux->revenue = atoi(argv[2]);
+call    0 never executed
+        -:   60:
+    #####:   61:  return 0;
+unconditional  0 never executed
+        -:   62:}
+        -:   63:
+function _ZN11ModelAgency13callbackcountEPviPPcS2_ called 0 returned 0% blocks executed 0%
+    #####:   64:int ModelAgency::callbackcount(void *data, int argc, char **argv, char **szColName){
+    $$$$$:   64-block  0
+        -:   65:
+    #####:   66:  int* aux = static_cast<int*>(data);
+    #####:   67:  *aux = (atoi(argv[0]));
+    $$$$$:   67-block  0
+call    0 never executed
+        -:   68:
+    #####:   69:    return 0;
+unconditional  0 never executed
+        -:   70:}
+        -:   71:
+function _ZN11ModelAgency11GiveAgencysEiP7sqlite3 called 0 returned 0% blocks executed 0%
+    #####:   72:Agency ModelAgency::GiveAgencys(int i, sqlite3 *db){
+    $$$$$:   72-block  0
+    #####:   73:  Agency aux("0", "Error", 0);
+    $$$$$:   73-block  0
+call    0 never executed
+call    1 never executed
+branch  2 never executed
+branch  3 never executed
+    $$$$$:   73-block  1
+call    4 never executed
+call    5 never executed
+branch  6 never executed
+branch  7 never executed
+    $$$$$:   73-block  2
+call    8 never executed
+branch  9 never executed
+branch 10 never executed
+    $$$$$:   73-block  3
+call   11 never executed
+call   12 never executed
+call   13 never executed
+call   14 never executed
+unconditional 15 never executed
+    %%%%%:   73-block  4
+call   16 never executed
+unconditional 17 never executed
+    %%%%%:   73-block  5
+call   18 never executed
+unconditional 19 never executed
+    %%%%%:   73-block  6
+call   20 never executed
+unconditional 21 never executed
+    %%%%%:   73-block  7
+call   22 never executed
+    #####:   74:  char* szErrMsg = nullptr;
+    #####:   75:  std::string pSQL("SELECT * FROM Agency WHERE rowid = " + std::to_string(i+1));
+call    0 never executed
+branch  1 never executed
+branch  2 never executed
+    $$$$$:   75-block  0
+call    3 never executed
+branch  4 never executed
+branch  5 never executed
+    $$$$$:   75-block  1
+call    6 never executed
+    $$$$$:   75-block  2
+call    7 never executed
+unconditional  8 never executed
+    $$$$$:   75-block  3
+unconditional  9 never executed
+    %%%%%:   75-block  4
+call   10 never executed
+unconditional 11 never executed
+    %%%%%:   75-block  5
+call   12 never executed
+unconditional 13 never executed
+    %%%%%:   75-block  6
+call   14 never executed
+unconditional 15 never executed
+    #####:   76:  int rc = sqlite3_exec(db, pSQL.c_str(), callbackagency, &aux, &szErrMsg);
+call    0 never executed
+call    1 never executed
+branch  2 never executed
+branch  3 never executed
+    #####:   77:    if(rc != SQLITE_OK){
+    $$$$$:   77-block  0
+branch  0 never executed
+branch  1 never executed
+    #####:   78:      std::cout << "SQL Error: " << szErrMsg << std::endl;
+    $$$$$:   78-block  0
+call    0 never executed
+branch  1 never executed
+branch  2 never executed
+    $$$$$:   78-block  1
+call    3 never executed
+branch  4 never executed
+branch  5 never executed
+    $$$$$:   78-block  2
+call    6 never executed
+branch  7 never executed
+branch  8 never executed
+    #####:   79:      sqlite3_free(szErrMsg);
+    $$$$$:   79-block  0
+call    0 never executed
+branch  1 never executed
+branch  2 never executed
+    #####:   80:      return aux;
+    $$$$$:   80-block  0
+unconditional  0 never executed
+        -:   81:    }
+    #####:   82:    return aux;
+    $$$$$:   82-block  0
+unconditional  0 never executed
+        -:   83:}
+        -:   84:
+function _ZN11ModelAgency7HowManyEP7sqlite3 called 0 returned 0% blocks executed 0%
+    #####:   85:int ModelAgency::HowMany(sqlite3 *db){
+    $$$$$:   85-block  0
+    #####:   86:  int* countEmp = (int*) malloc(sizeof(int));
+    #####:   87:  char* szErrMsg = nullptr;
+    #####:   88:  std::string pSQL("SELECT COUNT(agencyId) FROM Agency");
+    $$$$$:   88-block  0
+call    0 never executed
+call    1 never executed
+branch  2 never executed
+branch  3 never executed
+    $$$$$:   88-block  1
+call    4 never executed
+    $$$$$:   88-block  2
+call    5 never executed
+unconditional  6 never executed
+    $$$$$:   88-block  3
+unconditional  7 never executed
+    %%%%%:   88-block  4
+call    8 never executed
+unconditional  9 never executed
+    %%%%%:   88-block  5
+call   10 never executed
+unconditional 11 never executed
+    #####:   89:  int rc = sqlite3_exec(db, pSQL.c_str(), callbackcount, countEmp, &szErrMsg);
+call    0 never executed
+call    1 never executed
+branch  2 never executed
+branch  3 never executed
+    #####:   90:  if(rc != SQLITE_OK){
+    $$$$$:   90-block  0
+branch  0 never executed
+branch  1 never executed
+    #####:   91:      std::cout << "SQL Error: " << szErrMsg << std::endl;
+    $$$$$:   91-block  0
+call    0 never executed
+branch  1 never executed
+branch  2 never executed
+    $$$$$:   91-block  1
+call    3 never executed
+branch  4 never executed
+branch  5 never executed
+    $$$$$:   91-block  2
+call    6 never executed
+branch  7 never executed
+branch  8 never executed
+    #####:   92:      sqlite3_free(szErrMsg);
+    $$$$$:   92-block  0
+call    0 never executed
+branch  1 never executed
+branch  2 never executed
+    #####:   93:      free(countEmp);
+    #####:   94:      return 0;
+    $$$$$:   94-block  0
+unconditional  0 never executed
+        -:   95:    }
+    #####:   96:  return (*countEmp);
+    $$$$$:   96-block  0
+unconditional  0 never executed
+        -:   97:}
+        -:   98:
+function _ZN11ModelAgency10FindAgencyENSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEEP7sqlite3 called 0 returned 0% blocks executed 0%
+    #####:   99:Agency ModelAgency::FindAgency(std::string Id, sqlite3 *db){
+    $$$$$:   99-block  0
+    #####:  100:  Agency aux("0", "Error", 0);
+    $$$$$:  100-block  0
+call    0 never executed
+call    1 never executed
+branch  2 never executed
+branch  3 never executed
+    $$$$$:  100-block  1
+call    4 never executed
+call    5 never executed
+branch  6 never executed
+branch  7 never executed
+    $$$$$:  100-block  2
+call    8 never executed
+branch  9 never executed
+branch 10 never executed
+    $$$$$:  100-block  3
+call   11 never executed
+call   12 never executed
+call   13 never executed
+call   14 never executed
+unconditional 15 never executed
+    %%%%%:  100-block  4
+call   16 never executed
+unconditional 17 never executed
+    %%%%%:  100-block  5
+call   18 never executed
+unconditional 19 never executed
+    %%%%%:  100-block  6
+call   20 never executed
+unconditional 21 never executed
+    %%%%%:  100-block  7
+call   22 never executed
+    #####:  101:  char* szErrMsg = nullptr;
+    #####:  102:  std::string pSQL("SELECT * FROM Agency WHERE agencyId = '" + Id + "'");
+call    0 never executed
+branch  1 never executed
+branch  2 never executed
+    $$$$$:  102-block  0
+call    3 never executed
+branch  4 never executed
+branch  5 never executed
+    $$$$$:  102-block  1
+call    6 never executed
+    $$$$$:  102-block  2
+call    7 never executed
+unconditional  8 never executed
+    $$$$$:  102-block  3
+unconditional  9 never executed
+    %%%%%:  102-block  4
+call   10 never executed
+unconditional 11 never executed
+    %%%%%:  102-block  5
+call   12 never executed
+unconditional 13 never executed
+    %%%%%:  102-block  6
+call   14 never executed
+unconditional 15 never executed
+    #####:  103:  int rc = sqlite3_exec(db, pSQL.c_str(), callbackagency, &aux, &szErrMsg);
+call    0 never executed
+call    1 never executed
+branch  2 never executed
+branch  3 never executed
+    #####:  104:  if(rc != SQLITE_OK){
+    $$$$$:  104-block  0
+branch  0 never executed
+branch  1 never executed
+    #####:  105:    std::cout << "SQL Error: " << szErrMsg << std::endl;
+    $$$$$:  105-block  0
+call    0 never executed
+branch  1 never executed
+branch  2 never executed
+    $$$$$:  105-block  1
+call    3 never executed
+branch  4 never executed
+branch  5 never executed
+    $$$$$:  105-block  2
+call    6 never executed
+branch  7 never executed
+branch  8 never executed
+    #####:  106:    sqlite3_free(szErrMsg);
+    $$$$$:  106-block  0
+call    0 never executed
+branch  1 never executed
+branch  2 never executed
+    #####:  107:    return aux;
+    $$$$$:  107-block  0
+unconditional  0 never executed
+        -:  108:  }
+    #####:  109:  return aux;
+    $$$$$:  109-block  0
+unconditional  0 never executed
+        -:  110:}
+        -:  111:
+function _ZN11ModelAgency21InsertIntoTableAgencyE6AgencyP7sqlite3 called 0 returned 0% blocks executed 0%
+    #####:  112:flags ModelAgency::InsertIntoTableAgency(Agency aux, sqlite3 *db){
+    $$$$$:  112-block  0
+    #####:  113:  char* szErrMsg = nullptr;
+        -:  114:  std::string pSQL("INSERT OR IGNORE INTO Agency(agencyId, locality, revenue) VALUES ('"
+    #####:  115:  + aux.agencyId + "', '" + aux.locality + "', " + std::to_string(aux.revenue) + ")");
+    $$$$$:  115-block  0
+call    0 never executed
+branch  1 never executed
+branch  2 never executed
+    $$$$$:  115-block  1
+call    3 never executed
+branch  4 never executed
+branch  5 never executed
+    $$$$$:  115-block  2
+call    6 never executed
+branch  7 never executed
+branch  8 never executed
+    $$$$$:  115-block  3
+call    9 never executed
+branch 10 never executed
+branch 11 never executed
+    $$$$$:  115-block  4
+call   12 never executed
+branch 13 never executed
+branch 14 never executed
+    $$$$$:  115-block  5
+call   15 never executed
+branch 16 never executed
+branch 17 never executed
+    $$$$$:  115-block  6
+call   18 never executed
+branch 19 never executed
+branch 20 never executed
+    $$$$$:  115-block  7
+call   21 never executed
+call   22 never executed
+call   23 never executed
+call   24 never executed
+call   25 never executed
+call   26 never executed
+    $$$$$:  115-block  8
+call   27 never executed
+unconditional 28 never executed
+    $$$$$:  115-block  9
+unconditional 29 never executed
+    %%%%%:  115-block 10
+call   30 never executed
+unconditional 31 never executed
+    %%%%%:  115-block 11
+call   32 never executed
+unconditional 33 never executed
+    %%%%%:  115-block 12
+call   34 never executed
+unconditional 35 never executed
+    %%%%%:  115-block 13
+call   36 never executed
+unconditional 37 never executed
+    %%%%%:  115-block 14
+call   38 never executed
+unconditional 39 never executed
+    %%%%%:  115-block 15
+call   40 never executed
+unconditional 41 never executed
+    %%%%%:  115-block 16
+call   42 never executed
+unconditional 43 never executed
+    #####:  116:  int rc = sqlite3_exec(db, pSQL.c_str(), callback, 0, &szErrMsg);
+call    0 never executed
+call    1 never executed
+branch  2 never executed
+branch  3 never executed
+    #####:  117:  if(rc != SQLITE_OK){
+    $$$$$:  117-block  0
+branch  0 never executed
+branch  1 never executed
+    #####:  118:    std::cout << "SQL Error: " << szErrMsg << std::endl;
+    $$$$$:  118-block  0
+call    0 never executed
+branch  1 never executed
+branch  2 never executed
+    $$$$$:  118-block  1
+call    3 never executed
+branch  4 never executed
+branch  5 never executed
+    $$$$$:  118-block  2
+call    6 never executed
+branch  7 never executed
+branch  8 never executed
+    #####:  119:    sqlite3_free(szErrMsg);
+    $$$$$:  119-block  0
+call    0 never executed
+branch  1 never executed
+branch  2 never executed
+    #####:  120:    return RETURNERROR;
+    $$$$$:  120-block  0
+unconditional  0 never executed
+        -:  121:  }
+    #####:  122:  return RETURNOK;
+    $$$$$:  122-block  0
+unconditional  0 never executed
+        -:  123:}
+        -:  124:
+function _ZN11ModelAgency21DeleteFromTableAgencyENSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEEP7sqlite3 called 0 returned 0% blocks executed 0%
+    #####:  125:flags ModelAgency::DeleteFromTableAgency(std::string agencyId, sqlite3 *db){
+    $$$$$:  125-block  0
+    #####:  126:    char* szErrMsg = nullptr;
+    #####:  127:    std::string pSQL("DELETE FROM Agency WHERE agencyId = '" + agencyId + "'");
+    $$$$$:  127-block  0
+call    0 never executed
+branch  1 never executed
+branch  2 never executed
+    $$$$$:  127-block  1
+call    3 never executed
+branch  4 never executed
+branch  5 never executed
+    $$$$$:  127-block  2
+call    6 never executed
+    $$$$$:  127-block  3
+call    7 never executed
+unconditional  8 never executed
+    $$$$$:  127-block  4
+unconditional  9 never executed
+    %%%%%:  127-block  5
+call   10 never executed
+unconditional 11 never executed
+    %%%%%:  127-block  6
+call   12 never executed
+unconditional 13 never executed
+    #####:  128:    int rc = sqlite3_exec(db, pSQL.c_str(), callback, 0, &szErrMsg);
+call    0 never executed
+call    1 never executed
+branch  2 never executed
+branch  3 never executed
+    #####:  129:    if(rc != SQLITE_OK){
+    $$$$$:  129-block  0
+branch  0 never executed
+branch  1 never executed
+    #####:  130:      std::cout << "SQL Error: " << szErrMsg << std::endl;
+    $$$$$:  130-block  0
+call    0 never executed
+branch  1 never executed
+branch  2 never executed
+    $$$$$:  130-block  1
+call    3 never executed
+branch  4 never executed
+branch  5 never executed
+    $$$$$:  130-block  2
+call    6 never executed
+branch  7 never executed
+branch  8 never executed
+    #####:  131:      sqlite3_free(szErrMsg);
+    $$$$$:  131-block  0
+call    0 never executed
+branch  1 never executed
+branch  2 never executed
+    #####:  132:      return RETURNERROR;
+    $$$$$:  132-block  0
+unconditional  0 never executed
+        -:  133:    }
+    #####:  134:    return RETURNOK;    
+    $$$$$:  134-block  0
+unconditional  0 never executed
+        -:  135:}
+        -:  136:
+function _ZN11ModelAgency10GetAgencysEP7sqlite3 called 0 returned 0% blocks executed 0%
+    #####:  137:std::vector<Agency> ModelAgency::GetAgencys(sqlite3 *db){
+    $$$$$:  137-block  0
+    #####:  138:  std::vector<Agency> aux;
+    $$$$$:  138-block  0
+call    0 never executed
+    #####:  139:  for (int i = 0; i < ModelAgency::HowMany(db); i++){
+unconditional  0 never executed
+    $$$$$:  139-block  0
+call    1 never executed
+branch  2 never executed
+branch  3 never executed
+    $$$$$:  139-block  1
+branch  4 never executed
+branch  5 never executed
+unconditional  6 never executed
+    #####:  140:    Agency auxAgy = ModelAgency::GiveAgencys(i, db);
+    $$$$$:  140-block  0
+call    0 never executed
+branch  1 never executed
+branch  2 never executed
+    $$$$$:  140-block  1
+call    3 never executed
+    %%%%%:  140-block  2
+call    4 never executed
+unconditional  5 never executed
+    %%%%%:  140-block  3
+unconditional  6 never executed
+    %%%%%:  140-block  4
+call    7 never executed
+    #####:  141:    aux.push_back(auxAgy);
+    $$$$$:  141-block  0
+call    0 never executed
+branch  1 never executed
+branch  2 never executed
+        -:  142:  }
+    #####:  143:  return aux;
+    $$$$$:  143-block  0
+unconditional  0 never executed
+    $$$$$:  143-block  1
+unconditional  1 never executed
+function _GLOBAL__sub_I__ZN6Agency14generalrevenueE called 1 returned 100% blocks executed 100%
+function _Z41__static_initialization_and_destruction_0ii called 1 returned 100% blocks executed 100%
+        4:  144:}
+        1:  144-block  0
+        1:  144-block  1
+call    0 returned 1
+        1:  144-block  2
+        1:  144-block  3
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0
+        1:  144-block  4
+branch  3 taken 1 (fallthrough)
+branch  4 taken 0

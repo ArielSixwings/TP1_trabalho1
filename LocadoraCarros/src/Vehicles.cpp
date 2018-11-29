@@ -1,5 +1,6 @@
 #include <iostream>
 #include <string>
+#include "Alocation.hpp"
 #include "Vehicles.hpp"
 #include "Exceptions.hpp"
 

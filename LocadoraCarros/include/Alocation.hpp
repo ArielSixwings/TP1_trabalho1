@@ -19,12 +19,12 @@ public:
 	std::vector <int> DevolutionData;
 	std::vector <int> DevolutionHour;
 	std::string Type; //!daily or byperiod
-	std::string Agency;
+	std::string agency;
 	std::string CustomerId;//!CPF
 public:
 	/*!construtor da classe,recebe informações do veículo, agencia e tipo de alocação 
 	e pede as demais informações ao cliente*/
-	Alocation(int id, int which,std::string Agency,bool byperiod, std::string cpf, double price);
+	Alocation(int id, int which,std::string agency,bool byperiod, std::string cpf, double price);
 	//!construtor da classe que já recebe todas as informações sobre a alocação
 	Alocation(int id, std::vector <int> alocationData, std::vector <int>  alocationHour,
 	 std::vector <int>  devolutionData, std::vector <int>  devolutionHour);
